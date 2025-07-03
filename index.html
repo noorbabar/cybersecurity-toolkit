@@ -33,7 +33,7 @@
             
             <div class="cta-buttons">
                 <a href="#start" class="cta-primary">
-                    🚀 Start Your Journey
+                    Start Your Journey
                 </a>
                 <a href="#learn" class="cta-secondary">
                     Learn More
@@ -123,28 +123,22 @@
 
     <section class="testimonials">
         <div class="testimonials-container">
-            <h2 class="animate-on-scroll">Trusted by Business Leaders</h2>
+            <h2 class="animate-on-scroll">User Feedback</h2>
             <div class="testimonial-grid">
                 <div class="testimonial animate-on-scroll">
-                    <div class="testimonial-text">
-                        "Lock Step transformed our security posture completely. Finally, cybersecurity guidance that doesn't require a PhD to understand."
-                    </div>
-                    <div class="testimonial-author">Sarah Chen</div>
-                    <div class="testimonial-role">CEO, TechStart Solutions</div>
+                    <div class="testimonial-text"></div>
+                    <div class="testimonial-author"></div>
+                    <div class="testimonial-role"></div>
                 </div>
                 <div class="testimonial animate-on-scroll">
-                    <div class="testimonial-text">
-                        "As a CISO, I'm impressed by the practical approach. This is what every small business needs to build real resilience."
-                    </div>
-                    <div class="testimonial-author">Marcus Rodriguez</div>
-                    <div class="testimonial-role">CISO, CyberGuard Inc.</div>
+                    <div class="testimonial-text"></div>
+                    <div class="testimonial-author"></div>
+                    <div class="testimonial-role"></div>
                 </div>
                 <div class="testimonial animate-on-scroll">
-                    <div class="testimonial-text">
-                        "Perfect for learning cybersecurity fundamentals. The step-by-step approach makes complex topics accessible."
-                    </div>
-                    <div class="testimonial-author">Alex Thompson</div>
-                    <div class="testimonial-role">Computer Science Student</div>
+                    <div class="testimonial-text"></div>
+                    <div class="testimonial-author"></div>
+                    <div class="testimonial-role"></div>
                 </div>
             </div>
         </div>
@@ -159,7 +153,6 @@
     </section>
 
     <script>
-        // Smooth scrolling for navigation
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -169,7 +162,6 @@
             });
         });
 
-        // Scroll animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -187,7 +179,6 @@
             observer.observe(el);
         });
 
-        // Dynamic navbar background
         window.addEventListener('scroll', () => {
             const nav = document.querySelector('nav');
             if (window.scrollY > 100) {
@@ -197,7 +188,6 @@
             }
         });
 
-        // Counter animation for stats
         const animateCounters = () => {
             const counters = document.querySelectorAll('.stat-number');
             counters.forEach(counter => {
@@ -219,7 +209,6 @@
             });
         };
 
-        // Trigger counter animation when stats section is visible
         const statsObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
