@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risk Assessment - Small Business Cybersecurity Toolkit</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../../index.html">Home</a>
+            <a href="../guides/">Guides</a>
+            <a href="index.html">Assessment</a>
+            <a href="../../templates/">Templates</a>
+            <a href="../../resources/">Resources</a>
+            <a href="../../about/">About</a>
+        </nav>
+    </header>
+    <main>
+        <div class="assessment-container">
+            <h1>Cybersecurity Risk Assessment</h1>
+            <p>Answer these questions to get personalized security recommendations</p>
+            
+            <div id="assessment-form">
+                <div class="question-section" id="section-1">
+                    <h2>Business Information</h2>
+                    <div class="question">
+                        <label>What type of business do you run?</label>
+                        <select id="business-type">
+                            <option value="">Select...</option>
+                            <option value="retail">Retail Store</option>
+                            <option value="restaurant">Restaurant/Cafe</option>
+                            <option value="professional">Professional Services</option>
+                            <option value="healthcare">Healthcare</option>
+                            <option value="manufacturing">Manufacturing</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="question">
+                        <label>How many employees do you have?</label>
+                        <select id="employee-count">
+                            <option value="">Select...</option>
+                            <option value="1-5">1-5 employees</option>
+                            <option value="6-20">6-20 employees</option>
+                            <option value="21-50">21-50 employees</option>
+                            <option value="50+">50+ employees</option>
+                        </select>
+                    </div>
+                    
+                    <button onclick="nextSection(2)">Next</button>
+                </div>
+                
+                <div class="question-section" id="section-2" style="display: none;">
+                    <h2>Current Security Measures</h2>
+                    <div class="question">
+                        <label>Do you use multi-factor authentication?</label>
+                        <div class="radio-group">
+                            <input type="radio" id="mfa-yes" name="mfa" value="yes">
+                            <label for="mfa-yes">Yes, on all important accounts</label>
+                            <input type="radio" id="mfa-some" name="mfa" value="some">
+                            <label for="mfa-some">Yes, on some accounts</label>
+                            <input type="radio" id="mfa-no" name="mfa" value="no">
+                            <label for="mfa-no">No</label>
+                        </div>
+                    </div>
+                    
+                    <div class="question">
+                        <label>How do you manage passwords?</label>
+                        <div class="radio-group">
+                            <input type="radio" id="pwd-manager" name="passwords" value="manager">
+                            <label for="pwd-manager">Password manager</label>
+                            <input type="radio" id="pwd-written" name="passwords" value="written">
+                            <label for="pwd-written">Written down/saved in browser</label>
+                            <input type="radio" id="pwd-memory" name="passwords" value="memory">
+                            <label for="pwd-memory">I remember them</label>
+                        </div>
+                    </div>
+                    
+                    <button onclick="nextSection(1)">Back</button>
+                    <button onclick="nextSection(3)">Next</button>
+                </div>
+                
+                <div class="question-section" id="section-3" style="display: none;">
+                    <h2>Data and Systems</h2>
+                    <div class="question">
+                        <label>Do you regularly backup your data?</label>
+                        <div class="radio-group">
+                            <input type="radio" id="backup-auto" name="backup" value="automatic">
+                            <label for="backup-auto">Yes, automatically</label>
+                            <input type="radio" id="backup-manual" name="backup" value="manual">
+                            <label for="backup-manual">Yes, manually</label>
+                            <input type="radio" id="backup-no" name="backup" value="no">
+                            <label for="backup-no">No</label>
+                        </div>
+                    </div>
+                    
+                    <button onclick="nextSection(2)">Back</button>
+                    <button onclick="calculateRisk()">Get My Results</button>
+                </div>
+                
+                <div id="results" style="display: none;">
+                    <h2>Your Risk Assessment Results</h2>
+                    <div id="risk-score"></div>
+                    <div id="recommendations"></div>
+                    <button onclick="restartAssessment()">Start Over</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="../../assets/js/assessment.js"></script>
+</body>
+</html>
