@@ -1,0 +1,281 @@
+nav {
+    background: #2c3e50;
+    padding: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    background: #34495e;
+}
+
+.guide-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.action-list {
+    list-style: none;
+    padding: 0;
+}
+
+.action-list li {
+    background: #e8f4f8;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border-left: 4px solid #3498db;
+}
+
+.guide-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.guide-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border: 1px solid #e1e8ed;
+}
+
+.next-steps {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: #d4edda;
+    border-radius: 8px;
+}
+
+.next-steps a {
+    display: inline-block;
+    background: #28a745;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-right: 1rem;
+    margin-top: 0.5rem;
+}
+
+/* Assessment styles */
+.assessment-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.question-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.question {
+    margin-bottom: 1.5rem;
+}
+
+.question label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.question select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 0.5rem;
+}
+
+.radio-group label {
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.risk-badge {
+    text-align: center;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    background: #007bff;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-right: 1rem;
+    margin-top: 0.5rem;
+}
+
+.btn-urgent {
+    background: #dc3545;
+}
+
+.urgent-actions {
+    background: #f8d7da;
+    padding: 1rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+    border-left: 4px solid #dc3545;
+}
+
+button {
+    background: #007bff;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+button:hover {
+    background: #0056b3;
+}
+/* Phishing Simulation Styles */
+.simulation-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.simulation-controls {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.simulation-controls button {
+    margin: 0 0.5rem;
+}
+
+.email-simulation {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    font-family: Arial, sans-serif;
+}
+
+.email-header {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.email-header div {
+    margin-bottom: 0.5rem;
+}
+
+.email-body {
+    line-height: 1.6;
+}
+
+.suspicious-element {
+    background: #fff3cd;
+    padding: 2px 4px;
+    border-radius: 3px;
+    cursor: pointer;
+    border: 1px solid #ffeaa7;
+    transition: all 0.3s ease;
+}
+
+.suspicious-element:hover {
+    background: #ffeaa7;
+    border-color: #fdcb6e;
+}
+
+.found-flag {
+    background: #f8d7da !important;
+    border-color: #dc3545 !important;
+    color: #721c24;
+}
+
+.phishing-link {
+    background: #e9ecef;
+    padding: 1rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.phishing-link a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+#feedback-panel {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+.warning-popup {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 4px;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.success-message {
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+    border-radius: 4px;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+#explanation-panel {
+    background: #e9ecef;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+#explanation-panel ul {
+    padding-left: 1.5rem;
+}
+
+#explanation-panel li {
+    margin-bottom: 0.5rem;
+}
