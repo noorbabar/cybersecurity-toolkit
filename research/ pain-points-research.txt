@@ -1,0 +1,24 @@
+SMALL BUSINESS CHALLENGES:
+- Limited IT budget and staff
+- Lack of technical expertise
+- Time constraints
+- Overwhelming technical jargon
+- Unclear ROI on security investments
+- Compliance confusion
+
+COMMON THREATS (prioritised by frequency):
+1. Phishing attacks (90% of breaches start here)
+2. Ransomware
+3. Business email compromise
+4. Weak passwords
+5. Unpatched software
+6. Unsecured Wi-Fi
+7. Social engineering
+8. Insider threats
+
+INDUSTRY-SPECIFIC RISKS:
+- Retail: POS malware, customer data theft
+- Healthcare: Patient data breaches
+- Professional services: Client confidentiality
+- Manufacturing: Industrial espionage
+- Hospitality: Guest data, payment processing

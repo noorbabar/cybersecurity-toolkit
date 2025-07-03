@@ -1,0 +1,17 @@
+TARGET BUSINESSES FOR CASE STUDIES:
+- Local cafe (POS systems, Wi-Fi, customer data)
+- Small retail store (e-commerce, inventory systems)
+- Professional services (client data, email communication)
+- Construction company (project files, financial data)
+
+REAL ATTACK SCENARIOS TO INCLUDE:
+- Phishing email leading to credential theft
+- Ransomware attack on small manufacturing business
+- Social engineering targeting accounting department
+- Unsecured Wi-Fi leading to data breach
+- Insider threat (disgruntled employee)
+
+POSITIVE EXAMPLES:
+- Small business that successfully prevented attack
+- Cost-effective security implementations
+- Simple processes that work in practice

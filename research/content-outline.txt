@@ -1,0 +1,34 @@
+GETTING STARTED GUIDE:
+- Why cybersecurity matters for small business
+- Most common threats (top 5)
+- Quick wins (immediate actions)
+- Essential 8 simplified
+- Budget friendly security measures
+
+THREAT AWARENESS SECTION:
+- Phishing emails (recognition + response)
+- Ransomware (prevention + response)
+- Social engineering tactics
+- Unsecure Wi-Fi risks
+- Insider threats
+
+RISK ASSESSMENT TOOL:
+- Business type questionnaire
+- Current security posture check
+- Threat likelihood assessment
+- Impact analysis
+- Prioritised recommendations
+
+IMPLEMENTATION GUIDES:
+- Password managers setup
+- MFA implementation
+- Backup strategies (3-2-1 rule)
+- Software updates process
+- Secure remote work setup
+
+TEMPLATES SECTION:
+- Incident response plan template
+- Password policy template
+- Access control policy
+- Employee cybersecurity training checklist
+- Vendor security assessment form
