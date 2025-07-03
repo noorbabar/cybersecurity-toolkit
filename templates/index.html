@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Templates & Checklists - Small Business Cybersecurity Toolkit</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../docs/guides/">Guides</a>
+            <a href="../docs/assessment/">Assessment</a>
+            <a href="index.html">Templates</a>
+            <a href="../resources/">Resources</a>
+            <a href="../about/">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="template-container">
+            <h1>Downloadable Templates & Checklists</h1>
+            <p>Ready-to-use templates and checklists to help you implement cybersecurity measures in your small business. All templates are customizable and free to download.</p>
+            
+            <div class="template-category">
+                <div class="category-header">
+                    <h2> Security Policy Templates</h2>
+                    <p>Essential policies every small business should have in place</p>
+                </div>
+                
+                <div class="template-grid">
+                    <div class="template-card">
+                        <h3>Password Policy Template</h3>
+                        <p>A comprehensive password policy that balances security with usability for small businesses.</p>
+                        <ul class="template-features">
+                            <li>Minimum password requirements</li>
+                            <li>Password manager guidelines</li>
+                            <li>Account lockout procedures</li>
+                            <li>Regular review schedules</li>
+                        </ul>
+                        <div class="download-actions">
+                            <button class="btn-download" onclick="downloadTemplate('password-policy')">
+                                📄 Download Word
+                            </button>
+                            <button class="btn-preview" onclick="previewTemplate('password-policy')">
+                                Preview
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="template-card">
+                        <h3>Remote Work Security Policy</h3>
+                        <p>Guidelines for secure remote work practices, including device management and network security.</p>
+                        <ul class="template-features">
+                            <li>Home network security</li>
+                            <li>Device management rules</li>
+                            <li>Video conferencing guidelines</li>
+                            <li>Data handling procedures</li>
+                        </ul>
+                        <div class="download-actions">
+                            <button class="btn-download" onclick="downloadTemplate('remote-work-policy')">
+                                📄 Download Word
+                            </button>
+                            <button class="btn-preview" onclick="previewTemplate('remote-work-policy')">
+                                Preview
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="template-card">
+                        <h3>Acceptable Use Policy</h3>
+                        <p>Clear guidelines for appropriate use of company technology and internet resources.</p>
+                        <ul class="template-features">
+                            <li>Internet usage guidelines</li>
+                            <li>Software installation rules</li>
+                            <li>Social media policies</li>
+                            <li>Disciplinary procedures</li>
+                        </ul>
+                        <div class="download-actions">
+                            <button class="btn-download" onclick="downloadTemplate('acceptable-use-policy')">
+                                📄 Download Word
+                            </button>
+                            <button class="btn-preview" onclick="previewTemplate('acceptable-use-policy')">
+                                Preview
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="template-category">
+                <div class="category-header">
+                    <h2>Incident Response Templates</h2>
+                    <p>Be prepared for security incidents with these response templates</p>
+                </div>
+                
+                <div class="template-grid">
+                    <div class="template-card">
+                        <h3>Incident Response Plan</h3>
+                        <p>Step-by-step guide for responding to cybersecurity incidents, tailored for small businesses.</p>
+                        <ul class="template-features">
+                            <li>Incident classification system</li>
+                            <li>Response team roles</li>
+                            <li>Communication templates</li>
+                            <li>Recovery procedures</li>
+                        </ul>
+                        <div class="download-actions">
+                            <button class="btn-download" onclick="downloadTemplate('incident-response-plan')">
+                                📄 Download Word
+                            </button>
+                            <button class="btn-preview" onclick="previewTemplate('incident-response-plan')">
+                                Preview
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="template-card">
+                        <h3>Data Breach Response Checklist</h3>
+                        <p>Quick reference checklist for immediate actions when a data breach is discovered.</p>
+                        <ul class="template-features">
+                            <li>First 24 hours checklist</li>
+                            <li>Legal notification requirements</li>
+                            <li>Customer communication scripts</li>
+                            <li>Evidence preservation steps</li>
+                        </ul>
+                        <div class="download-actions">
+                            <button class="btn-download" onclick="downloadTemplate('data-breach-checklist')">
+                                📄 Download Word
+                            </button>
+                            <button class="btn-preview" onclick="previewTemplate('data-breach-checklist')">
+                                Preview
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="template-card">
+                        <h3>Ransomware Response Guide</h3>
+                        <p>Specific procedures for handling ransomware attacks and recovery operations.</p>
+                        <ul class="template-features">
+                            <li>Immediate containment steps</li>
+                            <li>Decision framework for payment</li>
+                            <li>Recovery from backups</li>
+                            <li>Prevention improvements</li>
+                        </ul>
+                        <div class="download-actions">
+                            <button class="btn-download" onclick="downloadTemplate('ransomware-response')">
+                                📄 Download Word
+                            </button>
+                            <button class="btn-preview" onclick="previewTemplate('ransomware-response')">
+                                Preview
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="template-category">
+                <div class="category-header">
+                    <h2> Security Checklists</h2>
+                    <p>Practical checklists to implement and maintain security measures</p>
+                </div>
+                
+                <div class="template-grid">
+                    <div class="template-card">
+                        <h3>New Employee Security Checklist</h3>
+                        <p>Essential security tasks to complete when onboarding new employees.</p>
+                        <ul class="template-features">
+                            <li>Account setup procedures</li>
+                            <li>Security training requirements</li>
+                            <li>Access permissions checklist</li>
+                            <li>Equipment security setup</li>
+                        </ul>
+                        <div class="download-actions">
+                            <button class="btn-download" onclick="downloadTemplate('new-employee-checklist')">
+                                📄 Download Word
+                            </button>
+                            <button class="btn-preview" onclick="previewTemplate('new-employee-checklist')">
+                                Preview
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="template-card">
+                        <h3>Monthly Security Review Checklist</h3>
+                        <p>Regular maintenance tasks to keep your security measures effective.</p>
+                        <ul class="template-features">
+                            <li>Software update verification</li>
+                            <li>Backup testing procedures</li>
+                            <li>Access review requirements</li>
+                            <li>Security awareness updates</li>
+                        </ul>
+                        <div class="download-actions">
+                            <button class="btn-download" onclick="downloadTemplate('monthly-review-checklist')">
+                                📄 Download Word
+                            </button>
+                            <button class="btn-preview" onclick="previewTemplate('monthly-review-checklist')">
+                                Preview
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="template-card">
+                        <h3>Vendor Security Assessment</h3>
+                        <p>Evaluate the security practices of third-party vendors and suppliers.</p>
+                        <ul class="template-features">
+                            <li>Security questionnaire</li>
+                            <li>Risk assessment criteria</li>
+                            <li>Contract security clauses</li>
+                            <li>Ongoing monitoring tasks</li>
+                        </ul>
+                        <div class="download-actions">
+                            <button class="btn-download" onclick="downloadTemplate('vendor-security-assessment')">
+                                📄 Download Word
+                            </button>
+                            <button class="btn-preview" onclick="previewTemplate('vendor-security-assessment')">
+                                Preview
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="template-category">
+                <div class="category-header">
+                    <h2>📚 Training Materials</h2>
+                    <p>Resources to educate your team about cybersecurity best practices</p>
+                </div>
+                
+                <div class="template-grid">
+                    <div class="template-card">
+                        <h3>Phishing Awareness Training</h3>
+                        <p>Interactive training materials to help employees recognize and report phishing attempts.</p>
+                        <ul class="template-features">
+                            <li>Real-world phishing examples</li>
+                            <li>Reporting procedures</li>
+                            <li>Quick reference card</li>
+                            <li>Assessment quiz</li>
+                        </ul>
+                        <div class="download-actions">
+                            <button class="btn-download" onclick="downloadTemplate('phishing-training')">
+                                📄 Download PowerPoint
+                            </button>
+                            <button class="btn-preview" onclick="previewTemplate('phishing-training')">
+                                Preview
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="template-card">
+                        <h3>Security Awareness Poster Pack</h3>
+                        <p>Eye-catching posters to reinforce security awareness around the workplace.</p>
+                        <ul class="template-features">
+                            <li>Password security reminders</li>
+                            <li>Phishing red flags</li>
+                            <li>Clean desk policy</li>
+                            <li>Incident reporting contact</li>
+                        </ul>
+                        <div class="download-actions">
+                            <button class="btn-download" onclick="downloadTemplate('security-posters')">
+                                📄 Download PDF
+                            </button>
+                            <button class="btn-preview" onclick="previewTemplate('security-posters')">
+                                Preview
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="template-card">
+                        <h3>Security Handbook for Employees</h3>
+                        <p>Comprehensive guide covering all essential security practices for your team.</p>
+                        <ul class="template-features">
+                            <li>Easy-to-understand guidelines</li>
+                            <li>Common threat scenarios</li>
+                            <li>Emergency contact information</li>
+                            <li>Customizable for your business</li>
+                        </ul>
+                        <div class="download-actions">
+                            <button class="btn-download" onclick="downloadTemplate('security-handbook')">
+                                📄 Download PDF
+                            </button>
+                            <button class="btn-preview" onclick="previewTemplate('security-handbook')">
+                                Preview
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="usage-tips">
+                <h3> How to Use These Templates</h3>
+                <ul>
+                    <li><strong>Customise for your business:</strong> Replace placeholder text with your specific information</li>
+                    <li><strong>Review regularly:</strong> Update templates as your business and threats evolve</li>
+                    <li><strong>Train your team:</strong> Make sure everyone understands the policies and procedures</li>
+                    <li><strong>Keep copies safe:</strong> Store templates in a secure location with regular backups</li>
+                    <li><strong>Get legal review:</strong> Consider having policies reviewed by a lawyer familiar with your industry</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <div id="templateModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Template Preview</h2>
+                <span class="close" onclick="closeModal()">&times;</span>
+            </div>
+            <div id="modalBody" class="template-preview"></div>
+        </div>
+    </div>
+
+    <script>
+        const templateContent = {
+            'password-policy': `SMALL BUSINESS PASSWORD POLICY TEMPLATE
+
+POLICY OVERVIEW
+This policy establishes minimum requirements for password security across all business systems and accounts.
+
+SCOPE
+This policy applies to all employees, contractors, and business partners who have access to company systems.
+
+PASSWORD REQUIREMENTS
+• Minimum 12 characters long
+• Include uppercase and lowercase letters
+• Include at least one number
+• Include at least one special character
+• Must not contain common dictionary words
+• Must not contain personal information
+
+PASSWORD MANAGER REQUIREMENTS
+• All employees must use an approved password manager
+• Recommended tools: [List approved password managers]
+• Shared passwords must be stored in business password manager
+• Personal passwords should not be stored in business systems
+
+MULTI-FACTOR AUTHENTICATION
+• MFA is required for all business-critical systems
+• Acceptable MFA methods: [List approved methods]
+• MFA must be enabled within 48 hours of account creation
+
+ACCOUNT SECURITY
+• Passwords must be changed immediately if compromised
+• Accounts will be locked after 5 failed login attempts
+• Shared accounts are prohibited except where technically necessary
+• Regular password audits will be conducted quarterly
+
+VIOLATION CONSEQUENCES
+• First violation: Warning and mandatory retraining
+• Second violation: Written warning
+• Third violation: Disciplinary action up to termination
+
+POLICY REVIEW
+This policy will be reviewed annually and updated as needed.
+
+Effective Date: [DATE]
+Next Review: [DATE]
+Approved by: [NAME, TITLE]`,
+
+            'incident-response-plan': `SMALL BUSINESS INCIDENT RESPONSE PLAN
+
+EXECUTIVE SUMMARY
+This plan provides step-by-step procedures for responding to cybersecurity incidents.
+
+INCIDENT RESPONSE TEAM
+• Incident Commander: [NAME, CONTACT]
+• Technical Lead: [NAME, CONTACT]
+• Communications Lead: [NAME, CONTACT]
+• Legal/Compliance: [NAME, CONTACT]
+
+INCIDENT CLASSIFICATION
+LEVEL 1 - LOW IMPACT
+• Single user affected
+• No data compromise
+• Normal business operations continue
+
+LEVEL 2 - MEDIUM IMPACT
+• Multiple users affected
+• Potential data compromise
+• Some business disruption
+
+LEVEL 3 - HIGH IMPACT
+• Organization-wide impact
+• Confirmed data breach
+• Significant business disruption
+
+RESPONSE PROCEDURES
+
+IMMEDIATE RESPONSE (0-1 HOURS)
+1. Assess and classify the incident
+2. Assemble response team
+3. Contain the incident
+4. Preserve evidence
+5. Document all actions
+
+SHORT-TERM RESPONSE (1-24 HOURS)
+1. Conduct detailed investigation
+2. Implement recovery procedures
+3. Notify relevant parties
+4. Continue monitoring
+5. Regular team updates
+
+LONG-TERM RESPONSE (24+ HOURS)
+1. Complete system recovery
+2. Conduct lessons learned review
+3. Update security measures
+4. File required reports
+5. Monitor for recurring issues
+
+COMMUNICATION TEMPLATES
+[Include templates for internal notifications, customer communications, and regulatory reports]
+
+RECOVERY PROCEDURES
+[Detailed steps for restoring systems and data from backups]
+
+CONTACT INFORMATION
+• Emergency Services: 000
+• Cyber Security Hotline: [NUMBER]
+• Legal Counsel: [CONTACT]
+• Insurance Provider: [CONTACT]
+• Key Vendors: [CONTACTS]
+
+TESTING AND UPDATES
+This plan will be tested every 6 months and updated as needed.`,
+
+            'data-breach-checklist': `DATA BREACH RESPONSE CHECKLIST
+
+IMMEDIATE ACTIONS (FIRST 24 HOURS)
+
+□ HOUR 1: DISCOVERY AND INITIAL RESPONSE
+□ Stop the breach (disconnect affected systems)
+□ Assess scope and severity
+□ Notify incident response team
+□ Preserve evidence
+□ Document discovery time and circumstances
+
+□ HOURS 2-4: CONTAINMENT
+□ Isolate affected systems
+□ Change compromised passwords
+□ Secure physical access points
+□ Implement temporary security measures
+□ Continue evidence preservation
+
+□ HOURS 4-8: INVESTIGATION
+□ Conduct forensic analysis
+□ Identify data types affected
+□ Determine number of individuals impacted
+□ Assess risk level
+□ Gather detailed timeline
+
+□ HOURS 8-24: NOTIFICATION PLANNING
+□ Check legal notification requirements
+□ Prepare notification letters
+□ Set up communication channels
+□ Coordinate with legal counsel
+□ Contact insurance provider
+
+DAYS 2-5: EXTENDED RESPONSE
+
+□ REGULATORY NOTIFICATIONS
+□ Notify data protection authorities (if required)
+□ File required reports
+□ Provide updates as investigation continues
+□ Maintain compliance documentation
+
+□ AFFECTED INDIVIDUAL NOTIFICATIONS
+□ Send individual notifications
+□ Set up call center/support
+□ Provide identity protection services
+□ Monitor for additional concerns
+□ Track notification completion
+
+□ SYSTEM RECOVERY
+□ Implement security improvements
+□ Restore systems from clean backups
+□ Conduct security testing
+□ Update security policies
+□ Provide employee training
+
+ONGOING MONITORING (WEEKS 2-8)
+
+□ CONTINUOUS MONITORING
+□ Monitor for misuse of compromised data
+□ Track identity protection sign-ups
+□ Monitor media coverage
+□ Conduct regular security assessments
+□ Update incident response procedures
+
+□ DOCUMENTATION AND REPORTING
+□ Maintain detailed incident log
+□ Prepare final incident report
+□ Document lessons learned
+□ Update security policies
+□ Schedule follow-up reviews
+
+IMPORTANT CONTACTS
+• Legal Counsel: [CONTACT]
+• Insurance Provider: [CONTACT]
+• Data Protection Authority: [CONTACT]
+• Forensic Investigators: [CONTACT]
+• Public Relations: [CONTACT]
+
+NOTIFICATION TIMEFRAMES
+• Internal Team: Immediate
+• Legal Counsel: Within 2 hours
+• Insurance: Within 24 hours
+• Regulators: [CHECK LOCAL REQUIREMENTS]
+• Affected Individuals: [CHECK LOCAL REQUIREMENTS]`
+        };
+
+        function previewTemplate(templateId) {
+            const modal = document.getElementById('templateModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalBody = document.getElementById('modalBody');
+            
+            modalTitle.textContent = getTemplateTitle(templateId);
+            modalBody.textContent = templateContent[templateId] || 'Preview not available for this template.';
+            
+            modal.style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('templateModal').style.display = 'none';
+        }
+
+        function getTemplateTitle(templateId) {
+            const titles = {
+                'password-policy': 'Password Policy Template',
+                'incident-response-plan': 'Incident Response Plan',
+                'data-breach-checklist': 'Data Breach Response Checklist',
+                'remote-work-policy': 'Remote Work Security Policy',
+                'acceptable-use-policy': 'Acceptable Use Policy',
+                'ransomware-response': 'Ransomware Response Guide',
+                'new-employee-checklist': 'New Employee Security Checklist',
+                'monthly-review-checklist': 'Monthly Security Review Checklist',
+                'vendor-security-assessment': 'Vendor Security Assessment',
+                'phishing-training': 'Phishing Awareness Training',
+                'security-posters': 'Security Awareness Poster Pack',
+                'security-handbook': 'Security Handbook for Employees'
+            };
+            return titles[templateId] || 'Template Preview';
+        }
+
+        function downloadTemplate(templateId) {
+            const content = templateContent[templateId];
+            if (content) {
+                const blob = new Blob([content], { type: 'text/plain' });
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `${templateId}.txt`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                window.URL.revokeObjectURL(url);
+            } else {
+                alert('Template download is not available yet. Please check back later.');
+            }
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('templateModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
