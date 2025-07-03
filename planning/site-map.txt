@@ -1,0 +1,23 @@
+Homepage (index.html)
+├── Getting Started Guide (/docs/getting-started.html)
+├── Threat Awareness (/docs/threats/)
+│   ├── Phishing Guide
+│   ├── Ransomware Prevention
+│   └── Social Engineering
+├── Risk Assessment (/assessment/)
+│   ├── Self-Assessment Tool
+│   └── Results & Recommendations
+├── Implementation Guides (/docs/implementation/)
+│   ├── Password Security
+│   ├── Multi-Factor Authentication
+│   ├── Backup Strategies
+│   └── Secure Wi-Fi Setup
+├── Templates & Downloads (/templates/)
+│   ├── Policy Templates
+│   ├── Incident Response Plans
+│   └── Checklists
+├── Resources (/resources/)
+│   ├── Emergency Contacts
+│   ├── Further Reading
+│   └── Glossary
+└── About (/about.html)

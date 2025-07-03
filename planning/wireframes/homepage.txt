@@ -1,0 +1,6 @@
+[HEADER - Logo + Navigation]
+[MAIN SECTION - Main headline + Call-to-action]
+[QUICK START CARDS - 3 main entry points]
+[FEATURED RESOURCES - Most important tools]
+[TESTIMONIALS/TRUST INDICATORS]
+[FOOTER - Links + Contact]

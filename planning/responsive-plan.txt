@@ -1,0 +1,17 @@
+BREAKPOINTS:
+- Mobile: 320px - 768px
+- Tablet: 768px - 1024px  
+- Desktop: 1024px+
+
+MOBILE-FIRST APPROACH:
+- Single column layout on mobile
+- Collapsible navigation menu
+- Touch-friendly buttons
+- Readable font sizes (16px minimum)
+- Simplified forms and assessments
+
+KEY RESPONSIVE ELEMENTS:
+- Navigation (hamburger menu on mobile)
+- Assessment tool (step-by-step on mobile)
+- Infographics (scalable/downloadable)
+- Templates (mobile-friendly forms)
