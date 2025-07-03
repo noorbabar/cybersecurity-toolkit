@@ -1,0 +1,21 @@
+WRITING GUIDELINES:
+- Use simple, everyday words
+- Avoid technical jargon or explain it immediately
+- Write in second person ("you" not "one")
+- Use active voice
+- Keep sentences under 20 words
+- Use bullet points for lists
+- Include real examples
+- Add "why this matters" context
+
+TONE:
+- Helpful, not condescending
+- Confident but not scary
+- Practical and actionable
+- Empathetic to small business challenges
+
+READABILITY TARGETS:
+- Grade 8 reading level
+- Short paragraphs (3-4 sentences max)
+- Clear headings and subheadings
+- Visual breaks between sections
