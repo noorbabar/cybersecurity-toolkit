@@ -24,7 +24,7 @@
             </div>
         </div>
     </nav>
-    
+
     <div class="mobile-menu">
         <a href="../index.html">Home</a>
         <a href="../docs/guides/">Guides</a>
@@ -199,6 +199,14 @@
     </section>
 
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            });
+        });
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
