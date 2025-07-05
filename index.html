@@ -12,6 +12,8 @@
     <nav>
         <div class="nav-container">
             <a href="#" class="logo">Lock Step</a>
+
+            <button class="menu-toggle" id="menu-toggle">&#9776;</button>
             <div class="nav-links">
                 <a href="../index.html">Home</a>
                 <a href="../docs/guides/">Guides</a>
@@ -258,5 +260,13 @@
             statsObserver.observe(statsSection);
         }
     </script>
+    <script>
+        const toggleButton = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+      
+        toggleButton.addEventListener('click', () => {
+          navLinks.classList.toggle('show');
+        });
+      </script>
 </body>
 </html>
