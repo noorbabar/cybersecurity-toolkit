@@ -1,0 +1,5 @@
+[HEADER - Navigation + Breadcrumbs]
+[SIDEBAR - Table of contents]
+[MAIN CONTENT - Article with headings, images, examples]
+[RELATED RESOURCES - Next steps/related guides]
+[FOOTER]
