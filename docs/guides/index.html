@@ -6,7 +6,6 @@
     <title>Security Guides - Lock Step</title>
     <link rel="stylesheet" href="../../assets/css/guides.css">
     <link rel="stylesheet" href="../../assets/css/styles.css">
-
 </head>
 <body>
     <div class="bg-animation"></div>
@@ -25,46 +24,190 @@
     
     <main>
         <h1>Security Guides</h1>
-        <p style="text-align: center; font-size: 1.1rem; color: #666; margin-bottom: 3rem;">
-            Practical cybersecurity guidance tailored for small businesses
-        </p>
         
-        <div class="guide-grid">
-            <div class="guide-card">
-                <h3> Getting Started</h3>
-                <p>Essential first steps for small business cybersecurity. Learn the basics and get your business protected with simple, actionable steps.</p>
-                <a href="getting-started.html">Read Guide</a>
+        <div class="intro-section">
+            <h2>Your Cybersecurity Journey</h2>
+            <p>These guides are designed to take you from cybersecurity basics to advanced protection strategies. Each section builds on the previous one, creating a comprehensive security foundation for your small business.</p>
+            <p><strong>Start at Level 1</strong> and work your way through each section. Each guide includes "Next Steps" linking to the most relevant follow-up topics.</p>
+        </div>
+        
+        <div class="guide-pathway">
+            <!-- Level 1: thingies here -->
+            <div class="pathway-section">
+                <div class="pathway-title">
+                    <div class="pathway-number">1</div>
+                    Foundation: Start Here
+                </div>
+                <p>Essential knowledge every small business owner needs before implementing any security measures.</p>
+                <div class="guide-list">
+                    <div class="guide-item">
+                        <h4><a href="level1/getting-started.html" style="color: inherit; text-decoration: none;">Understanding Cyber Risk</a></h4>
+                        <p>Learn the Risk = Threat × Vulnerability × Impact formula and how to evaluate your business risks.</p>
+                    </div>
+                    <div class="guide-item">
+                        <h4><a href="level1/cia-triad.html" style="color: inherit; text-decoration: none;">The CIA Triad</a></h4>
+                        <p>Confidentiality, Integrity, Availability, the three pillars of cybersecurity explained simply.</p>
+                    </div>
+                    <div class="guide-item">
+                        <h4><a href="level1/attack-types.html" style="color: inherit; text-decoration: none;">Types of Attacks & Data</a></h4>
+                        <p>Common cyber threats and what data criminals are after in your business.</p>
+                    </div>
+                    <div class="guide-item">
+                        <h4><a href="level1/ppt.html" style="color: inherit; text-decoration: none;">Process, People, Technology</a></h4>
+                        <p>Why cybersecurity is more than just buying software, it's about building a complete system.</p>
+                    </div>
+                </div>
             </div>
             
-            <div class="guide-card">
-                <h3> Phishing Protection</h3>
-                <p>Recognise and prevent phishing attacks. Learn how to spot suspicious emails and protect your team from common scams.</p>
-                <a href="phishing-guide.html">Read Guide</a>
+            <div class="pathway-arrow">↓</div>
+            
+            <!-- Level 2: thingies -->
+            <div class="pathway-section">
+                <div class="pathway-title">
+                    <div class="pathway-number">2</div>
+                    Immediate Actions - Quick Wins
+                </div>
+                <p>High impact security measures you can implement right away to protect your business.</p>
+                <div class="guide-list">
+                    <div class="guide-item">
+                        <h4><a href="level2/mfa-guide.html" style="color: inherit; text-decoration: none;">Multi-Factor Authentication (MFA)</a></h4>
+                        <p>MFA vs 2FA explained, plus step-by-step setup for your most important accounts.</p>
+                    </div>
+                    <div class="guide-item">
+                        <h4><a href="level2/password-security.html" style="color: inherit; text-decoration: none;">Password Security & Training</a></h4>
+                        <p>Strong passwords, password managers, and training your team on password best practices.</p>
+                    </div>
+                    <div class="guide-item">
+                        <h4><a href="level2/phishing-protection.html" style="color: inherit; text-decoration: none;">Phishing Protection</a></h4>
+                        <p>Recognise social engineering attacks and train your team to spot and report suspicious emails.</p>
+                    </div>
+                    <div class="guide-item">
+                        <h4><a href="level2/patch.html" style="color: inherit; text-decoration: none;">Software Updates & Patch Management</a></h4>
+                        <p>Keep your systems secure with automated updates and a simple patch management process.</p>
+                    </div>
+                </div>
             </div>
             
-            <div class="guide-card">
-                <h3> Password Security</h3>
-                <p>Strong passwords and password managers. Create unbreakable passwords and manage them securely across your business.</p>
-                <a href="password-security.html">Read Guide</a>
+            <div class="pathway-arrow">↓</div>
+            
+            <!-- Level 3 things-->
+            <div class="pathway-section">
+                <div class="pathway-title">
+                    <div class="pathway-number">3</div>
+                    Essential Controls - Building Your Defense
+                </div>
+                <p>Core security controls that form the backbone of your cybersecurity program.</p>
+                <div class="guide-list">
+                    <div class="guide-item">
+                        <h4><a href="level3/essential-8.html" style="color: inherit; text-decoration: none;">Essential 8 Implementation</a></h4>
+                        <p>Australia's Essential 8 framework broken down by maturity level - start with what you can do today.</p>
+                    </div>
+                    <div class="guide-item">
+                        <h4><a href="level3/backup-recovery.html" style="color: inherit; text-decoration: none;">Data Backup & Recovery</a></h4>
+                        <p>3-2-1 backup rule, automated solutions, and testing your backups actually work.</p>
+                    </div>
+                    <div class="guide-item">
+                        <h4><a href="level3/iam.html" style="color: inherit; text-decoration: none;">Identity & Access Management (IDAM)</a></h4>
+                        <p>Control who has access to what, implement the AAA framework (Authentication, Authorisation, Accounting).</p>
+                    </div>
+                    <div class="guide-item">
+                        <h4><a href="level3/admin-privileges.html" style="color: inherit; text-decoration: none;">Admin Privileges & User Controls</a></h4>
+                        <p>Limit administrative access and implement user application hardening.</p>
+                    </div>
+                </div>
             </div>
             
-            <div class="guide-card">
-                <h3> Data Backup</h3>
-                <p>Protect your business data with proper backup strategies. Learn the 3-2-1 rule and automated backup solutions.</p>
-                <a href="backup-guide.html">Read Guide</a>
+            <div class="pathway-arrow">↓</div>
+            
+            <!-- Level 4: Advanced Protection -->
+            <div class="pathway-section">
+                <div class="pathway-title">
+                    <div class="pathway-number">4</div>
+                    Advanced Protection - Comprehensive Security
+                </div>
+                <p>Advanced strategies for businesses ready to implement comprehensive security programs.</p>
+                <div class="guide-list">
+                    <div class="guide-item">
+                        <h4><a href="level4/defense-in-depth.html" style="color: inherit; text-decoration: none;">Defense in Depth Strategy</a></h4>
+                        <p>Layer your security controls for maximum protection using physical, technical, and administrative controls.</p>
+                    </div>
+                    <div class="guide-item">
+                        <h4><a href="level4/zero-trust.html" style="color: inherit; text-decoration: none;">Zero Trust Security</a></h4>
+                        <p>Never trust, always verify - implement zero trust principles for your small business.</p>
+                    </div>
+                    <div class="guide-item">
+                        <h4><a href="level4/vulnerability-management.html" style="color: inherit; text-decoration: none;">Vulnerability Management</a></h4>
+                        <p>Systematic approach to finding and fixing security weaknesses before attackers do.</p>
+                    </div>
+                    <div class="guide-item">
+                        <h4><a href="level4/incident-response.html" style="color: inherit; text-decoration: none;">Incident Response Planning</a></h4>
+                        <p>Prepare for breaches with a clear incident response plan and recovery procedures.</p>
+                    </div>
+                </div>
             </div>
             
-            <div class="guide-card">
-                <h3> Software Updates</h3>
-                <p>Keep your systems secure with regular updates. Understand patch management and automatic update strategies.</p>
-                <a href="updates-guide.html">Read Guide</a>
+            <div class="pathway-arrow">↓</div>
+            
+            <!-- Level 5: Frameworks & Compliance -->
+            <div class="pathway-section">
+                <div class="pathway-title">
+                    <div class="pathway-number">5</div>
+                    Frameworks & Compliance - Professional Standards
+                </div>
+                <p>Industry frameworks and compliance requirements for businesses needing formal security programs.</p>
+                <div class="guide-list">
+                    <div class="guide-item">
+                        <h4><a href="level5/nist-framework.html" style="color: inherit; text-decoration: none;">NIST Cybersecurity Framework</a></h4>
+                        <p>Identify, Protect, Detect, Respond, Recover - implement the NIST CSF for small business.</p>
+                    </div>
+                    <div class="guide-item">
+                        <h4><a href="level5/cis-controls.html" style="color: inherit; text-decoration: none;">CIS Controls</a></h4>
+                        <p>Critical Security Controls prioritised for small business implementation.</p>
+                    </div>
+                    <div class="guide-item">
+                        <h4><a href="level5/risk-assessment.html" style="color: inherit; text-decoration: none;">Risk Assessment & Management</a></h4>
+                        <p>Formal risk assessment using NIST 800-30, risk matrices, and management frameworks.</p>
+                    </div>
+                    <div class="guide-item">
+                        <h4><a href="level5/privacy-compliance.html" style="color: inherit; text-decoration: none;">Privacy by Design & Privacy Act</a></h4>
+                        <p>Protect customer data and comply with Australian privacy regulations.</p>
+                    </div>
+                </div>
             </div>
             
-            <div class="guide-card">
-                <h3> Essential 8</h3>
-                <p>Australia's Essential 8 framework explained simply. Government-recommended security strategies for small business.</p>
-                <a href="essential-8.html">Read Guide</a>
+            <div class="pathway-arrow">↓</div>
+            
+            <!-- Level 6: Specialised Topics -->
+            <div class="pathway-section">
+                <div class="pathway-title">
+                    <div class="pathway-number">6</div>
+                    Specialised Topics - Advanced Threats
+                </div>
+                <p>Emerging threats and specialised security considerations for modern businesses.</p>
+                <div class="guide-list">
+                    <div class="guide-item">
+                        <h4><a href="level6/ai-enhanced-attacks.html" style="color: inherit; text-decoration: none;">AI-Enhanced Attacks</a></h4>
+                        <p>How attackers are using AI tools and how to defend against sophisticated AI-powered threats.</p>
+                    </div>
+                    <div class="guide-item">
+                        <h4><a href="level6/third-party-security.html" style="color: inherit; text-decoration: none;">Third-Party Vendor Security</a></h4>
+                        <p>Manage security risks from suppliers, contractors, and service providers.</p>
+                    </div>
+                    <div class="guide-item">
+                        <h4><a href="level6/osint-exposure.html" style="color: inherit; text-decoration: none;">OSINT & Information Exposure</a></h4>
+                        <p>What attackers can learn about your business online and how to limit your exposure.</p>
+                    </div>
+                    <div class="guide-item">
+                        <h4><a href="level6/operational-technology.html" style="color: inherit; text-decoration: none;">Operational Technology (OT) Security</a></h4>
+                        <p>Secure industrial systems, IoT devices, and operational technology in your business.</p>
+                    </div>
+                </div>
             </div>
+        </div>
+        
+        <div class="intro-section">
+            <h2>Getting Started</h2>
+            <p>Not sure where to begin? <a href="../assessment/" style="color: #4A90E2;">Take our Risk Assessment</a> to identify your business's priority areas, or start with <strong>Level 1: Foundation</strong> to build your cybersecurity knowledge from the ground up.</p>
         </div>
     </main>
 </body>
