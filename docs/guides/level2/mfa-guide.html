@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Multi-Factor Authentication Guide - Lock Step</title>
+    <link rel="stylesheet" href="../../../assets/css/levels.css" />
+    <link rel="stylesheet" href="../../../assets/css/styles.css" />
+</head>
+<body>
+    <div class="bg-animation"></div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="../../index.html" class="logo">Lock Step</a>
+            <div class="nav-links">
+                <a href="../../index.html">Home</a>
+                <a href="../index.html">Guides</a>
+                <a href="../assessment/">Assessment</a>
+                <a href="../../templates/">Templates</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="guide-content">
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 25%;"></div>
+            </div>
+
+            <div class="guide-nav">
+                <div class="guide-level">Level 2: Immediate Actions</div>
+                <div>Guide 1 of 4</div>
+            </div>
+
+            <h1>Multi-Factor Authentication (MFA): Your Business's Digital Lock</h1>
+
+            <div class="section">
+                <h2>Think of MFA Like Your Front Door</h2>
+                <p>You wouldn't protect your business with just one flimsy lock, right? Multi-Factor Authentication (MFA) is like having both a key AND a security code for your digital accounts.</p>
+                
+                <div class="example-box">
+                    <p><strong>Simple Example:</strong> When you use your debit card at an ATM, you need both your card (something you have) AND your PIN (something you know). MFA works the same way for your online accounts.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>What Happens When You Don't Have MFA</h2>
+                <div class="example-box">
+                    <p><strong>Real Story:</strong> A local bakery lost $15,000 when hackers got into their business email. The hackers sent fake invoices to suppliers and customers. The bakery didn't have MFA, just a password that was stolen in a data breach.</p>
+                    <p><strong>After adding MFA:</strong> No more security problems, and customers trust them again.</p>
+                    <p><em>Source: Reported by the <a href="https://www.ic3.gov/Media/PDF/AnnualReport/2023_IC3Report.pdf" target="_blank">FBI's Internet Crime Complaint Center (IC3)</a></em></p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>The 3 Types of MFA (Choose What's Easiest for You)</h2>
+                <div class="mfa-types">
+                    <div class="mfa-option">
+                        <h4>📱 Text Messages (SMS): EASIEST START</h4>
+                        <p>You get a code texted to your phone when you log in. Simple, but not the most secure.</p>
+                        <p><strong>Best for:</strong> Getting started quickly</p>
+                    </div>
+                    <div class="mfa-option">
+                        <h4>📲 Authenticator Apps: RECOMMENDED</h4>
+                        <p>Free apps like Google Authenticator or Microsoft Authenticator generate codes on your phone.</p>
+                        <p><strong>Best for:</strong> Better security, works without cell service</p>
+                    </div>
+                    <div class="mfa-option">
+                        <h4>🔐 Security Keys: MOST SECURE</h4>
+                        <p>Physical devices (like a USB key) that you plug into your computer.</p>
+                        <p><strong>Best for:</strong> Maximum security, but costs $25-50 per key</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Step by Step: Setting Up MFA (Start Here!)</h2>
+                
+                <div class="step-container">
+                    <h3>STEP 1: Make Your Priority List (5 minutes)</h3>
+                    <p>Start with these accounts in this order:</p>
+                    <ol>
+                        <li><strong>Business Email</strong> (Gmail, Outlook, etc.),This is your #1 priority</li>
+                        <li><strong>Bank/Payment accounts</strong> (business checking, PayPal, Stripe)</li>
+                        <li><strong>Cloud storage</strong> (Google Drive, Dropbox, OneDrive)</li>
+                        <li><strong>Business software</strong> (QuickBooks, Shopify, social media)</li>
+                    </ol>
+                </div>
+
+                <div class="step-container">
+                    <h3>STEP 2: Download an Authenticator App (10 minutes)</h3>
+                    <p>We recommend starting with an authenticator app. Download one of these free apps:</p>
+                    <ul>
+                        <li><strong>Google Authenticator</strong> (iPhone/Android)</li>
+                        <li><strong>Microsoft Authenticator</strong> (iPhone/Android)</li>
+                        <li><strong>Authy</strong> (iPhone/Android), backs up to cloud</li>
+                    </ul>
+                    <p>Just search for these in your phone's app store and install.</p>
+                </div>
+
+                <div class="step-container">
+                    <h3>STEP 3: Set Up MFA on Your Email (15 minutes)</h3>
+                    
+                    <div class="platform-instructions">
+                        <h4>For Gmail Users:</h4>
+                        <ol>
+                            <li>Go to <strong>myaccount.google.com</strong></li>
+                            <li>Click <strong>"Security"</strong> on the left</li>
+                            <li>Find <strong>"2-Step Verification"</strong> and click it</li>
+                            <li>Click <strong>"Get Started"</strong></li>
+                            <li>Choose <strong>"Authenticator app"</strong></li>
+                            <li>Scan the QR code with your authenticator app</li>
+                            <li>Enter the 6-digit code from your app</li>
+                            <li>Save the backup codes somewhere safe!</li>
+                        </ol>
+                    </div>
+
+                    <div class="platform-instructions">
+                        <h4>For Outlook/Microsoft Users:</h4>
+                        <ol>
+                            <li>Go to <strong>account.microsoft.com</strong></li>
+                            <li>Sign in and click <strong>"Security"</strong></li>
+                            <li>Click <strong>"Advanced security options"</strong></li>
+                            <li>Find <strong>"Two step verification"</strong> and turn it on</li>
+                            <li>Choose <strong>"Use an app"</strong></li>
+                            <li>Scan the QR code with Microsoft Authenticator</li>
+                            <li>Enter the code from your app</li>
+                            <li>Save the backup codes!</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="step-container">
+                    <h3>STEP 4: Test It Works (5 minutes)</h3>
+                    <ol>
+                        <li>Sign out of your email completely</li>
+                        <li>Sign back in with your email and password</li>
+                        <li>When prompted, open your authenticator app</li>
+                        <li>Enter the 6 digit code that appears</li>
+                        <li>You should be logged in successfully</li>
+                    </ol>
+                    <p><strong>If this doesn't work:</strong> Double check you scanned the QR code correctly, or try SMS instead.</p>
+                </div>
+
+                <div class="step-container">
+                    <h3>STEP 5: Save Your Backup Codes (CRITICAL!)</h3>
+                    <div class="example-box">
+                        <p><strong>Important:</strong> Write down or screenshot your backup codes. If you lose your phone, these codes are the only way to get back into your accounts.</p>
+                    </div>
+                    <p>Store these codes in:</p>
+                    <ul>
+                        <li>A password manager (if you have one)</li>
+                        <li>A secure note on a different device</li>
+                        <li>A physical piece of paper in a safe place</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Quick Setup for Other Important Accounts</h2>
+                
+                <div class="account-setup">
+                    <h4>Banking/Financial Apps:</h4>
+                    <p>Look for "Security Settings" or "Two-Factor Authentication" in your account settings. Most banks call it "Secure Login" or "Login Verification."</p>
+                    
+                    <h4>Social Media (Facebook, Instagram, LinkedIn):</h4>
+                    <p>Go to Settings → Security → Two-Factor Authentication. Use your authenticator app here too.</p>
+                    
+                    <h4>Cloud Storage (Google Drive, Dropbox):</h4>
+                    <p>Same process as email, look for "Security" or "Account Settings" and enable 2FA.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Common Problems and Solutions</h2>
+                <div class="faq-section">
+                    <h4> "I don't see a 2FA option"</h4>
+                    <p>Some services call it "Two-Step Verification," "Login Verification," or "Account Security." Search for these terms in settings.</p>
+                    
+                    <h4> "My phone died/broke - now what?"</h4>
+                    <p>Use those backup codes you saved! Each code works once to get you back in.</p>
+                    
+                    <h4> "This seems too complicated"</h4>
+                    <p>Start with SMS codes instead of an app. It's less secure but much better than no MFA at all.</p>
+                    
+                    <h4> "My employees will hate this"</h4>
+                    <p>Show them it only takes 5 extra seconds to log in, but could save the business thousands in losses.</p>
+                </div>
+            </div>
+
+            <div class="action-items">
+                <h3>Quick Action Checklist</h3>
+                <ul>
+                    <li>☐ Download authenticator app on your phone</li>
+                    <li>☐ Enable MFA on your business email (start here!)</li>
+                    <li>☐ Enable MFA on your bank and payment platforms</li>
+                    <li>☐ Enable MFA on cloud storage (Google Drive, Dropbox)</li>
+                    <li>☐ Enable MFA on business software (QuickBooks, social media)</li>
+                    <li>☐ Store backup codes safely</li>
+                    <li>☐ Test login process to make sure it works</li>
+                </ul>
+                <p><strong>Pro tip:</strong> Start with email first, it's the most critical. Then add one new account per day until you're done.</p>
+            </div>
+
+            <div class="section">
+                <h2>Getting Your Team on Board</h2>
+                <p>If you have employees, here's how to introduce MFA without pushback:</p>
+                
+                <div class="team-tips">
+                    <h4>1. Start with yourself first</h4>
+                    <p>Set it up on your own accounts so you can help others.</p>
+                    
+                    <h4>2. Explain the "why"</h4>
+                    <p>"This protects our business and your job. It takes 5 seconds but prevents thousands in losses."</p>
+                    
+                    <h4>3. Make it easy</h4>
+                    <p>Set up a 15-minute meeting to walk through it together, or create a simple instruction sheet.</p>
+                    
+                    <h4>4. Be patient</h4>
+                    <p>Some people need time to adjust. The extra security is worth a few days of complaints.</p>
+                </div>
+            </div>
+            <div class="section">
+                <p><strong>Bottom line:</strong> Any MFA is better than no MFA.</p>
+            </div>
+            <div class="next-steps">
+                <h3>Next: Make Your Passwords Bulletproof</h3>
+                <p>Great job! You've just made your accounts 99.9% more secure. Now let's make sure those passwords are strong enough to work with your new MFA setup.</p>
+
+                <div class="next-steps-grid">
+                    <a href="password-security.html" class="next-step-card">
+                        <h4>Password Security <span class="priority-badge">NEXT</span></h4>
+                        <p>Create passwords that hackers can't crack, even with advanced tools</p>
+                    </a>
+                    <a href="../index.html" class="next-step-card">
+                        <h4>Back to Guides Home</h4>
+                        <p>See all guides and resources</p>
+                    </a>
+                    <a href="../assessment/" class="next-step-card">
+                        <h4>Risk Assessment</h4>
+                        <p>Find your biggest risks and learn what to fix first</p>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+</body>
+</html>
