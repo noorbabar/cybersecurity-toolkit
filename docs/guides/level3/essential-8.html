@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Essential 8 Implementation - Lock Step</title>
+    <link rel="stylesheet" href="../../../assets/css/levels.css" />
+    <link rel="stylesheet" href="../../../assets/css/styles.css" />
+</head>
+<body>
+    <div class="bg-animation"></div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="../../index.html" class="logo">Lock Step</a>
+            <div class="nav-links">
+                <a href="../../index.html">Home</a>
+                <a href="../index.html">Guides</a>
+                <a href="../assessment/">Assessment</a>
+                <a href="../../templates/">Templates</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="guide-content">
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 65%;"></div>
+            </div>
+
+            <div class="guide-nav">
+                <div class="guide-level">Level 3 Essential Controls</div>
+                <div>Guide 1 of 4</div>
+            </div>
+
+            <h1>Essential 8 Implementation</h1>
+
+            <div class="section">
+                <h2>What is the Essential 8?</h2>
+                <p>The Essential Eight is a list from the Australian Cyber Security Centre. It shows the eight key actions every business should take to stop cyber criminals and protect data from ransomware and theft.</p>
+                <p>We’ve talked about some of these before like Multi Factor Authentication and patching. Here, you’ll see how all eight fit together to keep your business safe.</p>
+            </div>
+
+            <div class="section">
+                <h2>The Eight Controls and How to Use Them</h2>
+
+                <div class="example-box">
+                    <h4>1. Application Control</h4>
+                    <p><strong>What it means:</strong> Only allow trusted apps and programs to run on your devices. Block everything else, especially unknown or unneeded software.</p>
+                    <p><strong>How to do it:</strong> On Windows, turn on AppLocker or Microsoft Defender Application Control. Or, set a rule that new software can only be installed after your approval.</p>
+                </div>
+
+                <div class="example-box">
+                    <h4>2. Patch Applications</h4>
+                    <p><strong>What it means:</strong> Keep apps like browsers, PDF readers, and media players updated so cyber criminals can’t use old weaknesses to get in.</p>
+                    <p><strong>How to do it:</strong> Turn on automatic updates or use tools like Ninite to update everything at once. <a href="../level2/patch.html">See full guide</a></p>
+                </div>
+
+                <div class="example-box">
+                    <h4>3. Configure Microsoft Office Macro Settings</h4>
+                    <p><strong>What it means:</strong> Macros are small scripts that can automate tasks in Office but can also spread malware.</p>
+                    <p><strong>How to do it:</strong> Disable macros unless you really need them. In Microsoft 365, go to Trust Center, then Macro Settings, and choose “Disable all except digitally signed macros.”</p>
+                </div>
+
+                <div class="example-box">
+                    <h4>4. User Application Hardening</h4>
+                    <p><strong>What it means:</strong> Turn off risky app features like Flash or JavaScript in PDFs that cyber criminals use to attack.</p>
+                    <p><strong>How to do it:</strong> Use modern browsers like Chrome or Edge with pop-up blockers. Disable or uninstall Flash and Java if you don’t need them.</p>
+                </div>
+
+                <div class="example-box">
+                    <h4>5. Restrict Administrative Privileges</h4>
+                    <p><strong>What it means:</strong> Admin accounts have full control. If hackers get these, they can take over everything.</p>
+                    <p><strong>How to do it:</strong> Only give admin rights to people who really need it. Remove admin rights when staff leave or no longer need them.</p>
+                </div>
+
+                <div class="example-box">
+                    <h4>6. Patch Operating Systems</h4>
+                    <p><strong>What it means:</strong> Keep your computer and phone operating systems updated to close security holes.</p>
+                    <p><strong>How to do it:</strong> Turn on automatic updates on all devices. <a href="../level2/patch.html">Learn more</a></p>
+                </div>
+
+                <div class="example-box">
+                    <h4>7. Multi Factor Authentication</h4>
+                    <p><strong>What it means:</strong> Require more than a password to log in, like a code sent to a phone or an app.</p>
+                    <p><strong>How to do it:</strong> Turn on MFA for email, banking, websites, and any system with important data. <a href="../level2/mfa-guide.html">Step-by-step guide</a></p>
+                </div>
+
+                <div class="example-box">
+                    <h4>8. Regular Backups</h4>
+                    <p><strong>What it means:</strong> Keep copies of your important files so you can recover quickly if cyber criminals lock or delete your data.</p>
+                    <p><strong>How to do it:</strong> Back up at least once a week. Use cloud services like Google Drive or Dropbox, or an external drive kept separately from your computers.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Real World Example When Controls Are Ignored</h2>
+                <div class="example-box">
+                    <p><strong>Case:</strong> In May 2021 JBS Australia was hit by ransomware that shut down meat processing in Australia and North America.</p>
+                    <p><strong>Impact:</strong> Operations stopped, causing financial loss and major disruption.</p>
+                    <p><strong>Fix:</strong> They improved patching, limited admin access, and started daily backups after the attack.</p>
+                    <p><strong>Source:</strong> <a href="https://www.cyber.gov.au/sites/default/files/2023-03/ACSC%20Annual%20Cyber%20Threat%20Report%20-%202020-2021.pdf" target="_blank" rel="noopener noreferrer">Australian Cyber Security Centre Annual Cyber Threat Report 2020 2021</a></p>
+                </div>
+            </div>
+
+            <div class="action-items">
+                <h3>Start These This Week</h3>
+                <ul>
+                    <li>☐ Check who has admin rights and remove where not needed</li>
+                    <li>☐ Turn off macros in Microsoft Office</li>
+                    <li>☐ Back up your important files now</li>
+                    <li>☐ Use our MFA and patch guides to complete other steps</li>
+                </ul>
+                <p>Each step blocks common ways cyber criminals attack. Together, they give your business strong protection.</p>
+            </div>
+
+            <div class="next-steps">
+                <h3>Next Up Backup and Recovery</h3>
+                <p>Learn how to keep backups safe and recover your data fast if something goes wrong.</p>
+
+                <div class="next-steps-grid">
+                    <a href="backup-recovery.html" class="next-step-card">
+                        <h4>Backup and Recovery <span class="priority-badge">NEXT</span></h4>
+                        <p>Get ready for data loss and ransomware</p>
+                    </a>
+                    <a href="../index.html" class="next-step-card">
+                        <h4>Back to Guides</h4>
+                        <p>See all security guides</p>
+                    </a>
+                    <a href="../assessment/" class="next-step-card">
+                        <h4>Risk Assessment</h4>
+                        <p>Find your biggest security risks</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
