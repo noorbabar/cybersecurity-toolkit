@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Simulator - Lock Step</title>
+    <link rel="stylesheet" href="../assets/css/interactive.css"> 
+    <link rel="stylesheet" href="../assets/css/styles.css">
+
+</head>
+<body>
+    <div class="bg-animation"></div>
+    
+    <nav>
+        <div class="nav-container">
+            <a href="../index.html" class="logo">Lock Step</a>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="../docs/guides/">Guides</a>
+                <a href="../docs/assessment/">Assessment</a>
+                <a href="../interactive/">Interactive Tools</a>
+                <a href="../templates/">Templates</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-menu">
+        <a href="../index.html">Home</a>
+        <a href="../docs/guides/">Guides</a>
+        <a href="../docs/assessment/">Assessment</a>
+        <a href="../interactive/">Interactive Tools</a>
+        <a href="../templates/">Templates</a>
+    </div>
+    
+    <div class="simulator-container">
+        <h1> Interactive Phishing Email Simulator</h1>
+        <p style="text-align: center; color: #cccccc; margin-bottom: 2rem;">
+            Learn to spot phishing emails by clicking on suspicious elements. Find all the red flags!
+        </p>
+        
+        <div class="instructions">
+            <h3> How This Works</h3>
+            <ul style="margin: 0; padding-left: 1.5rem;">
+                <li>Look carefully at the email below</li>
+                <li>Click on anything that seems suspicious</li>
+                <li>Find all 5 red flags to complete the training</li>
+                <li>Modern scammers use perfect spelling so look for other warning signs!</li>
+            </ul>
+        </div>
+        
+        <div class="progress-section">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressBar"></div>
+            </div>
+            <div class="score-display" id="scoreDisplay">Red Flags Found: 0/5</div>
+        </div>
+        
+        <div class="email-interface">
+            <div class="email-header">
+                <div class="email-field">
+                    <div class="field-label">From:</div>
+                    <div class="field-value clickable" data-flag="sender">security@amaz0n-support.com</div>
+                </div>
+                <div class="email-field">
+                    <div class="field-label">To:</div>
+                    <div class="field-value">you@yourbusiness.com</div>
+                </div>
+                <div class="email-field">
+                    <div class="field-label">Subject:</div>
+                    <div class="field-value clickable" data-flag="subject">URGENT: Account will be suspended in 24 hours!</div>
+                </div>
+                <div class="email-field">
+                    <div class="field-label">Date:</div>
+                    <div class="field-value">Today, 2:34 PM</div>
+                </div>
+            </div>
+            
+            <div class="email-body">
+                <p>Dear Valued Customer,</p>
+                
+                <p>We have detected <span class="clickable" data-flag="fear">unusual activity on your account that requires immediate verification</span>. Your account will be <span class="clickable" data-flag="urgency">permanently suspended within 24 hours</span> unless you take action now.</p>
+                
+                <p>Please <span class="clickable email-link" data-flag="link">click here to verify your account immediately</span> or risk losing access to all your purchases and Prime benefits.</p>
+                
+                <p>We apologize for any inconvenience.</p>
+                
+                <p>Best regards,<br>
+                Amazon Security Team<br>
+                <span class="clickable" data-flag="contact">security@amaz0n-support.com</span></p>
+                
+                <button class="verify-btn" onclick="handleButtonClick()">VERIFY ACCOUNT NOW</button>
+            </div>
+        </div>
+        
+        <div class="feedback-panel" id="feedbackPanel">
+            <h3 style="color: #0096ff;"> Your Findings</h3>
+            <div id="feedbackContent"></div>
+        </div>
+        
+        <div class="final-results" id="finalResults">
+            <div class="final-score" id="finalScore">5/5</div>
+            <h3 id="resultsTitle"> Perfect Score!</h3>
+            <p id="resultsDescription">You found all the red flags! You're ready to protect your business from phishing attacks.</p>
+        </div>
+        
+        <div style="text-align: center; margin: 30px 0;">
+            <button class="btn" onclick="resetSimulation()"> Try Different Email</button>
+        </div>
+        <a href="../docs/guides/level2/phishing-protection.html" class="btn"> Learn More</a>
+
+    </div>
+
+    <script>
+        let foundFlags = new Set();
+        const totalFlags = 5;
+        
+        const flagExplanations = {
+            'sender': ' Great catch! This uses "amaz0n" with a zero instead of "o", a common spoofing technique.',
+            'subject': ' Excellent! Urgent language like "URGENT" is designed to make you panic and act quickly.',
+            'fear': ' Well spotted! Fear tactics like "unusual activity" are meant to scare you into quick action.',
+            'urgency': ' Perfect! Real companies don\'t impose artificial 24-hour deadlines like this.',
+            'link': ' Great work! Always hover over links - this would lead to a fake website to steal your credentials.',
+            'contact': '📧 Nice catch! This contact email doesn\'t match Amazon\'s real domain (amazon.com).'
+        };
+        
+        const emailTemplates = [
+            {
+                from: 'security@amaz0n-support.com',
+                subject: 'URGENT: Account will be suspended in 24 hours!',
+                body: `<p>Dear Valued Customer,</p>
+                
+                <p>We have detected <span class="clickable" data-flag="fear">unusual activity on your account that requires immediate verification</span>. Your account will be <span class="clickable" data-flag="urgency">permanently suspended within 24 hours</span> unless you take action now.</p>
+                
+                <p>Please <span class="clickable email-link" data-flag="link">click here to verify your account immediately</span> or risk losing access to all your purchases and Prime benefits.</p>
+                
+                <p>We apologize for any inconvenience.</p>
+                
+                <p>Best regards,<br>
+                Amazon Security Team<br>
+                <span class="clickable" data-flag="contact">security@amaz0n-support.com</span></p>
+                
+                <button class="verify-btn" onclick="handleButtonClick()">VERIFY ACCOUNT NOW</button>`
+            },
+            {
+                from: 'notifications@paypa1-security.org',
+                subject: 'Security Alert: Unusual Login Activity Detected', 
+                body: `<p>Hello,</p>
+                
+                <p>We have identified <span class="clickable" data-flag="fear">multiple suspicious login attempts from an unrecognized device</span> on your PayPal account. <span class="clickable" data-flag="urgency">Your account has been temporarily restricted and must be verified within 2 hours.</span></p>
+                
+                <p>Please <span class="clickable email-link" data-flag="link">click here to verify your identity and restore full account access</span> immediately.</p>
+                
+                <p>We appreciate your prompt attention to this security matter.</p>
+                
+                <p>Sincerely,<br>
+                PayPal Security Team<br>
+                <span class="clickable" data-flag="contact">support@paypa1-security.org</span></p>
+                
+                <button class="verify-btn" onclick="handleButtonClick()">RESTORE ACCESS</button>`
+            },
+            {
+                from: 'alerts@your-bank-security.net',
+                subject: 'Critical Security Notice: Account Access Suspended',
+                body: `<p>Dear Customer,</p>
+                
+                <p>Our security systems have <span class="clickable" data-flag="fear">detected potentially fraudulent transactions and unauthorized access attempts</span> on your account. <span class="clickable" data-flag="urgency">Your account has been suspended and must be reactivated within 6 hours.</span></p>
+                
+                <p>To restore access, please <span class="clickable email-link" data-flag="link">verify your identity here</span> using your secure banking credentials.</p>
+                
+                <p>Thank you for your immediate cooperation.</p>
+                
+                <p>Best regards,<br>
+                Online Banking Security<br>
+                <span class="clickable" data-flag="contact">alerts@your-bank-security.net</span></p>
+                
+                <button class="verify-btn" onclick="handleButtonClick()">VERIFY IDENTITY</button>`
+            }
+        ];
+        
+        let currentEmailIndex = 0;
+        
+        function initializeSimulator() {
+            setupClickHandlers();
+            updateProgress();
+        }
+        
+        function setupClickHandlers() {
+            document.querySelectorAll('.clickable').forEach(element => {
+                element.addEventListener('click', function() {
+                    handleClick(this);
+                });
+            });
+        }
+        
+        function handleClick(element) {
+            const flag = element.getAttribute('data-flag');
+            
+            if (flag && !foundFlags.has(flag)) {
+                foundFlags.add(flag);
+                element.classList.add('found');
+                showFeedback(flag);
+                updateProgress();
+                
+                if (foundFlags.size === totalFlags) {
+                    setTimeout(showFinalResults, 1000);
+                }
+            }
+        }
+        
+        function showFeedback(flag) {
+            const panel = document.getElementById('feedbackPanel');
+            const content = document.getElementById('feedbackContent');
+            
+            panel.style.display = 'block';
+            
+            const item = document.createElement('div');
+            item.className = 'feedback-item';
+            item.innerHTML = `
+                <strong> Red Flag Found!</strong><br>
+                ${flagExplanations[flag]}
+            `;
+            
+            content.appendChild(item);
+            item.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+        
+        function updateProgress() {
+            const progress = (foundFlags.size / totalFlags) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+            document.getElementById('scoreDisplay').textContent = `Red Flags Found: ${foundFlags.size}/${totalFlags}`;
+        }
+        
+        function showFinalResults() {
+            const score = foundFlags.size;
+            const percentage = Math.round((score / totalFlags) * 100);
+            
+            document.getElementById('finalScore').textContent = `${score}/${totalFlags} (${percentage}%)`;
+            
+            if (percentage === 100) {
+                document.getElementById('resultsTitle').textContent = '🎉 Perfect Score!';
+                document.getElementById('resultsDescription').textContent = 'Outstanding! You found all the red flags. Your business is much safer with these skills!';
+                document.getElementById('finalResults').style.borderColor = '#28a745';
+            } else if (percentage >= 80) {
+                document.getElementById('resultsTitle').textContent = '👍 Great Job!';
+                document.getElementById('resultsDescription').textContent = 'You caught most of the red flags. With a bit more practice, you\'ll be a phishing expert!';
+                document.getElementById('finalResults').style.borderColor = '#ffc107';
+            } else {
+                document.getElementById('resultsTitle').textContent = '📚 Keep Learning!';
+                document.getElementById('resultsDescription').textContent = 'Phishing detection takes practice. Try the simulation again to improve your skills!';
+                document.getElementById('finalResults').style.borderColor = '#dc3545';
+            }
+            
+            document.getElementById('finalResults').style.display = 'block';
+            document.getElementById('finalResults').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function handleButtonClick() {
+            alert('STOP! In a real scenario, clicking this button would take you to a fake website designed to steal your login credentials. Always verify suspicious emails through official channels first!');
+        }
+        
+        function resetSimulation() {
+            currentEmailIndex = (currentEmailIndex + 1) % emailTemplates.length;
+            const email = emailTemplates[currentEmailIndex];
+            
+            document.querySelector('[data-flag="sender"]').textContent = email.from;
+            document.querySelector('[data-flag="subject"]').textContent = email.subject;
+            document.querySelector('.email-body').innerHTML = email.body;
+            
+            foundFlags.clear();
+            document.querySelectorAll('.found').forEach(el => el.classList.remove('found'));
+            document.getElementById('feedbackPanel').style.display = 'none';
+            document.getElementById('feedbackContent').innerHTML = '';
+            document.getElementById('finalResults').style.display = 'none';
+            
+            updateProgress();
+            setupClickHandlers();
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeSimulator();
+            
+            const hamburger = document.querySelector('.hamburger');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            if (hamburger && mobileMenu) {
+                hamburger.addEventListener('click', function() {
+                    hamburger.classList.toggle('active');
+                    mobileMenu.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

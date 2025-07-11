@@ -1,0 +1,341 @@
+/* Interactive Tools CSS - Save as /assets/css/interactive.css */
+
+.tools-hero {
+    text-align: center;
+    padding: 100px 2rem 4rem;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+}
+
+.main-tool {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid #0096ff;
+    border-radius: 20px;
+    padding: 3rem;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 20px 40px rgba(0, 150, 255, 0.3);
+}
+
+.new-badge {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.tool-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    display: block;
+    text-align: center;
+}
+
+.tool-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.feature {
+    text-align: center;
+    padding: 1rem;
+    background: rgba(0, 150, 255, 0.1);
+    border-radius: 10px;
+    border: 1px solid rgba(0, 150, 255, 0.3);
+}
+
+.feature-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.cta-large {
+    background: linear-gradient(135deg, #0096ff 0%, #0066cc 100%);
+    color: white;
+    text-decoration: none;
+    padding: 1.5rem 3rem;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    display: inline-block;
+    margin: 2rem auto;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.cta-large:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(0, 150, 255, 0.4);
+}
+
+.coming-soon {
+    margin-top: 4rem;
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 15px;
+    border: 1px solid rgba(0, 150, 255, 0.1);
+}
+
+.preview-tools {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.preview-tool {
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+    border: 1px solid rgba(0, 150, 255, 0.2);
+    opacity: 0.6;
+    position: relative;
+}
+
+.preview-tool::after {
+    content: 'Coming Soon';
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(0, 150, 255, 0.3);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+/* Phishing Simulator Specific Styles */
+.simulator-container {
+    max-width: 1000px;
+    margin: 100px auto 2rem;
+    padding: 3rem;
+    background: rgba(10, 10, 26, 0.8);
+    border: 1px solid rgba(0, 150, 255, 0.2);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 20px 40px rgba(0, 150, 255, 0.1);
+}
+
+.email-interface {
+    background: #ffffff;
+    color: #333;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.email-header {
+    background: #f8f9fa;
+    padding: 20px;
+    border-bottom: 1px solid #dee2e6;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.email-field {
+    display: flex;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.email-field:last-child {
+    margin-bottom: 0;
+}
+
+.field-label {
+    font-weight: 600;
+    color: #495057;
+    min-width: 60px;
+    margin-right: 10px;
+}
+
+.field-value {
+    color: #212529;
+    flex: 1;
+    cursor: pointer;
+    padding: 2px 4px;
+    border-radius: 3px;
+    transition: background-color 0.2s ease;
+}
+
+.field-value:hover {
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+.clickable {
+    cursor: pointer;
+    padding: 2px 4px;
+    border-radius: 3px;
+    transition: all 0.2s ease;
+}
+
+.clickable:hover {
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+.found {
+    background-color: rgba(40, 167, 69, 0.2) !important;
+    border: 2px solid #28a745 !important;
+    font-weight: bold;
+}
+
+.email-body {
+    padding: 30px;
+    line-height: 1.6;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 16px;
+}
+
+.email-link {
+    color: #007bff;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.verify-btn {
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.verify-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+.progress-section {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background: rgba(0, 150, 255, 0.2);
+    border-radius: 5px;
+    margin: 15px 0;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #0096ff, #66b3ff);
+    width: 0%;
+    transition: width 0.5s ease;
+}
+
+.score-display {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #0096ff;
+}
+
+.feedback-panel {
+    background: rgba(0, 150, 255, 0.1);
+    border: 1px solid rgba(0, 150, 255, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    display: none;
+}
+
+.feedback-item {
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #28a745;
+    background: rgba(40, 167, 69, 0.1);
+}
+
+.final-results {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid #28a745;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 30px 0;
+    text-align: center;
+    display: none;
+}
+
+.final-score {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #28a745;
+    margin-bottom: 1rem;
+}
+
+.instructions {
+    background: rgba(255, 193, 7, 0.1);
+    border: 1px solid rgba(255, 193, 7, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.instructions h3 {
+    color: #ffc107;
+    margin-bottom: 1rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .main-tool {
+        margin: 1rem;
+        padding: 2rem;
+    }
+    
+    .new-badge {
+        top: 1rem;
+        right: 1rem;
+        padding: 0.3rem 0.8rem;
+        font-size: 0.7rem;
+    }
+    
+    .tool-features {
+        grid-template-columns: 1fr;
+    }
+    
+    .simulator-container {
+        margin: 80px 1rem 2rem;
+        padding: 2rem;
+    }
+    
+    .email-field {
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+    
+    .field-label {
+        margin-bottom: 5px;
+        margin-right: 0;
+    }
+}
