@@ -124,7 +124,6 @@ nav::before {
 }
 
 .logo::before {
-    content: '🔐';
     font-size: 1.5rem;
     animation: pulse 2s infinite;
     filter: drop-shadow(0 0 10px rgba(0, 150, 255, 0.8));
