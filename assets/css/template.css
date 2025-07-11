@@ -47,20 +47,6 @@ body {
     opacity: 1;
 }
 
-.bg-animation::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at 20% 50%, rgba(0, 150, 255, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(0, 100, 255, 0.08) 0%, transparent 50%),
-                radial-gradient(circle at 40% 80%, rgba(0, 150, 255, 0.06) 0%, transparent 50%);
-    animation: float3d 20s ease-in-out infinite;
-    opacity: 0.8;
-}
-
 @keyframes float3d {
     0%, 100% { transform: translateY(0px) rotate(0deg); }
     25% { transform: translateY(-20px) rotate(90deg); }
@@ -199,25 +185,6 @@ main {
     100% { filter: drop-shadow(0 0 40px rgba(0, 150, 255, 0.8)); }
 }
 
-.template-container h1::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 120%;
-    height: 120%;
-    background: conic-gradient(from 0deg, transparent, rgba(0, 150, 255, 0.1), transparent);
-    transform: translate(-50%, -50%);
-    animation: rotate 10s linear infinite;
-    z-index: -1;
-    border-radius: 50%;
-}
-
-@keyframes rotate {
-    0% { transform: translate(-50%, -50%) rotate(0deg); }
-    100% { transform: translate(-50%, -50%) rotate(360deg); }
-}
-
 .template-container > p {
     font-size: 1.1rem;
     color: var(--text-light);
@@ -306,18 +273,6 @@ main {
 @keyframes slideInFromRight {
     0% { opacity: 0; transform: translateX(30px); }
     100% { opacity: 1; transform: translateX(0); }
-}
-
-.template-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #0096ff, transparent);
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
 }
 
 .template-card::after {
@@ -475,17 +430,6 @@ main {
     animation: slideInFromTop 0.8s ease-out;
 }
 
-.usage-tips::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #0096ff, transparent);
-    animation: shimmer 2s infinite;
-}
-
 @keyframes shimmer {
     0% { transform: translateX(-100%); }
     100% { transform: translateX(100%); }
@@ -567,17 +511,6 @@ main {
     box-shadow: var(--shadow-xl);
     overflow: hidden;
     position: relative;
-}
-
-.modal-content::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #0096ff, transparent);
-    animation: shimmer 2s infinite;
 }
 
 .modal-header {
