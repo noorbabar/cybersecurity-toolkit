@@ -19,8 +19,20 @@
                 <a href="index.html">Assessment</a>
                 <a href="../../templates/">Templates</a>
             </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
+
+    <div class="mobile-menu">
+        <a href="../../index.html">Home</a>
+        <a href="../guides/">Guides</a>
+        <a href="index.html">Assessment</a>
+        <a href="../../templates/">Templates</a>
+    </div>
         
     <main>
         <div class="assessment-container">
@@ -367,6 +379,17 @@
             document.querySelectorAll('select').forEach(select => select.selectedIndex = 0);
             nextSection(1);
         }
+        document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.mobile-menu');
+    
+        if (hamburger && mobileMenu) {
+            hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+        }
+        });
     </script>
 </body>
 </html>

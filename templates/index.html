@@ -18,8 +18,20 @@
                 <a href="../docs/assessment/">Assessment</a>
                 <a href="index.html">Templates</a>
             </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </nav>
+
+    <div class="mobile-menu">
+        <a href="../index.html">Home</a>
+        <a href="../docs/guides/">Guides</a>
+        <a href="../docs/assessment/">Assessment</a>
+        <a href="index.html">Templates</a>
+    </div>
 
     <main>
         <div class="template-container">
@@ -567,6 +579,17 @@ NOTIFICATION TIMEFRAMES
                 closeModal();
             }
         }
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const mobileMenu = document.querySelector('.mobile-menu');
+    
+            if (hamburger && mobileMenu) {
+            hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            });
+            }
+        });
     </script>
 </body>
 </html>
