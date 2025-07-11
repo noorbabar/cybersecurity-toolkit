@@ -8,8 +8,10 @@ body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background: linear-gradient(135deg, #010516 0%, #010003 100%);
     min-height: 100vh;
-    color: #2c3e50;
+    color: #ffffff;
     line-height: 1.6;
+    position: relative;
+    overflow-x: hidden;
 }
 
 html {
@@ -24,7 +26,7 @@ html {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+    background: linear-gradient(135deg, #010516 0%, #010003 100%);
 }
 
 .bg-animation::before {
@@ -34,14 +36,18 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><radialGradient id="g" cx="50%" cy="50%" r="50%"><stop offset="0%" style="stop-color:rgba(255,255,255,0.1);stop-opacity:1" /><stop offset="100%" style="stop-color:rgba(255,255,255,0);stop-opacity:0" /></radialGradient></defs><circle cx="50" cy="50" r="50" fill="url(%23g)" /></svg>') repeat;
-    animation: float 20s ease-in-out infinite;
-    opacity: 0.5;
+    background: radial-gradient(circle at 20% 50%, rgba(0, 150, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(0, 100, 255, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(0, 150, 255, 0.06) 0%, transparent 50%);
+    animation: float3d 20s ease-in-out infinite;
+    opacity: 0.8;
 }
 
-@keyframes float {
+@keyframes float3d {
     0%, 100% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-20px) rotate(180deg); }
+    25% { transform: translateY(-20px) rotate(90deg); }
+    50% { transform: translateY(-40px) rotate(180deg); }
+    75% { transform: translateY(-20px) rotate(270deg); }
 }
 
 nav {
@@ -49,9 +55,9 @@ nav {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(0, 150, 255, 0.2);
     padding: 0.75rem 2rem;
     z-index: 1000;
     transition: all 0.3s ease;
@@ -70,17 +76,22 @@ nav {
 .logo {
     font-size: 1.3rem;
     font-weight: 700;
-    color: #000;
+    color: #ffffff;
     text-decoration: none;
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    background: linear-gradient(135deg, #ffffff 0%, #0096ff 50%, #66b3ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .logo::before {
     content: '🔐';
     font-size: 1.5rem;
     animation: pulse 2s infinite;
+    filter: drop-shadow(0 0 10px rgba(0, 150, 255, 0.5));
 }
 
 @keyframes pulse {
@@ -94,29 +105,56 @@ nav {
 }
 
 .nav-links a {
-    color: #000;
+    color: #cccccc;
     text-decoration: none;
     font-weight: 500;
     font-size: 0.9rem;
     padding: 0.5rem 1rem;
     border-radius: 20px;
     transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-links a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 150, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.nav-links a:hover::before {
+    left: 100%;
 }
 
 .nav-links a:hover {
-    background: rgba(255, 255, 255, 0.2);
+    color: #0096ff;
+    background: rgba(0, 150, 255, 0.1);
     transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(0, 150, 255, 0.2);
 }
 
 .assessment-container {
     max-width: 900px;
     margin: 100px auto 2rem;
     padding: 3rem;
-    background: white;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(0, 150, 255, 0.2);
     border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 20px 40px rgba(0, 150, 255, 0.1);
     position: relative;
     overflow: hidden;
+    animation: slideInFromTop 0.8s ease-out;
+}
+
+@keyframes slideInFromTop {
+    0% { opacity: 0; transform: translateY(-30px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
 .assessment-container::before {
@@ -125,28 +163,66 @@ nav {
     top: 0;
     left: 0;
     right: 0;
-    height: 4px;
-    background: linear-gradient(45deg, #c6c6ca, #77b9ff);
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #0096ff, transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
 }
 
 h1 {
     text-align: center;
-    color: #2c3e50;
+    color: #ffffff;
     margin-bottom: 0.5rem;
     font-size: 2.8rem;
     font-weight: 700;
-    background: linear-gradient(45deg, #2c3e50, #34495e);
+    background: linear-gradient(135deg, #ffffff 0%, #0096ff 50%, #66b3ff 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    animation: titleGlow 3s ease-in-out infinite alternate;
+    position: relative;
+}
+
+@keyframes titleGlow {
+    0% { filter: drop-shadow(0 0 20px rgba(0, 150, 255, 0.5)); }
+    100% { filter: drop-shadow(0 0 40px rgba(0, 150, 255, 0.8)); }
+}
+
+h1::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120%;
+    height: 120%;
+    background: conic-gradient(from 0deg, transparent, rgba(0, 150, 255, 0.1), transparent);
+    transform: translate(-50%, -50%);
+    animation: rotate 10s linear infinite;
+    z-index: -1;
+    border-radius: 50%;
+}
+
+@keyframes rotate {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
 .subtitle {
     text-align: center;
-    color: #666;
+    color: #cccccc;
     margin-bottom: 3rem;
     font-size: 1.2rem;
     font-weight: 400;
+    animation: fadeIn 0.8s ease-out 0.2s both;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 .question-section {
@@ -160,11 +236,11 @@ h1 {
 }
 
 .question-section h2 {
-    color: #2c3e50;
+    color: #ffffff;
     margin-bottom: 2rem;
     font-size: 1.8rem;
     font-weight: 600;
-    border-bottom: 2px solid #f0f0f0;
+    border-bottom: 2px solid rgba(0, 150, 255, 0.2);
     padding-bottom: 0.75rem;
     position: relative;
 }
@@ -176,52 +252,87 @@ h1 {
     left: 0;
     width: 60px;
     height: 2px;
-    background: linear-gradient(45deg, #3a627f, #77b9ff);
+    background: linear-gradient(90deg, #0096ff, #66b3ff);
 }
 
 .question {
     margin-bottom: 2rem;
     padding: 1.5rem;
-    background: #f8f9fa;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 150, 255, 0.2);
     border-radius: 15px;
-    border: 1px solid #e9ecef;
+    backdrop-filter: blur(20px);
     transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.question::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 150, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.question:hover::before {
+    left: 100%;
 }
 
 .question:hover {
-    background: #f1f3f4;
-    border-color: #dee2e6;
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #0096ff;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 150, 255, 0.15);
 }
 
 .question label {
     display: block;
     margin-bottom: 1rem;
     font-weight: 600;
-    color: #2c3e50;
+    color: #ffffff;
     font-size: 1.1rem;
+    position: relative;
+    z-index: 1;
 }
 
 select {
     width: 100%;
     padding: 1rem;
-    border: 2px solid #e9ecef;
+    border: 2px solid rgba(0, 150, 255, 0.2);
     border-radius: 10px;
     font-size: 1rem;
-    background: white;
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    backdrop-filter: blur(20px);
     transition: all 0.3s ease;
     font-family: inherit;
+    position: relative;
+    z-index: 1;
 }
 
 select:focus {
     outline: none;
-    border-color: #3a627f;
-    box-shadow: 0 0 0 3px rgba(58, 98, 127, 0.1);
+    border-color: #0096ff;
+    box-shadow: 0 0 0 3px rgba(0, 150, 255, 0.2);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+select option {
+    background: #010516;
+    color: #ffffff;
+    padding: 0.5rem;
 }
 
 .radio-group {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
+    position: relative;
+    z-index: 1;
 }
 
 .radio-option {
@@ -229,41 +340,63 @@ select:focus {
     align-items: center;
     gap: 0.75rem;
     padding: 1rem;
-    background: white;
-    border: 2px solid #e9ecef;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(0, 150, 255, 0.2);
     border-radius: 10px;
+    backdrop-filter: blur(20px);
     transition: all 0.3s ease;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.radio-option::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 150, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.radio-option:hover::before {
+    left: 100%;
 }
 
 .radio-option:hover {
-    background: #f8f9fa;
-    border-color: #3a627f;
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #0096ff;
+    transform: translateX(5px);
+    box-shadow: 0 5px 20px rgba(0, 150, 255, 0.15);
 }
 
 .radio-option input[type="radio"] {
     width: 20px;
     height: 20px;
-    accent-color: #3a627f;
+    accent-color: #0096ff;
     margin: 0;
     cursor: pointer;
-}
-
-.radio-option input[type="radio"]:checked {
-    background: #3a627f;
+    position: relative;
+    z-index: 1;
 }
 
 .radio-option input[type="radio"]:checked + label {
-    color: #2c3e50;
+    color: #0096ff;
     font-weight: 600;
+    text-shadow: 0 0 10px rgba(0, 150, 255, 0.3);
 }
 
 .radio-option label {
     margin: 0;
     font-weight: 500;
     cursor: pointer;
-    color: #495057;
+    color: #cccccc;
     flex: 1;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
 }
 
 .button-group {
@@ -284,31 +417,49 @@ button {
     transition: all 0.3s ease;
     font-family: inherit;
     min-width: 140px;
+    position: relative;
+    overflow: hidden;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+button:hover::before {
+    left: 100%;
 }
 
 .btn-primary {
-    background: linear-gradient(45deg, #cbe8f6, #e1f3ff);
-    color: #000;
-    box-shadow: 0 4px 15px rgba(203, 232, 246, 0.3);
+    background: linear-gradient(135deg, #0096ff 0%, #0066cc 100%);
+    color: white;
+    box-shadow: 0 10px 25px rgba(0, 150, 255, 0.3);
 }
 
 .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(203, 232, 246, 0.4);
-    background: linear-gradient(45deg, #b8ddf0, #d4edff);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(0, 150, 255, 0.4);
+    background: linear-gradient(135deg, #0086e6 0%, #0056b3 100%);
 }
 
 .btn-secondary {
-    background: rgba(187, 236, 255, 0.4);
-    color: #000;
-    border: 2px solid rgba(58, 98, 127, 0.2);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.05);
+    color: #0096ff;
+    border: 2px solid rgba(0, 150, 255, 0.3);
+    backdrop-filter: blur(20px);
 }
 
 .btn-secondary:hover {
-    background: rgba(187, 236, 255, 0.6);
-    border-color: rgba(58, 98, 127, 0.3);
-    transform: translateY(-1px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #0096ff;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 150, 255, 0.2);
 }
 
 .results {
@@ -317,98 +468,169 @@ button {
     border-radius: 20px;
     margin-top: 2rem;
     animation: fadeInUp 0.8s ease-out;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(20px);
+}
+
+.results::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, currentColor, transparent);
+    animation: shimmer 2s infinite;
 }
 
 .risk-low {
-    background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
-    color: #155724;
-    border: 2px solid #b8dacd;
+    background: rgba(76, 175, 80, 0.1);
+    color: #4caf50;
+    border: 2px solid rgba(76, 175, 80, 0.3);
+    box-shadow: 0 20px 40px rgba(76, 175, 80, 0.1);
 }
 
 .risk-medium {
-    background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
-    color: #856404;
-    border: 2px solid #f5c842;
+    background: rgba(255, 193, 7, 0.1);
+    color: #ffc107;
+    border: 2px solid rgba(255, 193, 7, 0.3);
+    box-shadow: 0 20px 40px rgba(255, 193, 7, 0.1);
 }
 
 .risk-high {
-    background: linear-gradient(135deg, #f8d7da 0%, #f1b0b7 100%);
-    color: #721c24;
-    border: 2px solid #e8606d;
+    background: rgba(244, 67, 54, 0.1);
+    color: #f44336;
+    border: 2px solid rgba(244, 67, 54, 0.3);
+    box-shadow: 0 20px 40px rgba(244, 67, 54, 0.1);
 }
 
 .risk-score {
     font-size: 4rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    text-shadow: 0 0 30px currentColor;
+    animation: scoreGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes scoreGlow {
+    0% { filter: drop-shadow(0 0 20px currentColor); }
+    100% { filter: drop-shadow(0 0 40px currentColor); }
 }
 
 .results h2 {
     font-size: 2.2rem;
     margin-bottom: 1rem;
     font-weight: 600;
+    color: #ffffff;
 }
 
 .results p {
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
     font-weight: 500;
+    color: #cccccc;
 }
 
 .recommendations {
     text-align: left;
     margin-top: 2rem;
     padding: 2rem;
-    background: white;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(0, 150, 255, 0.2);
     border-radius: 15px;
-    border: 1px solid #e9ecef;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 10px 30px rgba(0, 150, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.recommendations::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 150, 255, 0.05), transparent);
+    transition: left 0.5s ease;
+}
+
+.recommendations:hover::before {
+    left: 100%;
 }
 
 .recommendations h3 {
-    color: #2c3e50;
+    color: #ffffff;
     margin-bottom: 1.5rem;
     font-size: 1.5rem;
     font-weight: 600;
+    position: relative;
+    z-index: 1;
 }
 
 .recommendations ul {
     list-style: none;
     padding: 0;
+    position: relative;
+    z-index: 1;
 }
 
 .recommendations li {
     padding: 0.75rem 0;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid rgba(0, 150, 255, 0.1);
     font-size: 1rem;
     line-height: 1.5;
+    color: #cccccc;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
 .recommendations li:last-child {
     border-bottom: none;
 }
 
+.recommendations li::before {
+    content: '';
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 150, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.recommendations li:hover::before {
+    left: 100%;
+}
+
 .recommendations li:hover {
-    background: #f8f9fa;
+    background: rgba(255, 255, 255, 0.05);
     padding-left: 1rem;
     margin: 0 -1rem;
     border-radius: 8px;
+    color: #ffffff;
+    transform: translateX(5px);
 }
 
 .priority-high {
-    color: #721c24;
+    color: #f44336;
     font-weight: 700;
+    text-shadow: 0 0 10px rgba(244, 67, 54, 0.3);
 }
 
 .priority-medium {
-    color: #856404;
+    color: #ffc107;
     font-weight: 600;
+    text-shadow: 0 0 10px rgba(255, 193, 7, 0.3);
 }
 
 .priority-low {
-    color: #155724;
+    color: #4caf50;
     font-weight: 600;
+    text-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
 }
 
 .progress-indicator {
@@ -422,17 +644,21 @@ button {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background: #e9ecef;
+    background: rgba(0, 150, 255, 0.2);
     transition: all 0.3s ease;
+    border: 1px solid rgba(0, 150, 255, 0.3);
 }
 
 .progress-dot.active {
-    background: #3a627f;
+    background: #0096ff;
     transform: scale(1.2);
+    box-shadow: 0 0 15px rgba(0, 150, 255, 0.5);
 }
 
 .progress-dot.completed {
-    background: #28a745;
+    background: #4caf50;
+    border-color: #4caf50;
+    box-shadow: 0 0 15px rgba(76, 175, 80, 0.5);
 }
 
 @media (max-width: 768px) {
@@ -508,5 +734,23 @@ button {
     
     .risk-score {
         font-size: 2.5rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .question {
+        border-color: rgba(0, 150, 255, 0.3);
+    }
+    
+    .question:hover {
+        border-color: rgba(0, 150, 255, 0.6);
     }
 }
