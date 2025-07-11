@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Operational Technology Security - Lock Step</title>
+    <link rel="stylesheet" href="../../../assets/css/levels.css" />
+    <link rel="stylesheet" href="../../../assets/css/styles.css" />
+</head>
+<body>
+    <div class="bg-animation"></div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="/../../../index.html" class="logo">Lock Step</a>
+            <div class="nav-links">
+                <a href="/../../../index.html">Home</a>
+                <a href="../index.html">Guides</a>
+                <a href="../assessment/">Assessment</a>
+                <a href="../../templates/">Templates</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="guide-content">
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 75%"></div>
+            </div>
+
+            <div class="guide-nav">
+                <div class="guide-level">Level 6: Emerging Threats</div>
+                <div>Guide 7 of 11</div>
+            </div>
+
+            <h1>Operational Technology Security</h1>
+
+            <div class="section">
+                <h2>What is Operational Technology?</h2>
+                <p>Operational Technology (OT) refers to computing systems that monitor and control industrial equipment, manufacturing processes, and building systems. This includes everything from factory machines and HVAC systems to security cameras and smart lighting.</p>
+                <p>Unlike regular computer networks, OT systems often control physical processes and equipment. When these systems are compromised, the consequences can include production shutdowns, safety hazards, and significant financial losses.</p>
+            </div>
+
+            <div class="section">
+                <h2>Common OT Systems in Small Business</h2>
+                <ul>
+                    <li><strong>Building Management Systems (BMS):</strong> Controls heating, ventilation, air conditioning, lighting, and access control systems in your building.</li>
+                    <li><strong>Security Systems:</strong> IP cameras, access control panels, alarm systems, and video management software.</li>
+                    <li><strong>Manufacturing Equipment:</strong> Computer-controlled machinery, sensors, programmable logic controllers (PLCs), and production monitoring systems.</li>
+                    <li><strong>Point of Sale (POS) Systems:</strong> Cash registers, payment terminals, and inventory management systems connected to your network.</li>
+                    <li><strong>IoT Devices:</strong> Smart printers, network-connected copiers, smart TVs, and wireless presentation systems.</li>
+                    <li><strong>Facilities Equipment:</strong> Smart meters, backup generators with network monitoring, and automated door systems.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>OT Security Challenges</h2>
+                <ul>
+                    <li><strong>Legacy Systems:</strong> Many OT devices run old software that can't be easily updated and may have known security vulnerabilities.</li>
+                    <li><strong>Default Credentials:</strong> Equipment often ships with default usernames and passwords that many businesses never change.</li>
+                    <li><strong>Network Connectivity:</strong> Modern OT systems are increasingly connected to business networks and the internet, expanding their attack surface.</li>
+                    <li><strong>Lack of Visibility:</strong> Many businesses don't know what OT devices are on their network or how to secure them properly.</li>
+                    <li><strong>Operational Requirements:</strong> OT systems often require continuous uptime, making it difficult to apply security updates during business hours.</li>
+                    <li><strong>Mixed Vendors:</strong> Different equipment from various manufacturers with inconsistent security capabilities and update procedures.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Securing OT Systems</h2>
+                <ul>
+                    <li><strong>Network Segmentation:</strong> Create separate network segments for OT devices. Use VLANs or physical separation to isolate them from your main business network.</li>
+                    <li><strong>Change Default Credentials:</strong> Log into every OT device and change default usernames and passwords. Use our <a href="password-security.html">Password Security guide</a> for strong credential practices.</li>
+                    <li><strong>Inventory All Devices:</strong> Create a comprehensive list of all OT equipment including IP addresses, firmware versions, and security contact information for each vendor.</li>
+                    <li><strong>Regular Updates:</strong> Establish a maintenance schedule to apply security updates during planned downtime. Coordinate with equipment vendors for support.</li>
+                    <li><strong>Access Control:</strong> Limit who can access OT systems and require approval for any changes to critical equipment configurations.</li>
+                    <li><strong>Monitoring:</strong> Implement network monitoring to detect unusual activity or unauthorized access to OT systems.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>OT Incident Response Considerations</h2>
+                <ul>
+                    <li><strong>Safety First:</strong> If OT systems control physical processes, prioritize worker and public safety over protecting the equipment during incidents.</li>
+                    <li><strong>Business Continuity:</strong> Have manual procedures ready in case automated systems need to be shut down during a security incident.</li>
+                    <li><strong>Vendor Coordination:</strong> Include equipment vendors in your incident response contacts, as they may be needed for specialized technical support.</li>
+                    <li><strong>Regulatory Reporting:</strong> Some industries have specific requirements for reporting OT security incidents to regulatory authorities.</li>
+                    <li><strong>Evidence Preservation:</strong> Document any changes to OT systems during incident response, as this may be required for insurance claims or investigations.</li>
+                    <li><strong>Recovery Planning:</strong> Test your ability to restore OT systems from backups or rebuild them if necessary.</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Real World Example: Manufacturing Disruption</h2>
+                <div class="example-box">
+                    <p><strong>Case:</strong> A small Australian food processing company suffered a ransomware attack that spread from their office network to their production line control systems.</p>
+                    <p><strong>Impact:</strong> Production halted for five days while they rebuilt systems, resulting in $200,000 in lost revenue and spoiled inventory.</p>
+                    <p><strong>Root Cause:</strong> Manufacturing equipment was connected to the same network as office computers, with default passwords that hadn't been changed in three years.</p>
+                    <p><strong>Prevention:</strong> Network segmentation and changing default credentials would have prevented the attack from reaching production systems.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Simple Steps to Start Today</h2>
+                <ul>
+                    <li>☐ Walk through your premises and list all connected equipment including cameras, printers, HVAC controllers, and manufacturing devices</li>
+                    <li>☐ Log into each device's web interface and change any default usernames and passwords</li>
+                    <li>☐ Contact your network administrator to set up separate VLANs for OT devices</li>
+                    <li>☐ Download firmware update schedules from equipment vendors and set calendar reminders</li>
+                    <li>☐ Create a manual procedures document for critical processes in case automation fails</li>
+                    <li>☐ Test your ability to shut down and restart OT systems safely during planned maintenance windows</li>
+                    <li>☐ Add OT system vendors to your incident response contact list</li>
+                </ul>
+            </div>
+
+            <div class="next-steps">
+                <h3>Next: Risk Matrix</h3>
+                <p>Learn how to visualize and prioritize cybersecurity risks using risk matrices.</p>
+
+                <div class="next-steps-grid">
+                    <a href="risk-matrix.html" class="next-step-card">
+                        <h4>Risk Matrix</h4>
+                        <p>Visualize and prioritize your security risks</p>
+                    </a>
+                    <a href="../index.html" class="next-step-card">
+                        <h4>Back to Guides</h4>
+                        <p>See all security guides</p>
+                    </a>
+                    <a href="../assessment/" class="next-step-card">
+                        <h4>Security Assessment</h4>
+                        <p>Evaluate your OT security posture</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
