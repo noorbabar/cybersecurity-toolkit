@@ -2,7 +2,7 @@
     max-width: 900px;
     margin: 100px auto 2rem;
     padding: 3rem;
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(10, 10, 26, 0.8);
     border: 1px solid rgba(0, 150, 255, 0.2);
     border-radius: 20px;
     backdrop-filter: blur(20px);
@@ -99,7 +99,7 @@
 .question {
     margin-bottom: 2rem;
     padding: 1.5rem;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(10, 10, 26, 0.6);
     border: 1px solid rgba(0, 150, 255, 0.2);
     border-radius: 15px;
     backdrop-filter: blur(20px);
@@ -109,7 +109,7 @@
 }
 
 .question:hover {
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(10, 10, 26, 0.8);
     border-color: #0096ff;
     transform: translateY(-2px);
     box-shadow: 0 10px 30px rgba(0, 150, 255, 0.15);
@@ -131,7 +131,7 @@
     border: 2px solid rgba(0, 150, 255, 0.2);
     border-radius: 10px;
     font-size: 1rem;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(10, 10, 26, 0.8);
     color: #ffffff;
     backdrop-filter: blur(20px);
     transition: all 0.3s ease;
@@ -144,11 +144,11 @@
     outline: none;
     border-color: #0096ff;
     box-shadow: 0 0 0 3px rgba(0, 150, 255, 0.2);
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(10, 10, 26, 0.9);
 }
 
 .assessment-container select option {
-    background: #010516;
+    background: #0a0a1a;
     color: #ffffff;
     padding: 0.5rem;
 }
@@ -166,7 +166,7 @@
     align-items: center;
     gap: 0.75rem;
     padding: 1rem;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(10, 10, 26, 0.6);
     border: 2px solid rgba(0, 150, 255, 0.2);
     border-radius: 10px;
     backdrop-filter: blur(20px);
@@ -177,7 +177,7 @@
 }
 
 .radio-option:hover {
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(10, 10, 26, 0.8);
     border-color: #0096ff;
     transform: translateX(5px);
     box-shadow: 0 5px 20px rgba(0, 150, 255, 0.15);
@@ -260,14 +260,14 @@
 }
 
 .btn-secondary {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(10, 10, 26, 0.8);
     color: #0096ff;
     border: 2px solid rgba(0, 150, 255, 0.3);
     backdrop-filter: blur(20px);
 }
 
 .btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(10, 10, 26, 0.9);
     border-color: #0096ff;
     transform: translateY(-2px);
     box-shadow: 0 10px 25px rgba(0, 150, 255, 0.2);
@@ -347,7 +347,7 @@
     text-align: left;
     margin-top: 2rem;
     padding: 2rem;
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(10, 10, 26, 0.6);
     border: 1px solid rgba(0, 150, 255, 0.2);
     border-radius: 15px;
     backdrop-filter: blur(20px);
@@ -388,7 +388,7 @@
 }
 
 .recommendations li:hover {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(10, 10, 26, 0.8);
     padding-left: 1rem;
     margin: 0 -1rem;
     border-radius: 8px;
@@ -443,14 +443,10 @@
 }
 
 @media (max-width: 768px) {
-    /* Hide nav-links on mobile - handled by styles.css */
-    .nav-links {
-        display: none;
-    }
-    
     .assessment-container {
         margin: 80px 1rem 2rem;
         padding: 2rem 1.5rem;
+        background: rgba(10, 10, 26, 0.9);
     }
     
     .assessment-container h1 {
@@ -467,14 +463,17 @@
     
     .question {
         padding: 1rem;
+        background: rgba(10, 10, 26, 0.8);
     }
     
     .radio-option {
         padding: 0.75rem;
+        background: rgba(10, 10, 26, 0.8);
         transform: none !important;
     }
     
     .radio-option:hover {
+        background: rgba(10, 10, 26, 0.9);
         transform: translateY(-2px) !important;
     }
     
@@ -498,12 +497,14 @@
     
     .recommendations {
         padding: 1.5rem;
+        background: rgba(10, 10, 26, 0.8);
     }
 }
 
 @media (max-width: 480px) {
     .assessment-container {
         padding: 1.5rem 1rem;
+        background: rgba(10, 10, 26, 0.95);
     }
     
     .assessment-container h1 {
@@ -517,6 +518,14 @@
     .risk-score {
         font-size: 2.5rem;
     }
+    
+    .question {
+        background: rgba(10, 10, 26, 0.9);
+    }
+    
+    .radio-option {
+        background: rgba(10, 10, 26, 0.9);
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -524,15 +533,5 @@
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
-    }
-}
-
-@media (prefers-color-scheme: dark) {
-    .question {
-        border-color: rgba(0, 150, 255, 0.3);
-    }
-    
-    .question:hover {
-        border-color: rgba(0, 150, 255, 0.6);
     }
 }
