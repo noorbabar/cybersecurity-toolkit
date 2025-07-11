@@ -281,15 +281,6 @@
             observer.observe(el);
         });
 
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 100) {
-                nav.style.background = 'rgba(44, 62, 80, 0.95)';
-            } else {
-                nav.style.background = 'rgba(255, 255, 255, 0.1)';
-            }
-        });
-
         const animateCounters = () => {
             const counters = document.querySelectorAll('.stat-number');
             counters.forEach(counter => {
