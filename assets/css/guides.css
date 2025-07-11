@@ -3,42 +3,7 @@ main {
     margin: 0 auto;
     padding: 80px 2rem 4rem;
     min-height: 100vh;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     position: relative;
-    overflow: hidden;
-}
-
-main::before {
-    content: '';
-    position: absolute;
-    top: 20%;
-    right: -10%;
-    width: 200px;
-    height: 200px;
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%) !important;
-    border-radius: 50%;
-    animation: float3d 15s ease-in-out infinite;
-    z-index: -1;
-}
-
-main::after {
-    content: '';
-    position: absolute;
-    bottom: 20%;
-    left: -10%;
-    width: 150px;
-    height: 150px;
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%) !important;
-    border-radius: 50%;
-    animation: float3d 20s ease-in-out infinite reverse;
-    z-index: -1;
-}
-
-@keyframes float3d {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    25% { transform: translateY(-20px) rotate(90deg); }
-    50% { transform: translateY(-40px) rotate(180deg); }
-    75% { transform: translateY(-20px) rotate(270deg); }
 }
 
 main h1 {
@@ -46,7 +11,7 @@ main h1 {
     font-weight: 800;
     margin-bottom: 2rem;
     text-align: center;
-        background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%) !important;
+    background: linear-gradient(135deg, #ffffff 0%, #0096ff 50%, #66b3ff 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -58,20 +23,6 @@ main h1 {
 @keyframes titleGlow {
     0% { filter: drop-shadow(0 0 20px rgba(0, 150, 255, 0.5)); }
     100% { filter: drop-shadow(0 0 40px rgba(0, 150, 255, 0.8)); }
-}
-
-main h1::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 120%;
-    height: 120%;
-    background: conic-gradient(from 0deg, transparent, rgba(0, 150, 255, 0.1), transparent);
-    transform: translate(-50%, -50%);
-    animation: rotate 10s linear infinite;
-    z-index: -1;
-    border-radius: 50%;
 }
 
 .intro-section {
@@ -90,17 +41,6 @@ main h1::before {
 @keyframes slideInFromTop {
     0% { opacity: 0; transform: translateY(-30px); }
     100% { opacity: 1; transform: translateY(0); }
-}
-
-.intro-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #0096ff, transparent);
-    animation: shimmer 2s infinite;
 }
 
 .intro-section h2 {
@@ -130,12 +70,6 @@ main h1::before {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    animation: fadeIn 0.8s ease-out 0.2s both;
-}
-
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
 }
 
 .intro-section strong {
@@ -186,12 +120,6 @@ main h1::before {
     width: 2px;
     background: linear-gradient(180deg, transparent, #0096ff, transparent);
     z-index: -1;
-    animation: pathwayGlow 3s ease-in-out infinite alternate;
-}
-
-@keyframes pathwayGlow {
-    0% { box-shadow: 0 0 5px rgba(0, 150, 255, 0.5); }
-    100% { box-shadow: 0 0 15px rgba(0, 150, 255, 0.8); }
 }
 
 .pathway-section {
@@ -213,10 +141,6 @@ main h1::before {
 @keyframes slideInFromRight {
     0% { opacity: 0; transform: translateX(30px); }
     100% { opacity: 1; transform: translateX(0); }
-}
-
-.pathway-section:last-child {
-    border-bottom: none;
 }
 
 .pathway-title {
@@ -244,20 +168,6 @@ main h1::before {
     flex-shrink: 0;
     position: relative;
     box-shadow: 0 0 20px rgba(0, 150, 255, 0.4);
-    animation: pulse 2s ease-in-out infinite;
-}
-
-.pathway-number::before {
-    content: '';
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    background: conic-gradient(from 0deg, transparent, rgba(0, 150, 255, 0.3), transparent);
-    border-radius: 50%;
-    animation: rotate 3s linear infinite;
-    z-index: -1;
 }
 
 .pathway-section > p {
@@ -297,28 +207,12 @@ main h1::before {
     transition: all 0.4s ease;
     position: relative;
     overflow: hidden;
-    transform: perspective(1000px) rotateY(0deg);
-}
-
-.guide-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(0, 150, 255, 0.1), transparent);
-    transition: left 0.5s ease;
-}
-
-.guide-item:hover::before {
-    left: 100%;
 }
 
 .guide-item:hover {
     background: rgba(255, 255, 255, 0.08);
     border-color: #0096ff;
-    transform: perspective(1000px) rotateY(5deg) translateY(-10px);
+    transform: translateY(-5px);
     box-shadow: 0 20px 40px rgba(0, 150, 255, 0.2);
 }
 
@@ -373,52 +267,15 @@ main h1::before {
     font-size: 2.5rem;
     margin: 3rem 0;
     font-weight: 300;
-    animation: bounce 2s infinite;
     text-shadow: 0 0 20px rgba(0, 150, 255, 0.8);
 }
 
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-    40% { transform: translateY(-10px); }
-    60% { transform: translateY(-5px); }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-    .guide-item:nth-child(odd) {
-        animation: slideInFromLeft 0.8s ease-out;
-    }
-    
-    .guide-item:nth-child(even) {
-        animation: slideInFromRight 0.8s ease-out;
-    }
-    
-    .guide-item {
-        animation-fill-mode: both;
-        animation-delay: calc(var(--index) * 0.1s);
-    }
-}
-
-.guide-item {
-    --index: 0;
-    transition: transform 0.1s ease-out;
-}
-
-.guide-item:nth-child(1) { --index: 1; }
-.guide-item:nth-child(2) { --index: 2; }
-.guide-item:nth-child(3) { --index: 3; }
-.guide-item:nth-child(4) { --index: 4; }
-.guide-item:nth-child(5) { --index: 5; }
-.guide-item:nth-child(6) { --index: 6; }
-
-.guide-item:hover {
-    --hover-intensity: 1;
-}
-
-.guide-item:not(:hover) {
-    --hover-intensity: 0;
-}
-
 @media (max-width: 768px) {
+    /* Hide nav-links on mobile - handled by styles.css */
+    .nav-links {
+        display: none;
+    }
+    
     main {
         padding: 60px 1.5rem 3rem;
     }
@@ -522,44 +379,10 @@ main h1::before {
     }
 }
 
-@media (prefers-color-scheme: dark) {
-    .guide-item {
-        border-color: rgba(0, 150, 255, 0.3);
-    }
-    
-    .guide-item:hover {
-        border-color: rgba(0, 150, 255, 0.6);
-    }
-}
-
-@media (prefers-contrast: high) {
-    .guide-item {
-        border-width: 2px;
-        border-color: #0096ff;
-    }
-    
-    .pathway-number {
-        border: 2px solid #ffffff;
-    }
-}
-
 @media (prefers-reduced-motion: reduce) {
     * {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
-    }
-}
-
-@media print {
-    .guide-item {
-        background: white !important;
-        color: black !important;
-        border: 1px solid #000 !important;
-    }
-    
-    .pathway-number {
-        background: black !important;
-        color: white !important;
     }
 }
