@@ -809,6 +809,10 @@ nav {
         font-size: 1.2rem;
     }
     
+    .nav-links {
+        display: none;
+    }
+    
     .hero {
         padding-top: 90px;
     }
