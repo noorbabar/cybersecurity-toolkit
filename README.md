@@ -1,132 +1,71 @@
-Lock Step:
+# Lock Step
+*Cybersecurity Toolkit for Small Businesses*
 
-Cybersecurity Toolkit for Small Businesses
+## Inspiration
+60% of small businesses close within 6 months of a cyber attack, yet they face the same sophisticated threats as major corporations without the resources to defend themselves. 
 
-Inspiration
-My inspiration for creating Lock Step came from the frequent cyber breaches reported in the news. I wanted to understand the pattern behind these attacks: Are they mainly targeting huge corporations, or smaller businesses as well? The statistics are alarming: 60% of small businesses close within 6 months of a cyber attack, yet they face the same sophisticated threats as major corporations without any of the resources to defend themselves.
+Existing cybersecurity frameworks like NIST and CIS Controls are powerful but written for enterprise IT teams. Small business owners don't have time for 100-page technical documents. Lock Step bridges this gap by democratizing cybersecurity - translating complex frameworks into practical guidance that real business owners can actually use.
 
-During research, I discovered that existing cybersecurity education is fundamentally broken for small businesses. Frameworks like NIST, Essential 8, and CIS Controls are incredibly powerful but written for enterprise IT teams with dedicated budgets and technical expertise. A busy cafe owner or family law practice doesn't have time to wade through 100-page documents filled with technical jargon.
+## What it does
+Lock Step transforms intimidating cybersecurity concepts into digestible, actionable resources:
 
-I realised there was a massive gap: small businesses need enterprise level protection but accessible implementation. That's when I decided to create Lock Step, to democratise cybersecurity by translating complex frameworks into practical guidance that real business owners can actually use.
+- **Progressive Learning Guides**: 6 skill levels from beginner to security-aware business owner
+- **Interactive Risk Assessment**: 3-minute questionnaire with prioritized action plans
+- **Ready-to-Use Templates**: Security policies, incident response plans, and compliance checklists
+- **Interactive Phishing Simulator**: Hands-on training for spotting modern phishing attempts
+- **Practical Implementation**: Every recommendation includes specific tools, costs, and step-by-step instructions
 
-What it does
-Lock Step transforms intimidating cybersecurity frameworks and concepts into digestible, actionable resources specifically designed for small businesses:
+##  How I built it
+Built with vanilla HTML, CSS, and JavaScript for strategic reasons:
 
-Progressive Learning Guides: Takes users from complete beginners to security-aware business owners through 6 skill levels (Foundation → Immediate Actions → Essential Controls → Advanced Protection → Frameworks & Compliance → Emerging Threats)
+**Architecture Choices:**
+- **Static Site Design**: No backend required, loads fast, inherently secure
+- **No Dependencies**: Minimizes attack surface, no supply chain vulnerabilities
+- **Mobile-First CSS**: Built from 320px up for maximum accessibility
+- **Progressive Enhancement**: Works without JavaScript, enhanced with it
 
-Interactive Risk Assessment: 3-minute questionnaire that identifies specific vulnerabilities and provides prioritised action plans based on business type, size, and current security posture
+##  Challenges I Faced
 
-Ready-to-Use Templates: Professional security policies, incident response plans, employee training materials, and compliance checklists that businesses can customise and implement immediately
+**Technical:**
+- CSS styling and layout implementation
+- Frontend framework decision (React vs vanilla HTML/CSS/JS)
+- Cross-device compatibility and responsive design
+- UI/UX design technical constraints
 
-Interactive Phishing Simulator: Hands-on training environment where users practice spotting modern phishing attempts (including AI-generated attacks) by clicking on red flags and receiving real-time feedback
+**Content & User Experience:**
+- Balancing technical accuracy with accessibility
+- Defining appropriate scope ("not enough" vs "overwhelming")
+- Language calibration for different technical literacy levels
+- Testing with time-constrained users
+- Designing resources for diverse industries
+- Time management and perfectionism
 
-Practical Implementation Focus: Every recommendation includes specific tools, cost estimates, and step-by-step instructions that non-technical business owners can follow
+## Key Accomplishments
+- Successfully translated enterprise frameworks without losing critical information
+- Created meaningful interactivity without complexity
+- Built practical implementation focus with exact tools and step-by-step instructions
+- Developed logical progression for complete beginners through clear learning paths
+- Used real Australian business case studies and current threats
 
-How I built it
-I deliberately chose vanilla HTML, CSS, and JavaScript instead of modern frameworks like React for several strategic reasons:
+## What I Learned
+- **Content Strategy**: Examples beat theory, progressive disclosure prevents overwhelm, every technical term needs practical context
+- **User Psychology**: Small business owners are time-constrained, trust comes through honesty, empowerment beats fear
+- **Development**: Perfectionism is the enemy, scope definition prevents feature creep, constant user perspective improves everything
 
-Trust and Security: For a cybersecurity toolkit, minimising dependencies reduces the attack surface. No npm packages means no supply chain vulnerabilities
-Performance First: Small business owners often have limited time and older devices. Vanilla code loads instantly without framework overhead
-Accessibility: Direct HTML provides better screen reader support
-Architecture Choices:
+##  What's Next
 
-Static Site Design: No backend required: can be hosted anywhere, loads fast, and is inherently more secure
-Progressive Enhancement: Core functionality works without JavaScript, enhanced features improve the experience
-Mobile-First CSS: Built from 320px up, ensuring accessibility on any device
-Challenges I ran into
-1. Content Simplification Nightmare
+**Immediate (3 months):**
+- User testing with real small business owners
+- Content refinement based on feedback
+- Complete interactive suite (password tester, social engineering simulator)
+- Mobile optimization
 
-My biggest challenge was constant second-guessing about complexity levels. Every single sentence required asking:
+**Medium-term (6 months):**
+- Industry-specific guidance
+- Community features
 
-"Will a busy restaurant owner understand 'multi-factor authentication' or should I say 'two-step login'?"
-"Is 'phishing' too technical, or do I need to explain it every time?"
-"Does 'Essential 8' mean anything to someone who's never heard of the Australian Cyber Security Centre?"
-I spent hours rewriting paragraphs, going from technical accuracy to oversimplification and back. The breaking point was realising I needed to pick a consistent voice: explain once clearly, then use the term confidently.
+**Long-term (12+ months):**
+- Measurement tools for tracking security improvement
+- Certification program
 
-2. Scope Creep and Feature Paralysis
-
-I constantly battled between "this isn't enough" and "this is overwhelming":
-
-Started with just guides, then added assessments, templates, interactive features
-Every cybersecurity topic led to ten more that "absolutely must be included"
-Kept questioning: "Is a phishing simulator essential or just nice-to-have?"
-Worried that without advanced features, it wouldn't be engaging, but with them, it might be too complex
-Solution: I created a strict hierarchy - Foundation → Immediate Actions → Advanced. If something couldn't fit clearly into this progression, it got cut or simplified.
-
-3. Time Management and Perfectionism
-
-Working alone meant every decision took longer:
-
-Spent entire days debating whether to include "Zero Trust" concepts or if that was too advanced
-Rewrote the same guide sections multiple times, never feeling they were "simple enough"
-Got lost in research rabbit holes, reading every NIST document to ensure accuracy
-Constantly switching between coding, content writing, and design, losing momentum
-4. Too Much vs. Too Little
-
-Every piece of content faced this dilemma:
-
-Risk Assessment: Too few questions = inaccurate results. Too many = people quit halfway
-Guide Length: Too short = not actionable. Too long = intimidating
-Technical Depth: Too shallow = useless. Too deep = overwhelming
-For example, the phishing guide went through 5 versions:
-
-Basic email tips (too simple)
-Comprehensive threat analysis (too complex)
-Just the top 5 red flags (too limited)
-Every possible attack type (overwhelming)
-Current version: Modern threats with practical focus
-5. Language Calibration
-
-I obsessed over every word choice:
-
-"Vulnerability" vs. "weakness" vs. "security gap"
-"Implement" vs. "set up" vs. "do"
-"Threat actor" vs. "hacker" vs. "criminal"
-"Mitigation" vs. "protection" vs. "defence"
-The constant question: "Would my local cafe owner understand this sentence?" and "Why does cybersecurity advice so often fail to reach those who need it most?"
-
-Accomplishments I'm proud of
-1. Finding the Sweet Spot Successfully translated enterprise frameworks without losing critical information. The guides are simple enough that a busy florist can follow them, but comprehensive enough that they actually provide real protection.
-
-2. Interactive Innovation Created meaningful interactivity without complexity. The phishing simulator teaches real skills through clicking and discovery, not through reading more text.
-
-3. Practical Implementation Focus Every recommendation includes exact tools to use, and step-by-step instructions. No more "you should consider implementing security measures."
-
-4. Content Architecture Built a logical progression tailored for complete beginners, to those with basic experience, through clear, connected learning paths.
-
-5. Real-World Grounding Used actual Australian business case studies and current threats (AI voice cloning, perfect grammar phishing) instead of hypothetical scenarios.
-
-What I learned
-Content Strategy Insights:
-
-The Power of Examples: Real business scenarios resonate far more than abstract explanations
-Progressive Disclosure Works: Breaking complex topics into digestible chunks prevents cognitive overload
-Jargon: Every technical term needs immediate, practical context
-Action Beats Theory: Users want "what do I do now?" not "here's how this technology works"
-User Psychology:
-
-Small Business Owners Are Time-Constrained: Everything must work within 3-10 minute attention spans
-Trust Through Honesty: Admitting limitations builds more credibility than overselling capabilities
-Fear Is Paralysing: Focusing on empowerment rather than threats gets better results
-Personal Development:
-
-Perfectionism Is The Enemy: Shipping something good beats perfecting something that never launches
-Scope Definition Is Critical: Clear boundaries prevent feature creep and decision paralysis
-User Testing In Your Head: Constantly asking "would my target user understand this?" improves everything, and is it enough to reach those who need it most?
-What's next for Lock Step
-Immediate Priorities (Next 3 months):
-
-User Testing: Get real small business owners to use the toolkit and provide feedback
-Content Refinement: Based on user feedback, continue simplifying language and improving clarity
-Complete Interactive Suite: Add password tester and social engineering simulator
-Mobile Optimisation: Ensure every interaction works perfectly on phones and tablets
-Feature Expansion (6 months):
-
-Industry-Specific Guidance: Tailored pathways for healthcare, retail, professional services
-Community Features: Simple forum for small business owners to share experiences
-Long-term Vision (12+ months):
-
-Measurement Tools: Help businesses track their security improvement over time
-Certification Program: Formal recognition for businesses completing a comprehensive security implementation
-
-Ultimate Goal: Transform cybersecurity from an intimidating technical challenge into an achievable business competency, because every small business deserves enterprise-level protection without enterprise-level complexity.
+**Ultimate Goal:** Transform cybersecurity from an intimidating technical challenge into an achievable business competency - because every small business deserves enterprise-level protection without enterprise-level complexity.
