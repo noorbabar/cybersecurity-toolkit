@@ -44,39 +44,27 @@
             <p>These guides take you from cybersecurity basics to professional-grade protection. Each level builds on the previous one.
             <strong>Start at Level 1</strong> and work through each section. </p>
         </div>
-        
-        <div class="guide-navigator">
-            <div class="navigator-header">
-                <h2>Quick Navigation</h2>
-            </div>            
-            <div class="nav-tabs">
-                <button class="nav-tab active" data-filter="all">All Guides</button>
-                <button class="nav-tab" data-filter="foundation">Foundation</button>
-                <button class="nav-tab" data-filter="immediate">Quick Wins</button>
-                <button class="nav-tab" data-filter="essential">Core Controls</button>
-                <button class="nav-tab" data-filter="advanced">Frameworks</button>
-            </div>
-            
-            <div class="progress-tracker">
-                <div class="progress-item" data-level="1">
-                    <div class="progress-circle">1</div>
-                    <span>Foundation</span>
+        <div class="simple-navigation">
+            <div class="nav-sections">
+                <div class="nav-section-link" data-level="1">
+                    <span class="section-title">Foundation</span>
+                    <span class="section-subtitle">Start Here</span>
                 </div>
-                <div class="progress-item" data-level="2">
-                    <div class="progress-circle">2</div>
-                    <span>Quick Wins</span>
+                <div class="nav-section-link" data-level="2">
+                    <span class="section-title">Quick Wins</span>
+                    <span class="section-subtitle">Immediate Actions</span>
                 </div>
-                <div class="progress-item" data-level="3">
-                    <div class="progress-circle">3</div>
-                    <span>Core Controls</span>
+                <div class="nav-section-link" data-level="3">
+                    <span class="section-title">Core Controls</span>
+                    <span class="section-subtitle">Build Protection</span>
                 </div>
-                <div class="progress-item" data-level="4">
-                    <div class="progress-circle">4</div>
-                    <span>Frameworks</span>
+                <div class="nav-section-link" data-level="4">
+                    <span class="section-title">Frameworks</span>
+                    <span class="section-subtitle">Professional Standards</span>
                 </div>
             </div>
         </div>
-
+      
             <div class="guide-pathway">
                 <!-- Level 1: Start Here -->
                 <div class="pathway-section">
@@ -218,86 +206,24 @@
 
         <script>
         class GuideNavigator {
-    constructor() {
-        this.currentFilter = 'all';
-        this.completedGuides = JSON.parse(localStorage.getItem('completedGuides') || '[]');
-        this.init();
-    }
+        constructor() {
+            this.currentFilter = 'all';
+            this.completedGuides = JSON.parse(localStorage.getItem('completedGuides') || '[]');
+            this.init();
+        }
+        init() {
+            this.setupEventListeners();
+            this.loadProgress();
+            this.setupIntersectionObserver();
+        }
 
-    init() {
-        this.setupEventListeners();
-        this.loadProgress();
-        this.setupIntersectionObserver();
-        this.addDynamicFiltering();
-    }
-
-    setupEventListeners() {
-        document.querySelectorAll('.nav-tab').forEach(tab => {
-            tab.addEventListener('click', (e) => this.handleTabClick(e));
+        setupEventListeners() {
+            document.querySelectorAll('.nav-section-link').forEach(link => {
+            link.addEventListener('click', (e) => this.jumpToLevel(e));
         });
 
-        document.querySelectorAll('.progress-item').forEach(item => {
-            item.addEventListener('click', (e) => this.jumpToLevel(e));
-        });
-
-        document.querySelectorAll('.guide-item').forEach(item => {
+            document.querySelectorAll('.guide-item').forEach(item => {
             item.addEventListener('click', (e) => this.trackGuideVisit(e));
-        });
-    }
-
-    handleTabClick(e) {
-        const filter = e.target.dataset.filter;
-        this.currentFilter = filter;
-    
-        document.querySelectorAll('.nav-tab').forEach(tab => 
-            tab.classList.remove('active'));
-        e.target.classList.add('active');
-    
-        this.filterGuides(filter);
-        this.animateTransition();
-    }
-
-    filterGuides(filter) {
-        const sections = document.querySelectorAll('.pathway-section');
-        const arrows = document.querySelectorAll('.pathway-arrow');
-        
-        const filterMap = {
-            'foundation': [1],
-            'immediate': [2],
-            'essential': [3],
-            'advanced': [4]
-        };
-
-        sections.forEach((section, index) => {
-            const level = index + 1;
-            const shouldShow = filter === 'all' || 
-                (filterMap[filter] && filterMap[filter].includes(level));
-        
-            section.style.display = shouldShow ? 'block' : 'none';
-            
-            if (shouldShow) {
-                setTimeout(() => {
-                    section.style.opacity = '1';
-                    section.style.transform = 'translateY(0)';
-                }, index * 100);
-            }
-        });
-
-        arrows.forEach(arrow => {
-            if (filter === 'all') {
-                arrow.style.display = 'block';
-            } else {
-                arrow.style.display = 'none';
-            }
-        });
-    }
-
-    animateTransition() {
-        const sections = document.querySelectorAll('.pathway-section');
-        sections.forEach(section => {
-            section.style.opacity = '0';
-            section.style.transform = 'translateY(20px)';
-            section.style.transition = 'all 0.3s ease';
         });
     }
 
@@ -337,21 +263,24 @@
     }
 
     jumpToLevel(e) {
-        const level = e.currentTarget.dataset.level;
-        const targetSection = document.querySelector(
-            `.pathway-section:nth-child(${parseInt(level) * 2 - 1})`
-        );
-    
-        if (targetSection) {
-            targetSection.scrollIntoView({ 
-                behavior: 'smooth', 
-                block: 'start' 
-            });
-        
-            this.createRippleEffect(e.currentTarget);
-        }
-    }
+    const level = e.currentTarget.dataset.level;
+    const targetSection = document.querySelector(
+        `.pathway-section:nth-child(${parseInt(level) * 2 - 1})`
+    );
 
+    // Update active state
+    document.querySelectorAll('.nav-section-link').forEach(link => 
+        link.classList.remove('active'));
+    e.currentTarget.classList.add('active');
+
+    if (targetSection) {
+        targetSection.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'start' 
+        });
+    }
+}
+       
     createRippleEffect(element) {
         const ripple = document.createElement('div');
         ripple.className = 'ripple-effect';
@@ -390,73 +319,6 @@
                 circle.classList.add('completed');
                 circle.innerHTML = '✓';
             }
-        });
-    }
-
-    addDynamicFiltering() {
-        const searchInput = document.createElement('input');
-        searchInput.type = 'text';
-        searchInput.placeholder = 'Search guides...';
-        searchInput.className = 'guide-search';
-    
-        document.querySelector('.nav-tabs').appendChild(searchInput);
-    
-        searchInput.addEventListener('input', (e) => {
-            this.performLiveSearch(e.target.value);
-        });
-    }
-
-    performLiveSearch(query) {
-        const guides = document.querySelectorAll('.guide-item');
-        const lowerQuery = query.toLowerCase();
-    
-        guides.forEach(guide => {
-            const title = guide.querySelector('h4').textContent.toLowerCase();
-            const description = guide.querySelector('p').textContent.toLowerCase();
-            const matches = title.includes(lowerQuery) || 
-                          description.includes(lowerQuery);
-        
-            guide.style.display = matches ? 'block' : 'none';
-        
-            if (matches && query.length > 0) {
-                this.highlightSearchTerms(guide, query);
-            } else {
-                this.removeHighlights(guide);
-            }
-        });
-    }
-
-    highlightSearchTerms(element, query) {
-        const walker = document.createTreeWalker(
-            element,
-            NodeFilter.SHOW_TEXT,
-            null,
-            false
-        );
-    
-        const textNodes = [];
-        let node;
-        while (node = walker.nextNode()) {
-            textNodes.push(node);
-        }
-    
-        textNodes.forEach(textNode => {
-            const regex = new RegExp(`(${query})`, 'gi');
-            const highlighted = textNode.textContent.replace(
-                regex, '<mark>$1</mark>'
-            );
-        
-            if (highlighted !== textNode.textContent) {
-                const wrapper = document.createElement('span');
-                wrapper.innerHTML = highlighted;
-                textNode.parentNode.replaceChild(wrapper, textNode);
-            }
-        });
-    }
-
-    removeHighlights(element) {
-        element.querySelectorAll('mark').forEach(mark => {
-            mark.outerHTML = mark.innerHTML;
         });
     }
 }
