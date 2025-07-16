@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Incident Response - Lock Step</title>
+    <title>Incident Response & Recovery - Lock Step</title>
     <link rel="stylesheet" href="../../../assets/css/levels.css" />
     <link rel="stylesheet" href="../../../assets/css/styles.css" />
 </head>
@@ -12,12 +12,13 @@
 
     <nav>
         <div class="nav-container">
-            <a href="/../../../index.html" class="logo">Lock Step</a>
+            <a href="../../../index.html" class="logo">Lock Step</a>
             <div class="nav-links">
-                <a href="/../../../index.html">Home</a>
+                <a href="../../../index.html">Home</a>
                 <a href="../index.html">Guides</a>
-                <a href="../assessment/">Assessment</a>
-                <a href="../../templates/">Templates</a>
+                <a href="../../assessment/">Assessment</a>
+                <a href="../../../templates/">Templates</a>
+                <a href="../../../interactive/">Interactive Tools</a>
             </div>
         </div>
     </nav>
@@ -25,91 +26,287 @@
     <main>
         <div class="guide-content">
             <div class="progress-bar">
-                <div class="progress-fill" style="width: 90%"></div>
+                <div class="progress-fill" style="width: 100%;"></div>
             </div>
 
             <div class="guide-nav">
-                <div class="guide-level">Level 4: Advanced Protection</div>
-                <div>Guide 2 of 4</div>
+                <div class="guide-level">Level 4: Professional Standards</div>
+                <div>Guide 1 of 2</div>
             </div>
 
-            <h1>Incident Response</h1>
+            <h1>Incident Response & Recovery</h1>
 
             <div class="section">
-                <h2>What is Incident Response?</h2>
-                <p>Incident Response is your action plan for when something goes wrong with your computer systems or data. It helps you handle security problems quickly and get back to business faster.</p>
-                <p>Having a plan ready means you won't waste time figuring out what to do during a crisis. You'll know exactly who to call and what steps to take.</p>
-            </div>
-
-            <div class="section">
-                <h2>The Five Phases of Incident Response</h2>
-                <ul>
-                    <li><strong>Preparation:</strong> Get ready before anything happens by creating your plan and gathering contact details.</li>
-                    <li><strong>Identification:</strong> Spot when something suspicious is happening and confirm it's a real security incident.</li>
-                    <li><strong>Containment:</strong> Stop the problem from spreading to other systems or getting worse.</li>
-                    <li><strong>Eradication:</strong> Remove the threat completely from your systems and fix any damage.</li>
-                    <li><strong>Recovery:</strong> Get everything back to normal and put extra monitoring in place.</li>
-                </ul>
+                <h2>What This Is About</h2>
+                <p>Incident response is your action plan for when cyber attacks happen to your business. It combines multiple layers of defense (defense in depth) with structured response procedures to minimise damage and get you back to normal operations quickly.</p>
+                <p>Having a plan ready means you won't waste time figuring out what to do during a crisis. You'll know exactly who to call, what steps to take, and how to recover.</p>
             </div>
 
             <div class="section">
-                <h2>Building Your Incident Response Plan</h2>
-                <ul>
-                    <li><strong>Create your contact sheet:</strong> Write down phone numbers for your IT support company, cyber insurance provider (if you have one), main bank, key suppliers, and your three most important customers. Keep this printed and in your desk drawer.</li>
-                    <li><strong>Define roles clearly:</strong> Write down who makes the final decisions (usually the business owner), who talks to customers, who handles the technical response, and who deals with media or authorities if needed.</li>
-                    <li><strong>Document your critical systems:</strong> Make a simple one-page list of your most important systems (accounting software, customer database, email server) and include instructions on how to safely shut them down if needed.</li>
-                    <li><strong>Understand your insurance:</strong> Call your insurance broker to confirm if you have cyber liability coverage, what it covers, and the exact process to make a claim.</li>
-                    <li><strong>Practice annually:</strong> Once a year, spend 30 minutes walking through a simple scenario like "what if our email goes down" to test if everyone knows their role.</li>
-                    <li><strong>Keep it accessible:</strong> Write the plan in simple bullet points and store copies both digitally and printed, so you can access it even if your computers are down.</li>
-                </ul>
-            </div>
-
-            <div class="section">
-                <h2>Common Incidents for Small Business</h2>
-                <ul>
-                    See our <a href="attac-types.html">Attack Types</a></li>
-                </ul>
-            </div>
-
-            <div class="section">
-                <h2>Real World Example: Quick Response Saves Business</h2>
+                <h2>Defense in Depth Strategy</h2>
+                <p>Before incidents happen, you need multiple layers of protection working together. Think of it like having several locks on your door instead of just one.</p>
+                
                 <div class="example-box">
-                    <p><strong>Case:</strong> A Brisbane marketing agency noticed their computers running slowly and strange files appearing on their server.</p>
-                    <p><strong>Response:</strong> They immediately disconnected from the internet, called their IT support, and switched to backup systems they had prepared.</p>
-                    <p><strong>Result:</strong> They contained the ransomware attack within two hours and restored operations from backups the same day.</p>
-                    <p><strong>Key:</strong> Having a plan and acting quickly prevented a minor incident from becoming a business disaster.</p>
+                    <h4>Essential defense layers:</h4>
+                    <ol>
+                        <li><strong>Physical security:</strong> Locked doors, secure workstations, visitor controls</li>
+                        <li><strong>Network security:</strong> Firewalls, secure WiFi, network segmentation</li>
+                        <li><strong>Endpoint protection:</strong> Antivirus, device encryption, software updates</li>
+                        <li><strong>Email security:</strong> Spam filters, phishing protection, attachment scanning</li>
+                        <li><strong>Access controls:</strong> Strong passwords, multi-factor authentication, user permissions</li>
+                        <li><strong>Data protection:</strong> Encryption, backups, data classification</li>
+                        <li><strong>Staff training:</strong> Security awareness, incident reporting, verification procedures</li>
+                    </ol>
+                </div>
+
+                <div class="example-box">
+                    <h4>Why layered defense works:</h4>
+                    <p>If criminals get past your email filters, they still face strong passwords. If they guess a password, they still need to bypass multi-factor authentication. Each layer makes it harder for attacks to succeed.</p>
+                    <p><strong>Example:</strong> A phishing email gets through your spam filter, but your trained employee recognises it as suspicious and reports it instead of clicking the link.</p>
                 </div>
             </div>
 
             <div class="section">
-                <h2>Your Emergency Response Checklist</h2>
+                <h2>The Five Phases of Incident Response</h2>
+                
+                <div class="example-box">
+                    <h4>Phase 1: Preparation</h4>
+                    <p><strong>What to do before anything happens:</strong></p>
+                    <ul>
+                        <li>Create contact lists for IT support, cyber insurance, bank, and key customers</li>
+                        <li>Document your critical systems and how to shut them down safely</li>
+                        <li>Set up monitoring and backup systems</li>
+                        <li>Train your team on what to do if they spot something suspicious</li>
+                        <li>Test your incident response plan annually</li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <h4>Phase 2: Identification</h4>
+                    <p><strong>How to spot when something is wrong:</strong></p>
+                    <ul>
+                        <li>Unusual computer behavior (slow performance, pop-ups, crashes)</li>
+                        <li>Suspicious emails or phone calls</li>
+                        <li>Unexpected system alerts or error messages</li>
+                        <li>Reports from staff about strange activity</li>
+                        <li>Alerts from security software or monitoring tools</li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <h4>Phase 3: Containment</h4>
+                    <p><strong>Stop the problem from spreading:</strong></p>
+                    <ul>
+                        <li>Disconnect affected devices from the network immediately</li>
+                        <li>Change passwords for compromised accounts</li>
+                        <li>Isolate infected systems</li>
+                        <li>Block suspicious network traffic</li>
+                        <li>Take photos of error messages or suspicious activity</li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <h4>Phase 4: Eradication</h4>
+                    <p><strong>Remove the threat completely:</strong></p>
+                    <ul>
+                        <li>Run antivirus scans on all systems</li>
+                        <li>Remove malware and infected files</li>
+                        <li>Patch security vulnerabilities that were exploited</li>
+                        <li>Update security software and definitions</li>
+                        <li>Verify that the threat is completely removed</li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <h4>Phase 5: Recovery</h4>
+                    <p><strong>Get back to normal operations:</strong></p>
+                    <ul>
+                        <li>Restore systems from clean backups</li>
+                        <li>Gradually reconnect systems to the network</li>
+                        <li>Monitor for signs of continued compromise</li>
+                        <li>Update security measures based on what you learned</li>
+                        <li>Communicate with customers and stakeholders as needed</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Building Your Incident Response Plan</h2>
+                
+                <div class="example-box">
+                    <h4>Essential planning elements:</h4>
+                    <ol>
+                        <li><strong>Response team roles:</strong> Who makes decisions, who handles technical issues, who talks to customers</li>
+                        <li><strong>Communication plan:</strong> How to reach team members, customers, and vendors during an incident</li>
+                        <li><strong>Critical system inventory:</strong> List of your most important systems and how to protect them</li>
+                        <li><strong>Contact information:</strong> IT support, cyber insurance, legal counsel, key suppliers</li>
+                        <li><strong>Recovery procedures:</strong> Step by step instructions for restoring operations</li>
+                        <li><strong>Business continuity:</strong> How to keep essential operations running during incidents</li>
+                    </ol>
+                </div>
+
+                <div class="example-box">
+                    <h4>Recovery and business continuity:</h4>
+                    <ol>
+                        <li><strong>Backup verification:</strong> Regularly test that your backups actually work</li>
+                        <li><strong>Alternative procedures:</strong> Manual processes for when computer systems are down</li>
+                        <li><strong>Remote work capabilities:</strong> How staff can work from home during office disruptions</li>
+                        <li><strong>Vendor relationships:</strong> Agreements with IT support and recovery services</li>
+                        <li><strong>Insurance claims:</strong> Documentation needed for cyber insurance claims</li>
+                        <li><strong>Customer communication:</strong> Templates for notifying customers about incidents</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Common Incident Types and Responses</h2>
+                
+                <div class="example-box">
+                    <h4>Ransomware attack:</h4>
+                    <p><strong>Immediate actions:</strong></p>
+                    <ul>
+                        <li>Disconnect all systems from the network</li>
+                        <li>Don't pay the ransom, contact law enforcement</li>
+                        <li>Check if your backups are clean and available</li>
+                        <li>Call your cyber insurance provider</li>
+                        <li>Document everything with photos and screenshots</li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <h4>Data breach:</h4>
+                    <p><strong>Immediate actions:</strong></p>
+                    <ul>
+                        <li>Contain the breach by securing compromised systems</li>
+                        <li>Assess what data was accessed or stolen</li>
+                        <li>Contact legal counsel about notification requirements</li>
+                        <li>Prepare communications for affected customers</li>
+                        <li>Report to relevant authorities if required</li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <h4>Email compromise:</h4>
+                    <p><strong>Immediate actions:</strong></p>
+                    <ul>
+                        <li>Change passwords for affected email accounts</li>
+                        <li>Check sent items for malicious emails</li>
+                        <li>Warn contacts about potential fake emails</li>
+                        <li>Review email rules and forwarding settings</li>
+                        <li>Enable additional security features</li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <h4>System outage:</h4>
+                    <p><strong>Immediate actions:</strong></p>
+                    <ul>
+                        <li>Determine if outage is from attack or technical failure</li>
+                        <li>Activate backup systems if available</li>
+                        <li>Implement manual procedures for critical processes</li>
+                        <li>Communicate with customers about service disruption</li>
+                        <li>Document timeline and impact for insurance claims</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Real World Example: Layered Defense Prevents Major Damage</h2>
+                <div class="example-box">
+                    <p><strong>What happened:</strong> A Sydney accounting firm received a convincing phishing email that bypassed their email filters. One staff member clicked the link and entered their password on a fake website.</p>
+                    <p><strong>How defense in depth helped:</strong> The attacker gained access to the email account but couldn't access client files because of multi-factor authentication, network segmentation, and limited user permissions.</p>
+                    <p><strong>Incident response:</strong> The firm quickly identified the compromise through monitoring alerts, contained it by changing passwords, and recovered by restoring the affected account from backup.</p>
+                    <p><strong>Result:</strong> What could have been a major data breach was limited to one email account being compromised for a few hours.</p>
+                    <p><strong>Lessons learned:</strong> Multiple security layers and a tested incident response plan prevented catastrophic damage.</p>
+                    <p><strong>Source:</strong> <a href="https://www.cyber.gov.au/sites/default/files/2023-03/ACSC_Small_Business_Cyber_Security_Guide_V6.pdf" target="_blank">ACSC Small Business Cyber Security Guide</a></p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Post-Incident Activities</h2>
+                
+                <div class="example-box">
+                    <h4>Learning from incidents:</h4>
+                    <ol>
+                        <li><strong>Conduct incident review:</strong> What happened, what worked, what didn't</li>
+                        <li><strong>Update security measures:</strong> Fix vulnerabilities that were exploited</li>
+                        <li><strong>Improve response procedures:</strong> Update your incident response plan</li>
+                        <li><strong>Enhance training:</strong> Educate staff about new threats and procedures</li>
+                        <li><strong>Review insurance coverage:</strong> Ensure adequate protection for future incidents</li>
+                        <li><strong>Strengthen defenses:</strong> Add additional security layers where needed</li>
+                    </ol>
+                </div>
+
+                <div class="example-box">
+                    <h4>Documentation and reporting:</h4>
+                    <ul>
+                        <li><strong>Incident timeline:</strong> Detailed record of what happened and when</li>
+                        <li><strong>Response actions:</strong> What steps were taken and by whom</li>
+                        <li><strong>Financial impact:</strong> Costs of the incident and recovery</li>
+                        <li><strong>Lessons learned:</strong> What improvements will be made</li>
+                        <li><strong>Regulatory reporting:</strong> Required notifications to authorities</li>
+                        <li><strong>Insurance claims:</strong> Documentation needed for claims processing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Essential Contacts and Resources</h2>
+                
+                <div class="example-box">
+                    <h4>Emergency contact list:</h4>
+                    <ul>
+                        <li><strong>IT support:</strong> Technical assistance and system recovery</li>
+                        <li><strong>Cyber insurance:</strong> Claims reporting and coverage verification</li>
+                        <li><strong>Legal counsel:</strong> Regulatory compliance and liability advice</li>
+                        <li><strong>Bank:</strong> Account monitoring and fraud prevention</li>
+                        <li><strong>Key suppliers:</strong> Critical vendor relationships</li>
+                        <li><strong>Customer service:</strong> Communication and reputation management</li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <h4>Government resources:</h4>
+                    <ul>
+                        <li><strong>Australian Cyber Security Centre:</strong> 1300 292 371</li>
+                        <li><strong>ReportCyber:</strong> cyber.gov.au/report</li>
+                        <li><strong>ACORN (cybercrime reporting):</strong> acorn.gov.au</li>
+                        <li><strong>Office of the Australian Information Commissioner:</strong> For privacy breaches</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Building Comprehensive Protection</h2>
+                <p>Effective incident response combines prevention, detection, and recovery:</p>
+                
                 <ul>
-                    <li>☐ Disconnect affected systems from the network immediately</li>
-                    <li>☐ Take photos of any error messages or suspicious activity</li>
-                    <li>☐ Contact your IT support or cybersecurity expert</li>
-                    <li>☐ Notify your insurance company if you have cyber coverage</li>
-                    <li>☐ Inform key customers if their data might be affected</li>
-                    <li>☐ Document everything that happened and what you did</li>
-                    <li>☐ Review and update your plan after the incident</li>
+                    <li><strong>Prevention:</strong> Multiple security layers to stop attacks: <a href="../level3/essential-8.html">read more here</a></li>
+                    <li><strong>Detection:</strong> Monitoring and alerts to spot problems early</li>
+                    <li><strong>Response:</strong> Structured procedures to contain and eliminate threats</li>
+                    <li><strong>Recovery:</strong> Backup systems and business continuity planning: <a href="../level3/backup-recovery.html">read more here</a></li>
+                    <li><strong>Learning:</strong> Continuous improvement based on incidents and threats</li>
                 </ul>
             </div>
 
             <div class="next-steps">
-                <h3>Next: Vulnerability Management</h3>
-                <p>Learn how to find and fix security weaknesses before attackers can exploit them.</p>
+                <h3>Next: Frameworks & Compliance</h3>
+                <p>Learn about industry frameworks that help you organise and improve your cybersecurity program.</p>
 
                 <div class="next-steps-grid">
-                    <a href="vulnerability-management.html" class="next-step-card">
-                        <h4>Vulnerability Management</h4>
-                        <p>Find and fix security weaknesses</p>
+                    <a href="frameworks-compliance.html" class="next-step-card">
+                        <h4>Frameworks & Compliance <span class="priority-badge">NEXT</span></h4>
+                        <p>NIST, CIS Controls, privacy compliance, and risk assessment frameworks</p>
                     </a>
+
                     <a href="../index.html" class="next-step-card">
                         <h4>Back to Guides</h4>
                         <p>See all security guides</p>
                     </a>
+
                     <a href="../assessment/" class="next-step-card">
                         <h4>Risk Assessment</h4>
-                        <p>Find your biggest security risks</p>
+                        <p>Evaluate your incident response readiness</p>
                     </a>
                 </div>
             </div>
