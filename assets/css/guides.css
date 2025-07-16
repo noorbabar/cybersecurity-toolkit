@@ -271,7 +271,6 @@ main h1 {
 }
 
 @media (max-width: 768px) {
-    /* Hide nav-links on mobile - handled by styles.css */
     .nav-links {
         display: none;
     }
@@ -385,4 +384,151 @@ main h1 {
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
+}
+.guide-navigator {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 150, 255, 0.2);
+    border-radius: 20px;
+    padding: 2rem;
+    margin: 2rem 0;
+    backdrop-filter: blur(20px);
+}
+
+.nav-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.nav-tab {
+    padding: 0.75rem 1.5rem;
+    background: rgba(0, 150, 255, 0.1);
+    border: 2px solid rgba(0, 150, 255, 0.3);
+    border-radius: 25px;
+    color: #0096ff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-tab:hover, .nav-tab.active {
+    background: linear-gradient(135deg, #0096ff 0%, #0066cc 100%);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(0, 150, 255, 0.4);
+}
+
+.progress-tracker {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow-x: auto;
+    padding: 1rem 0;
+}
+
+.progress-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    min-width: 120px;
+}
+
+.progress-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(0, 150, 255, 0.2);
+    border: 2px solid rgba(0, 150, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0096ff;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-bottom: 0.5rem;
+}
+
+.progress-circle.active {
+    background: linear-gradient(135deg, #0096ff 0%, #0066cc 100%);
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 150, 255, 0.6);
+}
+
+.progress-circle.completed {
+    background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);
+    border-color: #4caf50;
+    color: white;
+}
+
+.guide-search {
+    padding: 0.5rem 1rem;
+    border: 2px solid rgba(0, 150, 255, 0.3);
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    min-width: 200px;
+}
+
+.ripple-effect {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(0, 150, 255, 0.3);
+    transform: scale(0);
+    animation: ripple 0.6s linear;
+    pointer-events: none;
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+mark {
+    background: rgba(255, 193, 7, 0.3);
+    color: #ffc107;
+    padding: 0.1rem 0.2rem;
+    border-radius: 3px;
+}
+
+.navigator-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.navigator-header h2 {
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+}
+
+.optional-guides {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: rgba(74, 144, 226, 0.05);
+    border-radius: 8px;
+    border-left: 4px solid #4A90E2;
+}
+
+.optional-content {
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+
+.optional-guides h3 {
+    margin: 0 0 0.5rem 0;
+    color: #4A90E2;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
