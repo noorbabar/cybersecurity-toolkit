@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Identity & Access Management - Lock Step</title>
+    <title>Managing Staff & Access - Lock Step</title>
     <link rel="stylesheet" href="../../../assets/css/levels.css" />
     <link rel="stylesheet" href="../../../assets/css/styles.css" />
 </head>
@@ -12,12 +12,13 @@
 
     <nav>
         <div class="nav-container">
-            <a href="/../../../index.html" class="logo">Lock Step</a>
+            <a href="../../../index.html" class="logo">Lock Step</a>
             <div class="nav-links">
-                <a href="/../../../index.html">Home</a>
+                <a href="../../../index.html">Home</a>
                 <a href="../index.html">Guides</a>
-                <a href="../assessment/">Assessment</a>
-                <a href="../../templates/">Templates</a>
+                <a href="../../assessment/">Assessment</a>
+                <a href="../../../templates/">Templates</a>
+                <a href="../../../interactive/">Interactive Tools</a>
             </div>
         </div>
     </nav>
@@ -25,80 +26,183 @@
     <main>
         <div class="guide-content">
             <div class="progress-bar">
-                <div class="progress-fill" style="width: 75%"></div>
+                <div class="progress-fill" style="width: 50%;"></div>
             </div>
 
             <div class="guide-nav">
-                <div class="guide-level">Level 3: Essential Controls</div>
-                <div>Guide 3 of 4</div>
+                <div class="guide-level">Level 3: Building Protection</div>
+                <div>Guide 2 of 3</div>
             </div>
 
-            <h1>Identity and Access Management (IDAM)</h1>
+            <h1>Managing Staff & Access</h1>
 
             <div class="section">
-                <h2>What is Identity and Access Management?</h2>
-                <p>Identity and Access Management means controlling who can get into your business systems and data. It makes sure only the right people can see or change important information.</p>
-                <p>This stops cyber criminals from sneaking in using stolen passwords or leftover accounts from people who no longer work with you.</p>
-            </div>
-
-            <div class="section">
-                <h2>The AAA of Access Management</h2>
-                <p>To keep your business safe, focus on the three key parts of access control, known as <strong>AAA</strong>:</p>
-                <ul>
-                    <li><strong>Authentication:</strong> Confirming who someone is — usually by requiring a username and password, or better, adding a second step like a code sent to a phone (MFA).</li>
-                    <li><strong>Authorization:</strong> Deciding what that person is allowed to do. For example, a staff member might view customer info but not delete it.</li>
-                    <li><strong>Accounting:</strong> Keeping records of who accessed what and when — so you can check if anything suspicious happens.</li>
-                </ul>
-                <p>Using these three steps helps you control access carefully and spot problems early.</p>
+                <h2>What This Is About</h2>
+                <p>Managing staff and access means controlling who can get into your business systems and training your team to spot cyber threats. Your employees are both your biggest security risk and your strongest defense, it all depends on how well you manage and train them.</p>
+                <p>Most successful cyber attacks target employees rather than breaking through technical defenses, making staff management and training critical for small business security.</p>
             </div>
 
             <div class="section">
-                <h2>How to Manage Identity and Access</h2>
-                <ul>
-                    <li><strong>Review who has access:</strong> Make a list of everyone with accounts and what they can do.</li>
-                    <li><strong>Remove old accounts:</strong> Delete or disable accounts for former staff, contractors, or temporary users.</li>
-                    <li><strong>Use strong passwords:</strong> Require passwords that are hard to guess, and change them regularly.</li>
-                    <li><strong>Turn on Multi Factor Authentication (MFA):</strong> Require a second check like a code on a phone whenever someone logs in.</li>
-                    <li><strong>Limit access:</strong> Give people only the access they need to do their job, not more.</li>
-                    <li><strong>Keep logs:</strong> Where possible, track who logged in and what they did to help catch problems early.</li>
-                </ul>
-            </div>
-
-            <div class="section">
-                <h2>Real World Example: When Access Is Not Managed</h2>
+                <h2>The AAA Framework (Access Control Basics)</h2>
+                <p>Every business needs to follow three key steps for controlling access to systems and data:</p>
+                
                 <div class="example-box">
-                    <p><strong>Case:</strong> A small Australian healthcare provider was hit by ransomware after a staff computer without admin restrictions was compromised.</p>
-                    <p><strong>Impact:</strong> Systems were locked and patients turned away. The business shut down for five days and costs went over fifty thousand dollars.</p>
-                    <p><strong>Fix:</strong> They now limit admin access to the owner, use automatic updates, and perform backups every night.</p>
-                    <p><strong>Source:</strong> <a href="https://www.cyber.gov.au/sites/default/files/2023-03/ACSC_Small_Business_Cyber_Security_Guide_V6.pdf" target="_blank" rel="noopener noreferrer">ACSC Small Business Cyber Security Guide</a></p>
+                    <h4>Authentication - Who are you?</h4>
+                    <p><strong>What it means:</strong> Confirming someone is who they claim to be before letting them in.</p>
+                    <p><strong>What to do:</strong></p>
+                    <ul>
+                        <li>Require strong passwords for all accounts</li>
+                        <li>Use two-factor authentication, we'll cover this in detail: <a href="../level2/mfa-guide.html">read more here</a></li>
+                        <li>Never share login credentials between people</li>
+                        <li>Change passwords immediately when staff leave</li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <h4>Authorisation: What can you do?</h4>
+                    <p><strong>What it means:</strong> Deciding what someone is allowed to access once they're logged in.</p>
+                    <p><strong>What to do:</strong></p>
+                    <ul>
+                        <li>Give people only the minimum access they need for their job</li>
+                        <li>Limit admin privileges to essential staff only</li>
+                        <li>Review and update permissions when roles change</li>
+                        <li>Remove access to sensitive data for temporary workers</li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <h4>Accounting: What did you do?</h4>
+                    <p><strong>What it means:</strong> Keeping records of who accessed what and when.</p>
+                    <p><strong>What to do:</strong></p>
+                    <ul>
+                        <li>Enable login logs on important systems</li>
+                        <li>Monitor for unusual access patterns</li>
+                        <li>Keep records of permission changes</li>
+                        <li>Review logs monthly for suspicious activity</li>
+                    </ul>
                 </div>
             </div>
 
             <div class="section">
-                <h2>Simple Steps to Start Today</h2>
+                <h2>Employee Security Training</h2>
+                
+                <div class="example-box">
+                    <h4>What your team needs to know:</h4>
+                    <ol>
+                        <li><strong>How to spot phishing emails:</strong> Look for urgent language, spelling mistakes, and requests for passwords or money</li>
+                        <li><strong>Password security:</strong> We'll show them how to create strong passwords: <a href="../level2/password-security.html">read more here</a></li>
+                        <li><strong>Physical security:</strong> Lock computers when stepping away and don't let strangers into the office</li>
+                        <li><strong>Social engineering:</strong> Be suspicious of phone calls asking for sensitive information</li>
+                        <li><strong>When to ask for help:</strong> Create a culture where staff feel comfortable reporting suspicious activity</li>
+                    </ol>
+                </div>
+
+                <div class="example-box">
+                    <h4>Training methods that work:</h4>
+                    <ol>
+                        <li><strong>Monthly 10 minute team meetings:</strong> Cover one security topic each month</li>
+                        <li><strong>Real examples:</strong> Share news stories about local businesses that got attacked</li>
+                        <li><strong>Simple desk cards:</strong> Give each employee a card with security reminders</li>
+                        <li><strong>Practice scenarios:</strong> Test how staff handle suspicious emails or phone calls</li>
+                        <li><strong>Reward good behavior:</strong> Acknowledge staff who report suspicious activity</li>
+                    </ol>
+                </div>
+
+                <div class="example-box">
+                    <h4>Modern phishing training (AI era):</h4>
+                    <p>Today's phishing attacks use AI to create perfect emails with no spelling mistakes. Train your team to:</p>
+                    <ul>
+                        <li>Always verify unusual requests through a different communication method</li>
+                        <li>Check email addresses carefully, scammers use similar domains</li>
+                        <li>Be extra suspicious of urgency and pressure tactics</li>
+                        <li>Question requests that seem out of character for the sender</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Managing Admin Privileges</h2>
+                
+                <div class="example-box">
+                    <h4>Why limit admin access:</h4>
+                    <p>Admin privileges let someone control everything on your computers and systems. If a cyber criminal gets admin access, they can steal all your data, install malware, or lock you out completely.</p>
+                    
+                    <p><strong>What to do:</strong></p>
+                    <ol>
+                        <li><strong>Find who has admin access:</strong> Check user accounts on all computers and systems</li>
+                        <li><strong>Remove unnecessary admin rights:</strong> Only business owners and essential IT staff should have admin access</li>
+                        <li><strong>Use standard accounts for daily work:</strong> Even admins should use regular accounts for email and normal tasks</li>
+                        <li><strong>Secure admin accounts:</strong> Use strong passwords and two-factor authentication</li>
+                        <li><strong>Monitor admin activity:</strong> Keep logs of when admin accounts are used and for what</li>
+                        <li><strong>Remove access immediately:</strong> When someone leaves, remove their admin access the same day</li>
+                    </ol>
+                </div>
+
+                <div class="example-box">
+                    <h4>Setting up user controls:</h4>
+                    <ol>
+                        <li><strong>Create role-based access:</strong> Group similar jobs together with the same permissions</li>
+                        <li><strong>Use the principle of least privilege:</strong> Give people only what they need, nothing more</li>
+                        <li><strong>Review access quarterly:</strong> Check who has access to what every three months</li>
+                        <li><strong>Document everything:</strong> Keep records of who has access to what and why</li>
+                        <li><strong>Test your controls:</strong> Try accessing systems with different user accounts to verify restrictions work</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Real-World Example: Insider Threat Prevented</h2>
+                <div class="example-box">
+                    <p><strong>What happened:</strong> A Perth marketing agency discovered that a contractor was accessing client files outside their project scope, potentially to steal client lists for a competing business.</p>
+                    <p><strong>How it was caught:</strong> The business had implemented access logging and noticed the contractor was logging in during weekends and accessing files unrelated to their assigned project.</p>
+                    <p><strong>What they did:</strong> They immediately revoked the contractor's access, reviewed what files were accessed, and implemented stricter access controls with project specific permissions.</p>
+                    <p><strong>The lesson:</strong> Proper access controls and monitoring caught the threat before any data was stolen or misused.</p>
+                    <p><strong>Source:</strong> <a href="https://www.cyber.gov.au/sites/default/files/2023-03/ACSC_Small_Business_Cyber_Security_Guide_V6.pdf" target="_blank">ACSC Small Business Cyber Security Guide</a></p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Building Your Access Management System</h2>
+                <p>Here's what you need to implement comprehensive staff and access management:</p>
+                
+                <div class="example-box">
+                    <h4>Essential components:</h4>
+                    <ul>
+                        <li><strong>User account management:</strong> Create accounts for each person with appropriate permissions</li>
+                        <li><strong>Password policies:</strong> We'll show you how to implement strong password requirements: <a href="../level2/password-security.html">read more here</a></li>
+                        <li><strong>Multi-factor authentication:</strong> Add extra security layers: <a href="../level2/mfa-guide.html">read more here</a></li>
+                        <li><strong>Regular training:</strong> Keep your team updated on the latest threats and procedures</li>
+                        <li><strong>Access reviews:</strong> Regularly check and update who has access to what</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Key Management Principles</h2>
                 <ul>
-                    <li>☐ List all user accounts and their permissions</li>
-                    <li>☐ Remove access for anyone who no longer needs it</li>
-                    <li>☐ Require strong passwords and change them every 3 to 6 months</li>
-                    <li>☐ Turn on Multi Factor Authentication for all important accounts</li>
-                    <li>☐ Limit admin rights only to trusted people who really need it</li>
-                    <li>☐ Where possible, enable logging to track user activity</li>
+                    <li><strong>Start with people:</strong> Train your team before implementing complex technical controls</li>
+                    <li><strong>Limit access:</strong> Give people only what they need to do their job</li>
+                    <li><strong>Monitor activity:</strong> Keep logs of who accesses what and when</li>
+                    <li><strong>Remove access quickly:</strong> When someone leaves, remove their access immediately</li>
+                    <li><strong>Review regularly:</strong> Check permissions and training effectiveness quarterly</li>
                 </ul>
             </div>
 
             <div class="next-steps">
-                <h3>Next: Admin Privileges</h3>
-                <p>Learn more about why limiting administrator access is important and how to do it.</p>
+                <h3>Next: Essential 8 Implementation</h3>
+                <p>Now that you have staff and access management in place, learn about Australia's Essential 8 framework for comprehensive security.</p>
 
                 <div class="next-steps-grid">
-                    <a href="admin-privileges.html" class="next-step-card">
-                        <h4>Admin Privileges</h4>
-                        <p>Keep admin access limited to reduce risks</p>
+                    <a href="essential-8.html" class="next-step-card">
+                        <h4>Essential 8 Implementation <span class="priority-badge">NEXT</span></h4>
+                        <p>Australia's Essential 8 framework broken down for small business implementation</p>
                     </a>
+
                     <a href="../index.html" class="next-step-card">
                         <h4>Back to Guides</h4>
                         <p>See all security guides</p>
                     </a>
+
                     <a href="../assessment/" class="next-step-card">
                         <h4>Risk Assessment</h4>
                         <p>Find your biggest security risks</p>
