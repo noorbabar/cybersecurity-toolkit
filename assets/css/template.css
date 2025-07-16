@@ -398,7 +398,6 @@
 }
 
 @media (max-width: 768px) {
-    /* Hide nav-links on mobile - handled by styles.css */
     .nav-links {
         display: none;
     }

@@ -9,18 +9,15 @@ function nextSection(sectionNumber) {
 }
 
 function calculateRisk() {
-    // Collect all form data
     assessmentData.businessType = document.getElementById('business-type').value;
     assessmentData.employeeCount = document.getElementById('employee-count').value;
     assessmentData.mfa = document.querySelector('input[name="mfa"]:checked')?.value;
     assessmentData.passwords = document.querySelector('input[name="passwords"]:checked')?.value;
     assessmentData.backup = document.querySelector('input[name="backup"]:checked')?.value;
     
-    // Calculate risk score
     let riskScore = 0;
     let riskFactors = [];
     
-    // MFA check
     if (assessmentData.mfa === 'no') {
         riskScore += 30;
         riskFactors.push('No multi-factor authentication');
@@ -29,13 +26,11 @@ function calculateRisk() {
         riskFactors.push('Incomplete MFA coverage');
     }
     
-    // Password check
     if (assessmentData.passwords === 'memory' || assessmentData.passwords === 'written') {
         riskScore += 25;
         riskFactors.push('Weak password management');
     }
     
-    // Backup check
     if (assessmentData.backup === 'no') {
         riskScore += 20;
         riskFactors.push('No data backup strategy');
@@ -49,7 +44,6 @@ function calculateRisk() {
         riskScore += 10;
     }
     
-    // Show results
     showResults(riskScore, riskFactors);
 }
 
@@ -73,7 +67,6 @@ function showResults(score, factors) {
         recommendations = generateHighRiskRecommendations(factors);
     }
     
-    // Display results
     document.getElementById('risk-score').innerHTML = `
         <div class="risk-badge" style="background-color: ${riskColor}">
             <h3>${riskLevel}</h3>
