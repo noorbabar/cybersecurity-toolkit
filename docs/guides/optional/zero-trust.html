@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Zero Trust for Small Business - Lock Step</title>
+    <link rel="stylesheet" href="../../../assets/css/levels.css" />
+    <link rel="stylesheet" href="../../../assets/css/styles.css" />
+</head>
+<body>
+    <div class="bg-animation"></div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="../../../index.html" class="logo">Lock Step</a>
+            <div class="nav-links">
+                <a href="../../../index.html">Home</a>
+                <a href="../index.html">Guides</a>
+                <a href="../../assessment/">Assessment</a>
+                <a href="../../../templates/">Templates</a>
+                <a href="../../../interactive/">Interactive Tools</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="guide-content">
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 60%;"></div>
+            </div>
+
+            <div class="guide-nav">
+                <div class="guide-level">Optional: Specialised Topics</div>
+                <div>Guide 3 of 6</div>
+            </div>
+
+            <h1>Zero Trust for Small Business</h1>
+
+            <div class="section">
+                <h2>What This Is About</h2>
+                <p>Zero Trust is a security approach that assumes no one and nothing can be trusted automatically, even if they're inside your network. Every user, device, and application must prove they are legitimate before accessing anything.</p>
+                <p>Instead of building a wall around your business and trusting everything inside, Zero Trust checks every request every time. It's like having a security guard who asks for ID even if they recognise you.</p>
+            </div>
+
+            <div class="section">
+                <h2>Why Traditional Security Isn't Enough</h2>
+                <p>Traditional security assumes that if someone is inside your network, they must be trustworthy. But this creates problems:</p>
+                
+                <div class="example-box">
+                    <h4>Problems with traditional "castle and moat" security:</h4>
+                    <ul>
+                        <li><strong>Inside threats:</strong> Employees or contractors can access too much</li>
+                        <li><strong>Lateral movement:</strong> If criminals get inside, they can move freely</li>
+                        <li><strong>Remote work gaps:</strong> Home networks don't have the same protections</li>
+                        <li><strong>Cloud blind spots:</strong> Cloud services are outside your traditional perimeter</li>
+                        <li><strong>Device diversity:</strong> Personal devices accessing business systems</li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <h4>How Zero Trust is different:</h4>
+                    <ul>
+                        <li><strong>Never trust, always verify:</strong> Check every access request</li>
+                        <li><strong>Assume breach:</strong> Plan as if attackers are already inside</li>
+                        <li><strong>Least privilege:</strong> Give minimal access needed for each task</li>
+                        <li><strong>Continuous monitoring:</strong> Watch for suspicious behavior constantly</li>
+                        <li><strong>Verify explicitly:</strong> Use multiple sources to confirm identity</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Zero Trust Components for Small Business</h2>
+                
+                <div class="example-box">
+                    <h4>Identity verification:</h4>
+                    <p><strong>What to do:</strong></p>
+                    <ul>
+                        <li>Use multi-factor authentication on all systems:<a href="../level2/mfa-guide.html">read more here</a></li>
+                        <li>Implement strong password policies: <a href="../level2/password-security.html">read more here</a></li>
+                        <li>Monitor for unusual login patterns</li>
+                        <li>Use single sign on (SSO) to centralise access control</li>
+                        <li>Regularly review user access permissions</li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <h4>Device security:</h4>
+                    <p><strong>What to do:</strong></p>
+                    <ul>
+                        <li>Register all devices that access business systems</li>
+                        <li>Ensure devices are encrypted and updated</li>
+                        <li>Use mobile device management (MDM) for phones and tablets</li>
+                        <li>Implement device compliance policies</li>
+                        <li>Monitor device behavior for anomalies</li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <h4>Network segmentation:</h4>
+                    <p><strong>What to do:</strong></p>
+                    <ul>
+                        <li>Separate different types of devices and users</li>
+                        <li>Create VLANs for different business functions</li>
+                        <li>Use a guest network for visitors</li>
+                        <li>Implement microsegmentation for critical systems</li>
+                        <li>Monitor network traffic for unusual patterns</li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <h4>Application security:</h4>
+                    <p><strong>What to do:</strong></p>
+                    <ul>
+                        <li>Protect each application with its own security controls</li>
+                        <li>Use application-level access controls</li>
+                        <li>Implement API security for cloud services</li>
+                        <li>Monitor application usage patterns</li>
+                        <li>Use cloud access security brokers (CASB)</li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <h4>Data protection:</h4>
+                    <p><strong>What to do:</strong></p>
+                    <ul>
+                        <li>Encrypt data wherever it's stored</li>
+                        <li>Classify data by sensitivity level</li>
+                        <li>Control who can access different types of data</li>
+                        <li>Monitor data access and movement</li>
+                        <li>Use data loss prevention (DLP) tools</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Implementing Zero Trust on a Budget</h2>
+                
+                <div class="example-box">
+                    <h4>Phase 1: Identity and access (0-3 months):</h4>
+                    <ol>
+                        <li><strong>Enable MFA everywhere:</strong> Start with email and cloud services</li>
+                        <li><strong>Implement strong password policies:</strong> Use password managers for all staff</li>
+                        <li><strong>Review user access:</strong> Remove unnecessary permissions</li>
+                        <li><strong>Use built-in security features:</strong> Enable security features in Office 365 or Google Workspace</li>
+                        <li><strong>Monitor login activity:</strong> Set up alerts for unusual access patterns</li>
+                    </ol>
+                </div>
+
+                <div class="example-box">
+                    <h4>Phase 2: Device and network security (3-6 months):</h4>
+                    <ol>
+                        <li><strong>Inventory all devices:</strong> Know what's connecting to your network</li>
+                        <li><strong>Segment your network:</strong> Create VLANs for different user groups</li>
+                        <li><strong>Implement device policies:</strong> Require encryption and updates</li>
+                        <li><strong>Use VPN for remote access:</strong> Secure all remote connections - <a href="remote-work-security.html">read more here</a></li>
+                        <li><strong>Monitor network traffic:</strong> Watch for unusual activity</li>
+                    </ol>
+                </div>
+
+                <div class="example-box">
+                    <h4>Phase 3: Application and data security (6-12 months):</h4>
+                    <ol>
+                        <li><strong>Secure cloud applications:</strong> Use conditional access policies</li>
+                        <li><strong>Implement data classification:</strong> Label sensitive information</li>
+                        <li><strong>Use application proxies:</strong> Control access to cloud services</li>
+                        <li><strong>Deploy endpoint detection:</strong> Monitor devices for threats</li>
+                        <li><strong>Regular security assessments:</strong> Test your Zero Trust implementation</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Real-World Example: Zero Trust Prevents Insider Threat</h2>
+                <div class="example-box">
+                    <p><strong>What happened:</strong> A Melbourne consulting firm implemented Zero Trust after a contractor accidentally downloaded malware while working on client files.</p>
+                    <p><strong>How Zero Trust helped:</strong> The system required re-authentication when the infected laptop tried to access sensitive client files, and the unusual behavior triggered alerts.</p>
+                    <p><strong>The result:</strong> The malware was contained to just the laptop because the system didn't trust the device's new behavior patterns. No client data was compromised.</p>
+                    <p><strong>Traditional security would have:</strong> Trusted the laptop because it was inside the network, allowing the malware to spread.</p>
+                    <p><strong>Source:</strong> <a href="https://www.cyber.gov.au/sites/default/files/2023-03/ACSC_Small_Business_Cyber_Security_Guide_V6.pdf" target="_blank">ACSC Small Business Cyber Security Guide</a></p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Zero Trust vs Traditional Security</h2>
+                
+                <div class="example-box">
+                    <h4>Traditional security approach:</h4>
+                    <ul>
+                        <li>Trust devices inside the network</li>
+                        <li>Focus on perimeter defense</li>
+                        <li>Once inside, users have broad access</li>
+                        <li>Security focused on keeping threats out</li>
+                        <li>Assumes internal traffic is safe</li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <h4>Zero Trust approach:</h4>
+                    <ul>
+                        <li>Trust nothing, verify everything</li>
+                        <li>Security everywhere, not just at the perimeter</li>
+                        <li>Access granted on need-to-know basis</li>
+                        <li>Assumes threats are already inside</li>
+                        <li>Monitors all traffic for threats</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Tools and Technologies</h2>
+                
+                <div class="example-box">
+                    <h4>Essential Zero Trust tools:</h4>
+                    <ul>
+                        <li><strong>Identity providers:</strong> Microsoft Azure AD, Google Identity</li>
+                        <li><strong>Multi-factor authentication:</strong> Microsoft Authenticator, Google Authenticator</li>
+                        <li><strong>VPN solutions:</strong> NordLayer, ExpressVPN Business</li>
+                        <li><strong>Endpoint detection:</strong> Microsoft Defender for Business, CrowdStrike</li>
+                        <li><strong>Network monitoring:</strong> Built-in router logging, SolarWinds</li>
+                        <li><strong>Cloud security:</strong> Microsoft Cloud App Security, Google Cloud Security</li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <h4>Budget-friendly starting options:</h4>
+                    <ul>
+                        <li>Use built-in security features in Office 365 or Google Workspace</li>
+                        <li>Enable conditional access policies in your cloud services</li>
+                        <li>Use Windows Defender or built-in Mac security features</li>
+                        <li>Implement network segmentation with your existing router</li>
+                        <li>Use free monitoring tools like Windows Event Viewer</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Getting Started with Zero Trust</h2>
+                <p>Zero Trust implementation should be gradual and systematic:</p>
+                
+                <ul>
+                    <li><strong>Start with identity:</strong> Implement MFA and access controls first</li>
+                    <li><strong>Inventory everything:</strong> Know all users, devices, and applications</li>
+                    <li><strong>Segment gradually:</strong> Start with basic network separation</li>
+                    <li><strong>Monitor continuously:</strong> Watch for unusual behavior patterns</li>
+                    <li><strong>Improve iteratively:</strong> Add new controls as you learn and grow</li>
+                </ul>
+            </div>
+
+            <div class="next-steps">
+                <h3>Next: Operational Technology Security</h3>
+                <p>Learn about securing industrial systems and connected devices in your business.</p>
+
+                <div class="next-steps-grid">
+                    <a href="operational-technology.html" class="next-step-card">
+                        <h4>Operational Technology Security <span class="priority-badge">NEXT</span></h4>
+                        <p>Secure your industrial systems and IoT devices</p>
+                    </a>
+
+                    <a href="../index.html" class="next-step-card">
+                        <h4>Back to Guides</h4>
+                        <p>See all security guides</p>
+                    </a>
+
+                    <a href="../assessment/" class="next-step-card">
+                        <h4>Risk Assessment</h4>
+                        <p>Evaluate your Zero Trust implementation</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

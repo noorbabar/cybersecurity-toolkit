@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Securing Connected Devices - Lock Step</title>
+    <link rel="stylesheet" href="../../../assets/css/levels.css" />
+    <link rel="stylesheet" href="../../../assets/css/styles.css" />
+</head>
+<body>
+    <div class="bg-animation"></div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="../../../index.html" class="logo">Lock Step</a>
+            <div class="nav-links">
+                <a href="../../../index.html">Home</a>
+                <a href="../index.html">Guides</a>
+                <a href="../../assessment/">Assessment</a>
+                <a href="../../../templates/">Templates</a>
+                <a href="../../../interactive/">Interactive Tools</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="guide-content">
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 80%;"></div>
+            </div>
+
+            <div class="guide-nav">
+                <div class="guide-level">Optional: Specialised Topics</div>
+                <div>Guide 4 of 6</div>
+            </div>
+
+            <h1>Securing Connected Devices</h1>
+
+            <div class="section">
+                <h2>What This Is About</h2>
+                <p>Operational Technology (OT) and Internet of Things (IoT) devices are computers that control physical equipment in your business. This includes everything from smart printers and security cameras to manufacturing equipment and building management systems.</p>
+                <p>These devices often have weak security and can be entry points for cyber criminals to access your business network and data.</p>
+            </div>
+
+            <div class="section">
+                <h2>Common Connected Devices in Small Business</h2>
+                
+                <div class="example-box">
+                    <h4>Office devices:</h4>
+                    <ul>
+                        <li><strong>Smart printers and copiers:</strong> Often connected to your network with weak default passwords</li>
+                        <li><strong>Security cameras:</strong> IP cameras that can be accessed over the internet</li>
+                        <li><strong>Access control systems:</strong> Electronic door locks and card readers</li>
+                        <li><strong>Smart TVs and displays:</strong> Conference room displays and digital signage</li>
+                        <li><strong>VoIP phones:</strong> Internet-connected phone systems</li>
+                        <li><strong>Wireless presentation systems:</strong> Devices for screen sharing in meetings</li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <h4>Building systems:</h4>
+                    <ul>
+                        <li><strong>HVAC controllers:</strong> Heating, ventilation, and air conditioning systems</li>
+                        <li><strong>Lighting controls:</strong> Smart lighting systems</li>
+                        <li><strong>Fire safety systems:</strong> Connected smoke detectors and alarms</li>
+                        <li><strong>Energy management:</strong> Smart meters and power monitoring</li>
+                        <li><strong>Security systems:</strong> Alarm systems and motion sensors</li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <h4>Manufacturing/production (if applicable):</h4>
+                    <ul>
+                        <li><strong>Industrial control systems:</strong> Programmable logic controllers (PLCs)</li>
+                        <li><strong>Sensors and monitors:</strong> Temperature, pressure, and quality sensors</li>
+                        <li><strong>Automated equipment:</strong> Robotic systems and conveyor controls</li>
+                        <li><strong>Inventory systems:</strong> RFID readers and barcode scanners</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Security Risks of Connected Devices</h2>
+                
+                <div class="example-box">
+                    <h4>Common vulnerabilities:</h4>
+                    <ul>
+                        <li><strong>Default passwords:</strong> Many devices ship with "admin/admin" or similar weak credentials</li>
+                        <li><strong>No security updates:</strong> Old firmware with known vulnerabilities</li>
+                        <li><strong>Weak encryption:</strong> Unencrypted data transmission</li>
+                        <li><strong>No access controls:</strong> Anyone on the network can access the device</li>
+                        <li><strong>Poor authentication:</strong> No multi-factor authentication options</li>
+                        <li><strong>Insecure communication:</strong> Devices that communicate over unencrypted channels</li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <h4>Potential attack consequences:</h4>
+                    <ul>
+                        <li><strong>Network access:</strong> Criminals use IoT devices to access your business network</li>
+                        <li><strong>Data theft:</strong> Cameras and sensors can reveal sensitive business information</li>
+                        <li><strong>System disruption:</strong> Attackers can disable critical building or production systems</li>
+                        <li><strong>Ransom attacks:</strong> Criminals lock industrial systems until you pay</li>
+                        <li><strong>Physical damage:</strong> Malicious control of heating, cooling, or machinery</li>
+                        <li><strong>Privacy violations:</strong> Security cameras and microphones can be used for surveillance</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Securing Your Connected Devices</h2>
+                
+                <div class="example-box">
+                    <h4>Device inventory and discovery:</h4>
+                    <ol>
+                        <li><strong>Walk through your premises:</strong> List every device that connects to your network</li>
+                        <li><strong>Use network scanning tools:</strong> Tools like Fing or Advanced IP Scanner can find hidden devices</li>
+                        <li><strong>Check your router logs:</strong> Look for unknown devices in your network logs</li>
+                        <li><strong>Document device details:</strong> Record IP addresses, manufacturers, and firmware versions</li>
+                        <li><strong>Create a device register:</strong> Keep a spreadsheet with all connected devices</li>
+                        <li><strong>Review regularly:</strong> Update your inventory monthly</li>
+                    </ol>
+                </div>
+
+                <div class="example-box">
+                    <h4>Basic device security:</h4>
+                    <ol>
+                        <li><strong>Change default passwords:</strong> Replace factory passwords with strong, unique ones</li>
+                        <li><strong>Update firmware:</strong> Check for and install device updates monthly</li>
+                        <li><strong>Disable unnecessary features:</strong> Turn off unused services and ports</li>
+                        <li><strong>Enable encryption:</strong> Use WPA3 for wireless devices</li>
+                        <li><strong>Limit network access:</strong> Don't allow devices to communicate with the internet unless necessary</li>
+                        <li><strong>Use device certificates:</strong> Implement certificate-based authentication where possible</li>
+                    </ol>
+                </div>
+
+                <div class="example-box">
+                    <h4>Network segmentation:</h4>
+                    <ol>
+                        <li><strong>Create IoT VLANs:</strong> Put connected devices on separate network segments</li>
+                        <li><strong>Isolate critical systems:</strong> Keep production systems separate from office networks</li>
+                        <li><strong>Use guest networks:</strong> Put visitor devices on isolated networks</li>
+                        <li><strong>Implement firewall rules:</strong> Block unnecessary communication between network segments</li>
+                        <li><strong>Monitor network traffic:</strong> Watch for unusual communication patterns</li>
+                        <li><strong>Regular network audits:</strong> Check that segmentation is working properly</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Device Management Best Practices</h2>
+                
+                <div class="example-box">
+                    <h4>Access control:</h4>
+                    <ol>
+                        <li><strong>Use strong authentication:</strong> Require complex passwords and change them regularly</li>
+                        <li><strong>Implement role-based access:</strong> Give users only the device access they need</li>
+                        <li><strong>Enable multi-factor authentication:</strong> Where supported by the device</li>
+                        <li><strong>Monitor access logs:</strong> Track who accesses devices and when</li>
+                        <li><strong>Remove default accounts:</strong> Disable or delete factory-set user accounts</li>
+                        <li><strong>Regular access reviews:</strong> Check who has access to which devices quarterly</li>
+                    </ol>
+                </div>
+
+                <div class="example-box">
+                    <h4>Maintenance and monitoring:</h4>
+                    <ol>
+                        <li><strong>Regular health checks:</strong> Test device functionality monthly</li>
+                        <li><strong>Monitor device behavior:</strong> Watch for unusual activity or performance changes</li>
+                        <li><strong>Backup configurations:</strong> Save device settings before making changes</li>
+                        <li><strong>Document procedures:</strong> Keep records of how to manage each device type</li>
+                        <li><strong>Plan for replacement:</strong> Know when devices reach end-of-life</li>
+                        <li><strong>Test disaster recovery:</strong> Ensure you can restore device functionality quickly</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Incident Response for Connected Devices</h2>
+                
+                <div class="example-box">
+                    <h4>When a device is compromised:</h4>
+                    <ol>
+                        <li><strong>Isolate the device:</strong> Disconnect it from the network immediately</li>
+                        <li><strong>Assess the impact:</strong> Determine what data or systems may be affected</li>
+                        <li><strong>Check other devices:</strong> Look for signs of lateral movement to other systems</li>
+                        <li><strong>Document the incident:</strong> Record what happened and when</li>
+                        <li><strong>Contact vendors:</strong> Report the incident to device manufacturers</li>
+                        <li><strong>Restore from backup:</strong> Reset the device to known good configuration</li>
+                    </ol>
+                </div>
+
+                <div class="example-box">
+                    <h4>Recovery procedures:</h4>
+                    <ol>
+                        <li><strong>Factory reset:</strong> Restore the device to original settings</li>
+                        <li><strong>Apply security updates:</strong> Install all available firmware updates</li>
+                        <li><strong>Reconfigure security:</strong> Set strong passwords and disable unnecessary features</li>
+                        <li><strong>Test functionality:</strong> Verify the device works properly</li>
+                        <li><strong>Monitor closely:</strong> Watch for continued suspicious activity</li>
+                        <li><strong>Update procedures:</strong> Improve security based on lessons learned</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Real-World Example: Smart Printer Security Breach</h2>
+                <div class="example-box">
+                    <p><strong>What happened:</strong> A Darwin law firm discovered their smart printer was being used to scan and steal client documents after criminals accessed it through the default admin password.</p>
+                    <p><strong>How it happened:</strong> The printer was connected to the business network with factory default credentials and no security updates, making it an easy target for network scanning attacks.</p>
+                    <p><strong>The damage:</strong> Criminals accessed the printer's internal memory and retrieved copies of confidential legal documents that had been scanned and printed.</p>
+                    <p><strong>What they fixed:</strong> Changed all device passwords, updated firmware, put IoT devices on a separate network, and implemented regular security audits.</p>
+                    <p><strong>Source:</strong> <a href="https://www.cyber.gov.au/sites/default/files/2023-03/ACSC_Small_Business_Cyber_Security_Guide_V6.pdf" target="_blank">ACSC Small Business Cyber Security Guide</a></p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Purchasing Secure Connected Devices</h2>
+                
+                <div class="example-box">
+                    <h4>Security requirements when buying:</h4>
+                    <ul>
+                        <li><strong>Regular security updates:</strong> Vendor commits to providing firmware updates</li>
+                        <li><strong>Strong authentication:</strong> Supports complex passwords and ideally MFA</li>
+                        <li><strong>Encryption support:</strong> Data is encrypted in transit and at rest</li>
+                        <li><strong>Access controls:</strong> Allows you to control who can access the device</li>
+                        <li><strong>Audit logging:</strong> Tracks who accessed the device and when</li>
+                        <li><strong>Network security:</strong> Supports modern network security protocols</li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <h4>Questions to ask vendors:</h4>
+                    <ol>
+                        <li><strong>"How long will you provide security updates?"</strong></li>
+                        <li><strong>"What security certifications does this device have?"</strong></li>
+                        <li><strong>"Can we change the default passwords?"</strong></li>
+                        <li><strong>"Does it support network segmentation?"</strong></li>
+                        <li><strong>"What data does the device collect and store?"</strong></li>
+                        <li><strong>"How do we securely dispose of the device when it's retired?"</strong></li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Connected Device Security Checklist</h2>
+                
+                <div class="example-box">
+                    <h4>Initial setup:</h4>
+                    <ul>
+                        <li>Change all default passwords</li>
+                        <li>Update firmware to latest version</li>
+                        <li>Disable unnecessary features and services</li>
+                        <li>Configure network segmentation</li>
+                        <li>Enable encryption where available</li>
+                        <li>Document device configuration</li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <h4>Ongoing maintenance:</h4>
+                    <ul>
+                        <li>Check for firmware updates monthly</li>
+                        <li>Monitor device access logs</li>
+                        <li>Review network traffic patterns</li>
+                        <li>Test device functionality regularly</li>
+                        <li>Update inventory documentation</li>
+                        <li>Review access permissions quarterly</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Building Connected Device Security</h2>
+                <p>Securing connected devices requires ongoing attention:</p>
+                
+                <ul>
+                    <li><strong>Visibility:</strong> Know what devices are on your network</li>
+                    <li><strong>Access control:</strong> Manage who can access devices - <a href="../level3/iam.html">read more here</a></li>
+                    <li><strong>Network security:</strong> Isolate devices from critical systems</li>
+                    <li><strong>Patch management:</strong> Keep device firmware updated - <a href="../level2/patch.html">read more here</a></li>
+                    <li><strong>Incident response:</strong> Know how to respond when devices are compromised</li>
+                </ul>
+            </div>
+
+            <div class="next-steps">
+                <h3>Next: Information Exposure</h3>
+                <p>Learn about limiting how much information about your business is publicly available online.</p>
+
+                <div class="next-steps-grid">
+                    <a href="information-exposure.html" class="next-step-card">
+                        <h4>Information Exposure <span class="priority-badge">NEXT</span></h4>
+                        <p>Limit what attackers can learn about your business online</p>
+                    </a>
+
+                    <a href="../index.html" class="next-step-card">
+                        <h4>Back to Guides</h4>
+                        <p>See all security guides</p>
+                    </a>
+
+                    <a href="../assessment/" class="next-step-card">
+                        <h4>Risk Assessment</h4>
+                        <p>Evaluate your connected device security</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

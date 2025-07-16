@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Advanced Risk Assessment - Lock Step</title>
+    <link rel="stylesheet" href="../../../assets/css/levels.css" />
+    <link rel="stylesheet" href="../../../assets/css/styles.css" />
+</head>
+<body>
+    <div class="bg-animation"></div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="../../../index.html" class="logo">Lock Step</a>
+            <div class="nav-links">
+                <a href="../../../index.html">Home</a>
+                <a href="../index.html">Guides</a>
+                <a href="../../assessment/">Assessment</a>
+                <a href="../../../templates/">Templates</a>
+                <a href="../../../interactive/">Interactive Tools</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="guide-content">
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 100%;"></div>
+            </div>
+
+            <div class="guide-nav">
+                <div class="guide-level">Optional: Specialised Topics</div>
+                <div>Guide 6 of 6</div>
+            </div>
+
+            <h1>Advanced Risk Assessment</h1>
+
+            <div class="section">
+                <h2>What This Is About</h2>
+                <p>Advanced risk assessment goes beyond basic risk identification to include quantitative analysis, risk matrices, and enterprise-level risk management. This is for businesses that need detailed risk analysis for insurance, compliance, or strategic planning purposes.</p>
+                <p>While basic risk assessment asks "what could go wrong," advanced risk assessment asks "what's the probability and financial impact of each risk scenario."</p>
+            </div>
+
+            <div class="section">
+                <h2>Quantitative Risk Assessment</h2>
+                <p>Quantitative risk assessment uses numbers and calculations to estimate the financial impact of cybersecurity risks.</p>
+                
+                <div class="example-box">
+                    <h4>Key formulas:</h4>
+                    <ul>
+                        <li><strong>Annual Loss Expectancy (ALE) = Single Loss Expectancy (SLE) × Annual Rate of Occurrence (ARO)</strong></li>
+                        <li><strong>Single Loss Expectancy (SLE) = Asset Value × Exposure Factor</strong></li>
+                        <li><strong>Risk = Threat × Vulnerability × Impact</strong></li>
+                        <li><strong>Return on Security Investment (ROSI) = (Risk Reduction × ALE) - Security Investment Cost</strong></li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <h4>Quantitative risk assessment process:</h4>
+                    <ol>
+                        <li><strong>Asset valuation:</strong> Calculate the monetary value of your business assets</li>
+                        <li><strong>Threat frequency:</strong> Estimate how often each threat occurs annually</li>
+                        <li><strong>Vulnerability assessment:</strong> Determine the likelihood of successful attacks</li>
+                        <li><strong>Impact calculation:</strong> Estimate financial losses from each risk scenario</li>
+                        <li><strong>Risk prioritisation:</strong> Focus on risks with highest Annual Loss Expectancy</li>
+                        <li><strong>Cost-benefit analysis:</strong> Compare security investment costs to risk reduction</li>
+                    </ol>
+                </div>
+
+                <div class="example-box">
+                    <h4>Example calculation:</h4>
+                    <p><strong>Scenario:</strong> Ransomware attack on customer database</p>
+                    <ul>
+                        <li><strong>Asset value:</strong> Customer database worth $500,000</li>
+                        <li><strong>Exposure factor:</strong> 60% of value could be lost</li>
+                        <li><strong>Single Loss Expectancy:</strong> $500,000 × 0.6 = $300,000</li>
+                        <li><strong>Annual Rate of Occurrence:</strong> 15% chance per year (0.15)</li>
+                        <li><strong>Annual Loss Expectancy:</strong> $300,000 × 0.15 = $45,000</li>
+                    </ul>
+                    <p><strong>Conclusion:</strong> This risk justifies spending up to $45,000 annually on preventive measures</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Risk Matrices and Heat Maps</h2>
+                
+                <div class="example-box">
+                    <h4>Creating risk matrices:</h4>
+                    <ol>
+                        <li><strong>Define likelihood scale:</strong> Very Low (1), Low (2), Medium (3), High (4), Very High (5)</li>
+                        <li><strong>Define impact scale:</strong> Minimal (1), Minor (2), Moderate (3), Major (4), Catastrophic (5)</li>
+                        <li><strong>Calculate risk scores:</strong> Risk Score = Likelihood × Impact</li>
+                        <li><strong>Create risk categories:</strong> Low (1-6), Medium (8-12), High (15-20), Critical (25)</li>
+                        <li><strong>Plot risks on matrix:</strong> Visual representation of all identified risks</li>
+                        <li><strong>Prioritise actions:</strong> Focus on high-impact, high-likelihood risks first</li>
+                    </ol>
+                </div>
+
+                <div class="example-box">
+                    <h4>Risk heat map colors:</h4>
+                    <ul>
+                        <li><strong>Green (Low Risk):</strong> Score 1-6, monitor only</li>
+                        <li><strong>Yellow (Medium Risk):</strong> Score 8-12, implement controls within 90 days</li>
+                        <li><strong>Orange (High Risk):</strong> Score 15-20, implement controls within 30 days</li>
+                        <li><strong>Red (Critical Risk):</strong> Score 25, implement controls immediately</li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <h4>Example risk matrix entries:</h4>
+                    <ul>
+                        <li><strong>Phishing attack:</strong> Likelihood 4, Impact 4 = Risk Score 16 (High)</li>
+                        <li><strong>Ransomware:</strong> Likelihood 3, Impact 5 = Risk Score 15 (High)</li>
+                        <li><strong>Insider threat:</strong> Likelihood 2, Impact 4 = Risk Score 8 (Medium)</li>
+                        <li><strong>Natural disaster:</strong> Likelihood 1, Impact 5 = Risk Score 5 (Low)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Enterprise Risk Management</h2>
+                
+                <div class="example-box">
+                    <h4>Risk governance structure:</h4>
+                    <ol>
+                        <li><strong>Risk committee:</strong> Senior management oversight of risk management</li>
+                        <li><strong>Risk owner:</strong> Person responsible for managing each specific risk</li>
+                        <li><strong>Risk coordinator:</strong> Facilitates risk assessment and reporting</li>
+                        <li><strong>Risk champions:</strong> Department representatives who identify and report risks</li>
+                        <li><strong>External advisors:</strong> Consultants or auditors who provide independent review</li>
+                    </ol>
+                </div>
+
+                <div class="example-box">
+                    <h4>Risk management process:</h4>
+                    <ol>
+                        <li><strong>Risk identification:</strong> Systematic identification of all potential risks</li>
+                        <li><strong>Risk assessment:</strong> Evaluation of likelihood and impact</li>
+                        <li><strong>Risk response:</strong> Develop strategies to address each risk</li>
+                        <li><strong>Risk monitoring:</strong> Ongoing tracking of risk levels and control effectiveness</li>
+                        <li><strong>Risk reporting:</strong> Regular communication to stakeholders</li>
+                        <li><strong>Risk review:</strong> Periodic assessment of risk management effectiveness</li>
+                    </ol>
+                </div>
+
+                <div class="example-box">
+                    <h4>Risk response strategies:</h4>
+                    <ul>
+                        <li><strong>Accept:</strong> Acknowledge the risk but take no action (for low-impact risks)</li>
+                        <li><strong>Avoid:</strong> Eliminate the risk by changing business processes</li>
+                        <li><strong>Mitigate:</strong> Reduce likelihood or impact through controls</li>
+                        <li><strong>Transfer:</strong> Shift risk to third parties through insurance or contracts</li>
+                        <li><strong>Monitor:</strong> Watch risks that may change over time</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Risk Assessment Tools and Software</h2>
+                
+                <div class="example-box">
+                    <h4>Professional risk assessment tools:</h4>
+                    <ul>
+                        <li><strong>RiskLens:</strong> Quantitative risk assessment platform</li>
+                        <li><strong>ServiceNow Risk Management:</strong> Enterprise risk management solution</li>
+                        <li><strong>RSA Archer:</strong> Governance, risk, and compliance platform</li>
+                        <li><strong>MetricStream:</strong> Integrated risk management software</li>
+                        <li><strong>LogicGate:</strong> Cloud-based risk management platform</li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <h4>Simple tools for small business:</h4>
+                    <ul>
+                        <li><strong>Excel/Google Sheets:</strong> Create custom risk registers and matrices</li>
+                        <li><strong>Microsoft Project:</strong> Track risk mitigation projects</li>
+                        <li><strong>Notion:</strong> Collaborative risk documentation</li>
+                        <li><strong>Airtable:</strong> Database for risk tracking</li>
+                        <li><strong>Trello:</strong> Visual risk management boards</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Risk Metrics and Key Performance Indicators</h2>
+                
+                <div class="example-box">
+                    <h4>Risk-related KPIs:</h4>
+                    <ul>
+                        <li><strong>Risk reduction percentage:</strong> Decrease in overall risk exposure</li>
+                        <li><strong>Control effectiveness:</strong> Percentage of security controls operating effectively</li>
+                        <li><strong>Mean time to detect:</strong> Average time to identify security incidents</li>
+                        <li><strong>Mean time to respond:</strong> Average time to contain security incidents</li>
+                        <li><strong>Risk treatment rate:</strong> Percentage of identified risks with mitigation plans</li>
+                        <li><strong>Security investment ROI:</strong> Return on investment for security measures</li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <h4>Risk reporting dashboards:</h4>
+                    <ul>
+                        <li><strong>Risk heat maps:</strong> Visual representation of current risk levels</li>
+                        <li><strong>Risk trends:</strong> Changes in risk levels over time</li>
+                        <li><strong>Control status:</strong> Current state of risk mitigation measures</li>
+                        <li><strong>Risk appetite:</strong> Comparison of current risk to acceptable levels</li>
+                        <li><strong>Key risk indicators:</strong> Early warning signals for emerging risks</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Real-World Example: Comprehensive Risk Assessment</h2>
+                <div class="example-box">
+                    <p><strong>Company:</strong> A 150-employee Adelaide manufacturing company needed detailed risk assessment for cyber insurance and compliance requirements.</p>
+                    <p><strong>Process:</strong> They conducted a 6-month quantitative risk assessment covering all business processes, calculated Annual Loss Expectancy for 25 risk scenarios, and created a comprehensive risk register.</p>
+                    <p><strong>Key findings:</strong> Email compromise posed the highest financial risk ($280,000 ALE), while industrial system disruption had the highest impact but lower likelihood.</p>
+                    <p><strong>Outcome:</strong> The assessment justified a $150,000 annual security investment and helped secure favorable cyber insurance rates.</p>
+                    <p><strong>Ongoing benefit:</strong> The company now uses the risk model to evaluate all security investments and update their risk profile quarterly.</p>
+                    <p><strong>Source:</strong> <a href="https://www.cyber.gov.au/sites/default/files/2023-03/ACSC_Small_Business_Cyber_Security_Guide_V6.pdf" target="_blank">ACSC Small Business Cyber Security Guide</a></p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Integrating Risk Assessment with Business Strategy</h2>
+                
+                <div class="example-box">
+                    <h4>Strategic risk alignment:</h4>
+                    <ol>
+                        <li><strong>Business objectives:</strong> Align risk assessment with strategic goals</li>
+                        <li><strong>Risk appetite:</strong> Define acceptable risk levels for different business activities</li>
+                        <li><strong>Resource allocation:</strong> Use risk assessment to prioritise security investments</li>
+                        <li><strong>Performance measurement:</strong> Track risk reduction as a business metric</li>
+                        <li><strong>Stakeholder communication:</strong> Report risk status to board and investors</li>
+                    </ol>
+                </div>
+
+                <div class="example-box">
+                    <h4>Risk-informed decision making:</h4>
+                    <ul>
+                        <li><strong>New technology adoption:</strong> Assess cybersecurity risks of new systems</li>
+                        <li><strong>Vendor selection:</strong> Include risk assessment in procurement decisions</li>
+                        <li><strong>Business expansion:</strong> Evaluate risks of new markets or locations</li>
+                        <li><strong>Merger and acquisition:</strong> Assess cybersecurity risks of target companies</li>
+                        <li><strong>Product development:</strong> Include security risk assessment in product planning</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Advanced Risk Assessment Checklist</h2>
+                
+                <div class="example-box">
+                    <h4>Assessment preparation:</h4>
+                    <ul>
+                        <li>Define risk assessment scope and objectives</li>
+                        <li>Identify stakeholders and assign roles</li>
+                        <li>Gather asset inventory and valuation data</li>
+                        <li>Collect threat intelligence and vulnerability data</li>
+                        <li>Choose quantitative or qualitative methodology</li>
+                        <li>Select appropriate tools and software</li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <h4>Assessment execution:</h4>
+                    <ul>
+                        <li>Conduct systematic risk identification workshops</li>
+                        <li>Calculate likelihood and impact for each risk</li>
+                        <li>Create risk matrices and heat maps</li>
+                        <li>Prioritise risks based on scores and business impact</li>
+                        <li>Develop risk response strategies</li>
+                        <li>Create risk register and documentation</li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <h4>Ongoing risk management:</h4>
+                    <ul>
+                        <li>Monitor risk levels and control effectiveness</li>
+                        <li>Update risk assessment quarterly</li>
+                        <li>Report risk status to management</li>
+                        <li>Review and update risk appetite annually</li>
+                        <li>Integrate risk assessment into business decisions</li>
+                        <li>Benchmark against industry standards</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Building Advanced Risk Assessment Capability</h2>
+                <p>Advanced risk assessment requires systematic development:</p>
+                
+                <ul>
+                    <li><strong>Methodology:</strong> Choose appropriate quantitative or qualitative approaches</li>
+                    <li><strong>Tools and data:</strong> Invest in professional risk assessment tools and data sources</li>
+                    <li><strong>Skills development:</strong> Train staff in risk assessment techniques</li>
+                    <li><strong>Governance:</strong> Establish risk management processes and responsibilities</li>
+                    <li><strong>Integration:</strong> Connect risk assessment to business strategy and operations</li>
+                </ul>
+            </div>
+
+            <div class="next-steps">
+                <h3>Congratulations! You've Completed All Guides!</h3>
+                <p>You now have comprehensive knowledge of cybersecurity from basic concepts to advanced risk management. Use this foundation to build a robust security program for your business.</p>
+
+                <div class="next-steps-grid">
+                    <a href="../assessment/" class="next-step-card">
+                        <h4>Take the Assessment <span class="priority-badge">START HERE</span></h4>
+                        <p>Evaluate your current security posture and get a personalised action plan</p>
+                    </a>
+
+                    <a href="../../templates/" class="next-step-card">
+                        <h4>Download Templates</h4>
+                        <p>Get ready-made security documents and checklists</p>
+                    </a>
+
+                    <a href="../index.html" class="next-step-card">
+                        <h4>Review All Guides</h4>
+                        <p>Go back to any topic you need to review</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
