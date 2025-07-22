@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Getting Started with Cybersecurity - Lock Step</title>
+    <title>Understanding Cyber Risk - Lock Step</title>
     <link rel="stylesheet" href="../../../assets/css/levels.css">
     <link rel="stylesheet" href="../../../assets/css/styles.css">
 </head>
@@ -14,7 +14,6 @@
         <div class="nav-container">
             <a href="../../../index.html" class="logo">Lock Step</a>
             <div class="nav-links">
-                
                 <a href="../../../index.html">Home</a>
                 <a href="../index.html">Guides</a>
                 <a href="../../assessment/">Assessment</a>
@@ -39,94 +38,88 @@
             
             <div class="section">
                 <h2>Why This Matters</h2>
-                <p>Before you can protect your business, you need to understand what you're protecting it from. Cyber risk isn't just about technology, it's about understanding how threats could impact your business and making informed decisions about where to invest your limited time and resources.</p>
-                <p>Small businesses are targeted 43% more than large companies because criminals know you likely have fewer resources to defend yourself. But understanding risk gives you the power to make smart security decisions.</p>
+                <p>Small businesses get attacked 43% more than big companies. Criminals know you have valuable data but fewer defenses.</p>
+                <p><strong>Understanding risk helps you make smart security decisions.</strong></p>
             </div>
-            
+                
             <div class="risk-formula">
                 <h3>The Risk Formula</h3>
                 <div class="formula">Risk = Threat × Vulnerability × Impact</div>
                 <p>This simple formula helps you evaluate any security decision. High risk areas need immediate attention, while low risk areas can wait.</p>
+                
+                <div class="formula-parts">
+                    <div class="formula-part">
+                        <strong>Threat:</strong> What could attack you (hackers, malware, etc.)
+                    </div>
+                    <div class="formula-part">
+                        <strong>Vulnerability:</strong> Your weak spots (old software, weak passwords)
+                    </div>
+                    <div class="formula-part">
+                        <strong>Impact:</strong> How much damage it would cause
+                    </div>
+                </div>
             </div>
-            
+
+            <div class="interactive-risk-calculator">
+                <h3>Try This: See How Risk Works</h3>
+                <div class="risk-calculator">
+                    <div class="risk-input-group">
+                        <label>Threat Level (1-5):</label>
+                        <input type="range" id="threat-slider" min="1" max="5" value="3">
+                        <span id="threat-value">3</span>
+                    </div>
+                    <div class="risk-input-group">
+                        <label>Vulnerability Level (1-5):</label>
+                        <input type="range" id="vulnerability-slider" min="1" max="5" value="3">
+                        <span id="vulnerability-value">3</span>
+                    </div>
+                    <div class="risk-input-group">
+                        <label>Impact Level (1-5):</label>
+                        <input type="range" id="impact-slider" min="1" max="5" value="3">
+                        <span id="impact-value">3</span>
+                    </div>
+                    <div class="risk-result">
+                        <div class="risk-score">Risk Score: <span id="risk-total">27</span></div>
+                        <div class="risk-level" id="risk-level">MEDIUM RISK</div>
+                        <div class="risk-action" id="risk-action">Fix this within 90 days</div>
+                    </div>
+                </div>
+            </div>
+                
             <div class="section">
-                <h2>Breaking Down the Formula</h2>
-                
-                <div class="example-box">
-                    <h4>Threat</h4>
-                    <p><strong>What could go wrong?</strong> Common threats include ransomware, phishing emails, data breaches, system failures, or disgruntled employees. The likelihood varies by industry and business size.</p>
-                </div>
-                
-                <div class="example-box">
-                    <h4>Vulnerability</h4>
-                    <p><strong>What weaknesses exist?</strong> Outdated software, weak passwords, lack of backups, untrained staff, or poor physical security. These are gaps that threats can exploit.</p>
-                </div>
-                
-                <div class="example-box">
-                    <h4>Impact</h4>
-                    <p><strong>What would happen if this threat exploited this vulnerability?</strong> Consider financial loss, business downtime, reputation damage, legal consequences, and recovery costs.</p>
-                </div>
-            </div>
-            
-            <div class="section">
-                <h2>Real World Example</h2>
-                <div class="example-box">
-                    <h4>Scenario: Ransomware Attack</h4>
-                    <p><strong>Threat:</strong> Ransomware gangs targeting small businesses (High - happening daily)</p>
-                    <p><strong>Vulnerability:</strong> Staff clicking phishing links + no backup system (High - very common)</p>
-                    <p><strong>Impact:</strong> Business shut down for weeks, $50,000 ransom demand, customer data lost (Very High)</p>
-                    <p><strong>Risk Level:</strong> CRITICAL - Needs immediate action</p>
-                </div>
-            </div>
-            
-            <div class="action-items">
-                <h3>Your First Risk Assessment</h3>
-                <p>Ask yourself these questions about your business:</p>
+                <h2>What's Next</h2>
+                <p>Don't worry about calculating exact risks right now. As you go through these guides, you'll learn how to:</p>
                 <ul>
-                    <li>✓ What would happen if our computers were locked by ransomware tomorrow?</li>
-                    <li>✓ How would we operate if our main systems were down for a week?</li>
-                    <li>✓ What's our most valuable data, and where is it stored?</li>
-                    <li>✓ Who has access to our critical systems and data?</li>
-                    <li>✓ When did we last update our software and systems?</li>
-                    <li>✓ Have we ever tested our backup and recovery procedures?</li>
+                    <li>Reduce threats targeting your business</li>
+                    <li>Fix your biggest vulnerabilities</li>
+                    <li>Minimize impact when attacks happen</li>
                 </ul>
-            </div>
-            
-            <div class="section">
-                <h2>Common High-Risk Areas for Small Business</h2>
-                <p>Based on thousands of incidents, these areas typically represent the highest risk for small businesses:</p>
-                <ul>
-                    <li><strong>Email-based attacks</strong> - 94% of malware arrives via email</li>
-                    <li><strong>Weak or reused passwords</strong> - 80% of breaches involve weak credentials</li>
-                    <li><strong>Unpatched software</strong> - Criminals exploit known vulnerabilities</li>
-                    <li><strong>Lack of backups</strong> - No way to recover from ransomware or hardware failure</li>
-                    <li><strong>Untrained staff</strong> - Humans are often the weakest link</li>
-                </ul>
+                <p><strong>For now, just remember:</strong> High risk = fix immediately. Low risk = fix when you can.</p>
             </div>
             
             <div class="next-steps">
-                <h3>Next: What You’re Up Against</h3>
-                <p>Now that you know what to protect, let’s go over the common threats small businesses face — and how to spot them early.</p>
+                <h3>Next: Learn Common Attacks</h3>
+                <p>Let's see what criminals actually do to businesses like yours.</p>
 
                 <div class="next-steps-grid">
                     <a href="attack-types.html" class="next-step-card">
-                        <h4>Types of Attacks <span class="priority-badge">NEXT</span></h4>
-                        <p>Learn what cyber criminals target, and what they often go after in small businesses</p>
+                        <h4>Common Attacks <span class="priority-badge">NEXT</span></h4>
+                        <p>See what to watch out for</p>
                     </a>
 
                     <a href="../index.html" class="next-step-card">
                         <h4>Back to Guides</h4>
-                        <p>See all security guides</p>
+                        <p>See all guides</p>
                     </a>
 
-                    <a href="../assessment/" class="next-step-card">
-                        <h4>Take Our Risk Assessment</h4>
-                        <p>Get a personalised risk report for your business and priority action items</p>
+                    <a href="../../assessment/" class="next-step-card">
+                        <h4>Quick Assessment</h4>
+                        <p>Find your biggest risks</p>
                     </a>
-    
                 </div>
             </div>
         </div>
     </main>
+    <script src="../../../assets/js/interactive.js"></script>
 </body>
 </html>
