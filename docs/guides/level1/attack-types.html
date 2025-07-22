@@ -37,7 +37,6 @@
       <div class="section">
         <h2>What Are Cyber Attacks?</h2>
         <p>Cyber attacks are when criminals try to steal your business data, lock your files, or trick you into giving them money. They target small businesses because you often have valuable information but fewer security protections than big companies.</p>
-        <p><strong>The reality:</strong> 43% of cyber attacks target small businesses, and criminals use increasingly sophisticated methods including AI to make their attacks more convincing.</p>
       </div>
   
       <div class="section">
@@ -79,6 +78,7 @@
           </div>
         </div>
   
+        
         <div class="attack-card">
           <div class="attack-title">2. Ransomware (Locked Files)</div>
           <div class="attack-content">
@@ -98,6 +98,43 @@
             </div>
           </div>
         </div>
+
+        <div class="interactive-ransomware-timeline">
+          <h3>See How Ransomware Works</h3>
+          <div class="timeline-container">
+              <div class="timeline-step" data-step="1">
+                  <div class="step-icon">📧</div>
+                  <div class="step-content">
+                      <h4>Day 1: Phishing Email</h4>
+                      <p>Employee clicks malicious attachment</p>
+                      <button class="timeline-btn" data-action="investigate">What happens next?</button>
+                  </div>
+              </div>
+              <div class="timeline-step hidden" data-step="2">
+                  <div class="step-icon">🦠</div>
+                  <div class="step-content">
+                      <h4>Day 2-7: Silent Spread</h4>
+                      <p>Malware moves through your network</p>
+                      <button class="timeline-btn" data-action="continue">Continue...</button>
+                  </div>
+              </div>
+              <div class="timeline-step hidden" data-step="3">
+                  <div class="step-icon">🔒</div>
+                  <div class="step-content">
+                      <h4>Day 8: Files Encrypted</h4>
+                      <p>All business files are locked</p>
+                      <button class="timeline-btn" data-action="choices">What would you do?</button>
+                  </div>
+              </div>
+              <div class="choice-panel hidden" id="ransomware-choices">
+                  <h4>Your options:</h4>
+                  <button class="choice-btn bad-choice" data-choice="pay">Pay the ransom ($50,000)</button>
+                  <button class="choice-btn good-choice" data-choice="backup">Use your backups</button>
+                  <button class="choice-btn bad-choice" data-choice="negotiate">Try to negotiate</button>
+              </div>
+              <div class="choice-result hidden" id="choice-result"></div>
+          </div>
+      </div>
   
         <div class="attack-card">
           <div class="attack-title">3. Business Email Compromise</div>
@@ -191,18 +228,6 @@
         </div>
       </div>
   
-      <div class="section">
-        <h2>Key Protection Rules</h2>
-        <ul>
-          <li><strong>Think before you click:</strong> Hover over links to see where they really go</li>
-          <li><strong>Verify before you trust:</strong> Call back on known numbers for unusual requests</li>
-          <li><strong>Update everything:</strong> Keep all software and apps current</li>
-          <li><strong>Back up regularly:</strong> Save copies of important files somewhere safe</li>
-          <li><strong>Use strong passwords:</strong> Different passwords for every account</li>
-          <li><strong>Enable two-factor authentication:</strong> Add that extra security step</li>
-        </ul>
-      </div>
-  
       <div class="next-steps">
         <h3>Next: The CIA Triad</h3>
         <p>Now that you know the main threats, learn about the three core principles that guide all cybersecurity decisions.</p>
@@ -250,4 +275,5 @@
       });
     </script>
   </body>
+  <script src="../../../assets/js/interactive.js"></script>
   </html>
