@@ -38,7 +38,7 @@
 
             <div class="section">
                 <h2>Think of MFA Like Your Front Door</h2>
-                <p>You wouldn't protect your business with just one flimsy lock, right? Multi-Factor Authentication (MFA) is like having both a key AND a security code for your digital accounts.</p>
+                <p>You wouldn't protect your business with just one lock, right? Multi-Factor Authentication (MFA) is like having both a key AND a security code for your digital accounts.</p>
                 
                 <div class="example-box">
                     <p><strong>Simple Example:</strong> When you use your debit card at an ATM, you need both your card (something you have) AND your PIN (something you know). MFA works the same way for your online accounts.</p>
@@ -158,6 +158,48 @@
                 </div>
             </div>
 
+            <div class="interactive-mfa-demo">
+                <h3>See How MFA Blocks Attacks</h3>
+                <div class="attack-simulation">
+                    <div class="simulation-controls">
+                        <button id="start-attack" class="sim-btn primary">Start Attack Simulation</button>
+                        <button id="enable-mfa" class="sim-btn secondary disabled">Enable MFA</button>
+                        <button id="reset-sim" class="sim-btn">Reset</button>
+                    </div>
+                    <div class="attack-stages">
+                        <div class="stage" data-stage="1">
+                            <div class="stage-icon">🎣</div>
+                            <div class="stage-content">
+                                <h4>Hacker steals your password</h4>
+                                <div class="stage-status" id="stage1-status">Waiting...</div>
+                            </div>
+                        </div>
+                        <div class="stage" data-stage="2">
+                            <div class="stage-icon">🖥️</div>
+                            <div class="stage-content">
+                                <h4>Attempts to login</h4>
+                                <div class="stage-status" id="stage2-status">Waiting...</div>
+                            </div>
+                        </div>
+                        <div class="stage" data-stage="3">
+                            <div class="stage-icon">📱</div>
+                            <div class="stage-content">
+                                <h4>MFA Challenge</h4>
+                                <div class="stage-status" id="stage3-status">Waiting...</div>
+                            </div>
+                        </div>
+                        <div class="stage" data-stage="4">
+                            <div class="stage-icon">🚫</div>
+                            <div class="stage-content">
+                                <h4>Result</h4>
+                                <div class="stage-status" id="stage4-status">Waiting...</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="simulation-result" id="sim-result"></div>
+                </div>
+            </div>
+
             <div class="section">
                 <h2>Quick Setup for Other Important Accounts</h2>
                 
@@ -174,67 +216,19 @@
             </div>
 
             <div class="section">
-                <h2>Common Problems and Solutions</h2>
-                <div class="faq-section">
-                    <h4> "I don't see a 2FA option"</h4>
-                    <p>Some services call it "Two-Step Verification," "Login Verification," or "Account Security." Search for these terms in settings.</p>
-                    
-                    <h4> "My phone died/broke - now what?"</h4>
-                    <p>Use those backup codes you saved! Each code works once to get you back in.</p>
-                    
-                    <h4> "This seems too complicated"</h4>
-                    <p>Start with SMS codes instead of an app. It's less secure but much better than no MFA at all.</p>
-                    
-                    <h4> "My employees will hate this"</h4>
-                    <p>Show them it only takes 5 extra seconds to log in, but could save the business thousands in losses.</p>
-                </div>
-            </div>
-
-            <div class="action-items">
-                <h3>Quick Action Checklist</h3>
-                <ul>
-                    <li>☐ Download authenticator app on your phone</li>
-                    <li>☐ Enable MFA on your business email (start here!)</li>
-                    <li>☐ Enable MFA on your bank and payment platforms</li>
-                    <li>☐ Enable MFA on cloud storage (Google Drive, Dropbox)</li>
-                    <li>☐ Enable MFA on business software (QuickBooks, social media)</li>
-                    <li>☐ Store backup codes safely</li>
-                    <li>☐ Test login process to make sure it works</li>
-                </ul>
-                <p><strong>Pro tip:</strong> Start with email first, it's the most critical. Then add one new account per day until you're done.</p>
-            </div>
-
-            <div class="section">
-                <h2>Getting Your Team on Board</h2>
-                <p>If you have employees, here's how to introduce MFA without pushback:</p>
-                
-                <div class="team-tips">
-                    <h4>1. Start with yourself first</h4>
-                    <p>Set it up on your own accounts so you can help others.</p>
-                    
-                    <h4>2. Explain the "why"</h4>
-                    <p>"This protects our business and your job. It takes 5 seconds but prevents thousands in losses."</p>
-                    
-                    <h4>3. Make it easy</h4>
-                    <p>Set up a 15-minute meeting to walk through it together, or create a simple instruction sheet.</p>
-                    
-                    <h4>4. Be patient</h4>
-                    <p>Some people need time to adjust. The extra security is worth a few days of complaints.</p>
-                </div>
-            </div>
-            <div class="section">
                 <p><strong>Bottom line:</strong> Any MFA is better than no MFA.</p>
             </div>
 
             <div class="next-steps">
                 <h3>Next:Safe Banking & WiFi Security</h3>
-                <p>Now that you know the main threats, learn how to protect your money and internet connections.</p>
+                <p>Your accounts are now double-protected. Next, learn how to safely handle money and internet connections.</p>
         
                 <div class="next-steps-grid">
-                  <a href="../level2/banking-wifi-security.html" class="next-step-card">
-                    <h4>Safe Banking & WiFi Security <span class="priority-badge">NEXT</span></h4>
-                    <p>Learn how to protect your money and internet connections.</p>
-                  </a>
+                    <a href="../level2/banking-wifi-security.html" class="next-step-card">
+                        <h4>Safe Banking & WiFi Security <span class="priority-badge">NEXT</span></h4>
+                        <p>Protect your money and internet connections from attacks</p>
+                        <small>⏱️ 10 min read + 5 min setup</small>
+                    </a>
     
                     <a href="../index.html" class="next-step-card">
                         <h4>Back to Guides Home</h4>
@@ -250,6 +244,6 @@
         </div>
     </main>
 
-
+<script src="../../../assets/js/interactive.js"></script>
 </body>
 </html>
