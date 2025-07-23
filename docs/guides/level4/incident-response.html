@@ -129,7 +129,44 @@
                     </ul>
                 </div>
             </div>
-
+            <div class="interactive-incident-simulator">
+                <h3>Incident Response Simulation</h3>
+                <div class="incident-scenario-picker">
+                    <h4>Choose your incident scenario:</h4>
+                    <div class="scenario-buttons">
+                        <button class="scenario-btn" data-scenario="ransomware">Ransomware Attack</button>
+                        <button class="scenario-btn" data-scenario="breach"> Data Breach</button>
+                        <button class="scenario-btn" data-scenario="email"> Email Compromise</button>
+                        <button class="scenario-btn" data-scenario="outage">System Outage</button>
+                    </div>
+                </div>
+                
+                <div class="incident-simulation hidden" id="incident-sim">
+                    <div class="incident-timer">
+                        <div class="timer-display">Time elapsed: <span id="incident-timer">00:00</span></div>
+                        <div class="business-impact">Business impact: $<span id="business-cost">0</span></div>
+                    </div>
+                    
+                    <div class="incident-phases">
+                        <div class="phase-tracker">
+                            <div class="phase-step" data-phase="preparation"> Preparation</div>
+                            <div class="phase-step" data-phase="identification"> Identification</div>
+                            <div class="phase-step" data-phase="containment"> Containment</div>
+                            <div class="phase-step" data-phase="eradication">Eradication</div>
+                            <div class="phase-step" data-phase="recovery">Recovery</div>
+                        </div>
+                    </div>
+                    
+                    <div class="incident-decision-panel" id="decision-panel">
+                        <div class="current-situation" id="situation-text"></div>
+                        <div class="decision-options" id="decision-options"></div>
+                    </div>
+                    
+                    <div class="incident-result hidden" id="incident-result"></div>
+                    <button class="reset-simulation" id="reset-incident">Reset Simulation</button>
+                </div>
+            </div>
+                        
             <div class="section">
                 <h2>Building Your Incident Response Plan</h2>
                 
@@ -313,4 +350,5 @@
         </div>
     </main>
 </body>
+<script src="../../../assets/js/interactive.js"></script>
 </html>
