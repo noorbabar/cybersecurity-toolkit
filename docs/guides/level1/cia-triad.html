@@ -38,20 +38,10 @@
 
             <div class="section">
                 <h2>What Is the CIA Triad?</h2>
-                <p>The CIA Triad is a simple way to think about the three things every business must protect when it comes to digital systems and data:</p>
-                <ul>
-                    <li><strong>Confidentiality</strong>: Keeping sensitive information private</li>
-                    <li><strong>Integrity</strong>:Keeping your information correct and unchanged</li>
-                    <li><strong>Availability</strong>:Making sure your systems and data are always accessible when needed</li>
-                </ul>
-                <p>This applies whether you run a clinic, café, online store, accounting firm, creative agency, or any other small business.</p>
-            </div>
-
-            <div class="section">
-                <h2>Let’s Break It Down</h2>
+                <p>The CIA Triad is how security experts think about protecting business data. But don't worry, it's actually simple. Every business needs these three things working:</p>
                 
                 <div class="example-box">
-                    <h4>Confidentiality</h4>
+                    <h4>1. Confidentiality</h4>
                     <p><strong>Definition:</strong> Only the right people should have access to sensitive business information. That includes things like customer data, pricing, HR files, or financial reports.</p>
                     <p><strong>Real world example:</strong> If someone outside your business can open your invoices, payroll files, or staff records, that's a confidentiality issue.</p>
                     <p><strong>Quick Fixes:</strong></p>
@@ -63,7 +53,7 @@
                 </div>
 
                 <div class="example-box">
-                    <h4>Integrity</h4>
+                    <h4>2. Integrity</h4>
                     <p><strong>Definition:</strong> Your data should be accurate and trustworthy. No one should be able to change it without permission, whether by accident or on purpose.</p>
                     <p><strong>Real-world example:</strong> If someone changes prices on your website or deletes your booking list, and you didn’t approve it, that’s an integrity problem.</p>
                     <p><strong>Quick Fixes:</strong></p>
@@ -75,7 +65,7 @@
                 </div>
 
                 <div class="example-box">
-                    <h4>Availability</h4>
+                    <h4>3. Authentication / Availability</h4>
                     <p><strong>Definition:</strong> Your systems and services should be up and running when you (or your customers) need them. This includes your website, email, booking system, or POS.</p>
                     <p><strong>Real-world example:</strong> If your online store crashes on a sale day, or your team can’t access client files during the day, that’s an availability issue.</p>
                     <p><strong>Quick Fixes:</strong></p>
@@ -87,6 +77,27 @@
                 </div>
             </div>
 
+            <div class="interactive-cia-explorer">
+                <h3> Explore CIA Triad Scenarios</h3>
+                <div class="cia-scenario-picker">
+                    <div class="business-type-selector">
+                        <h4>Select your business type:</h4>
+                        <button class="business-btn" data-business="restaurant">Restaurant</button>
+                        <button class="business-btn" data-business="clinic"> Medical Clinic</button>
+                        <button class="business-btn" data-business="shop">Retail Shop</button>
+                        <button class="business-btn" data-business="office">Office Business</button>
+                    </div>
+                    <div class="cia-scenarios hidden" id="cia-scenarios">
+                        <div class="scenario-tabs">
+                            <button class="scenario-tab active" data-cia="confidentiality"> Confidentiality</button>
+                            <button class="scenario-tab" data-cia="integrity"> Integrity</button>
+                            <button class="scenario-tab" data-cia="availability">Availability</button>
+                        </div>
+                        <div class="scenario-content" id="scenario-content">
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="section">
                 <h2>Real-World Failure Example</h2>
                 <div class="example-box">
@@ -94,18 +105,6 @@
                     <p><strong>Source:</strong> <a href="https://www.ontrack.com/en-au/case-studies/ontrack-saved-my-data-after-a-hard-drive-head-crash" target="_blank">Data Recovery Case Study</a></p>
                     <p><strong>Simple Fix:</strong> They now use cloud storage and an external backup drive to ensure every photo is saved in two places. Setup took under 20 minutes and cost less than $100.</p>
                 </div>
-            </div>
-            
-
-            <div class="action-items">
-                <h3>Quick Self-Check</h3>
-                <p>Ask yourself:</p>
-                <ul>
-                    <li>☐ Is private data in my business only seen by the right people?</li>
-                    <li>☐ Could someone change or delete files without me knowing?</li>
-                    <li>☐ Do I have a backup if a device or system stops working?</li>
-                </ul>
-                <p>If you’re unsure, start with one fix from each list above. Most take under 10 minutes.</p>
             </div>
 
             <div class="next-steps">
@@ -131,5 +130,6 @@
             </div>
         </div>
     </main>
+    <script src="../../../assets/js/interactive.js"></script>
 </body>
 </html>
