@@ -20,11 +20,6 @@ main h1 {
     animation: titleGlow 3s ease-in-out infinite alternate;
 }
 
-@keyframes titleGlow {
-    0% { filter: drop-shadow(0 0 20px rgba(0, 150, 255, 0.5)); }
-    100% { filter: drop-shadow(0 0 40px rgba(0, 150, 255, 0.8)); }
-}
-
 .intro-section {
     margin: 3rem 0;
     text-align: center;
@@ -36,11 +31,6 @@ main h1 {
     position: relative;
     overflow: hidden;
     animation: slideInFromTop 0.8s ease-out;
-}
-
-@keyframes slideInFromTop {
-    0% { opacity: 0; transform: translateY(-30px); }
-    100% { opacity: 1; transform: translateY(0); }
 }
 
 .intro-section h2 {
@@ -129,18 +119,8 @@ main h1 {
     animation: slideInFromLeft 0.8s ease-out;
 }
 
-@keyframes slideInFromLeft {
-    0% { opacity: 0; transform: translateX(-30px); }
-    100% { opacity: 1; transform: translateX(0); }
-}
-
 .pathway-section:nth-child(even) {
     animation: slideInFromRight 0.8s ease-out;
-}
-
-@keyframes slideInFromRight {
-    0% { opacity: 0; transform: translateX(30px); }
-    100% { opacity: 1; transform: translateX(0); }
 }
 
 .pathway-title {
@@ -270,11 +250,80 @@ main h1 {
     text-shadow: 0 0 20px rgba(0, 150, 255, 0.8);
 }
 
+.simple-navigation {
+    margin: 2rem 0;
+    padding: 0;
+}
+
+.nav-sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.nav-section-link {
+    padding: 1rem 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(0, 150, 255, 0.2);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-section-link:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #0096ff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 150, 255, 0.2);
+}
+
+.nav-section-link.active {
+    background: rgba(0, 150, 255, 0.1);
+    border-color: #0096ff;
+    box-shadow: 0 0 20px rgba(0, 150, 255, 0.3);
+}
+
+.section-title {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0.3rem;
+}
+
+.section-subtitle {
+    display: block;
+    font-size: 0.85rem;
+    color: #cccccc;
+    opacity: 0.8;
+}
+
+.optional-guides {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: rgba(74, 144, 226, 0.05);
+    border-radius: 8px;
+    border-left: 4px solid #4A90E2;
+}
+
+.optional-content {
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+
+.optional-guides h3 {
+    margin: 0 0 0.5rem 0;
+    color: #4A90E2;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-    
     main {
         padding: 60px 1.5rem 3rem;
     }
@@ -339,6 +388,23 @@ main h1 {
     .guide-pathway::before {
         display: none;
     }
+    
+    .nav-sections {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+    }
+    
+    .nav-section-link {
+        padding: 0.8rem 1rem;
+    }
+    
+    .section-title {
+        font-size: 1rem;
+    }
+    
+    .section-subtitle {
+        font-size: 0.8rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -376,6 +442,10 @@ main h1 {
     .guide-item p {
         font-size: 0.9rem;
     }
+    
+    .nav-sections {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -383,124 +453,5 @@ main h1 {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
-    }
-}
-.ripple-effect {
-    position: absolute;
-    border-radius: 50%;
-    background: rgba(0, 150, 255, 0.3);
-    transform: scale(0);
-    animation: ripple 0.6s linear;
-    pointer-events: none;
-}
-
-@keyframes ripple {
-    to {
-        transform: scale(4);
-        opacity: 0;
-    }
-}
-
-mark {
-    background: rgba(255, 193, 7, 0.3);
-    color: #ffc107;
-    padding: 0.1rem 0.2rem;
-    border-radius: 3px;
-}
-
-.optional-guides {
-    margin: 2rem 0;
-    padding: 1.5rem;
-    background: rgba(74, 144, 226, 0.05);
-    border-radius: 8px;
-    border-left: 4px solid #4A90E2;
-}
-
-.optional-content {
-    margin-top: 1rem;
-    transition: all 0.3s ease;
-}
-
-.optional-guides h3 {
-    margin: 0 0 0.5rem 0;
-    color: #4A90E2;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-.simple-navigation {
-    margin: 2rem 0;
-    padding: 0;
-}
-
-.nav-sections {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    margin-bottom: 2rem;
-}
-
-.nav-section-link {
-    padding: 1rem 1.5rem;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(0, 150, 255, 0.2);
-    border-radius: 12px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.nav-section-link:hover {
-    background: rgba(255, 255, 255, 0.08);
-    border-color: #0096ff;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 150, 255, 0.2);
-}
-
-.nav-section-link.active {
-    background: rgba(0, 150, 255, 0.1);
-    border-color: #0096ff;
-    box-shadow: 0 0 20px rgba(0, 150, 255, 0.3);
-}
-
-.section-title {
-    display: block;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #ffffff;
-    margin-bottom: 0.3rem;
-}
-
-.section-subtitle {
-    display: block;
-    font-size: 0.85rem;
-    color: #cccccc;
-    opacity: 0.8;
-}
-
-@media (max-width: 768px) {
-    .nav-sections {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.8rem;
-    }
-    
-    .nav-section-link {
-        padding: 0.8rem 1rem;
-    }
-    
-    .section-title {
-        font-size: 1rem;
-    }
-    
-    .section-subtitle {
-        font-size: 0.8rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .nav-sections {
-        grid-template-columns: 1fr;
     }
 }
