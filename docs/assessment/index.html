@@ -306,34 +306,34 @@
                 riskLevel = 'LOW RISK';
                 riskClass = 'risk-low';
                 recommendations = [
-                    '• Maintain current security practices',
-                    '• Consider advanced threat detection',
-                    '• Regular security audits',
-                    '• Stay updated on security trends'
+                    'Maintain current security practices',
+                    'Consider advanced threat detection',
+                    'Regular security audits',
+                    'Stay updated on security trends'
                 ];
             } else if (score <= 50) {
                 riskLevel = 'MEDIUM RISK';
                 riskClass = 'risk-medium';
                 recommendations = [
-                    '🔧 Implement MFA on all accounts immediately',
-                    '🔧 Deploy a business password manager',
-                    '🔧 Set up automatic daily backups',
-                    '• Conduct employee security training',
-                    '• Upgrade to business-grade security software',
-                    '• Review and update network security'
+                    'Implement MFA on all accounts immediately',
+                    'Deploy a business password manager',
+                    'Set up automatic daily backups',
+                    'Conduct employee security training',
+                    'Upgrade to business-grade security software',
+                    'Review and update network security'
                 ];
             } else {
                 riskLevel = 'HIGH RISK';
                 riskClass = 'risk-high';
                 recommendations = [
-                    '🚨 URGENT: Enable MFA on all business accounts',
-                    '🚨 URGENT: Implement business password manager',
-                    '🚨 URGENT: Set up automated backup system',
-                    '🔧 Deploy business-grade antivirus/EDR',
-                    '🔧 Conduct immediate security training',
-                    '🔧 Implement network segmentation',
-                    '• Consider hiring cybersecurity consultant',
-                    '• Develop incident response plan'
+                    'URGENT: Enable MFA on all business accounts',
+                    'URGENT: Implement business password manager',
+                    'URGENT: Set up automated backup system',
+                    'Deploy business-grade antivirus/EDR',
+                    'Conduct immediate security training',
+                    'Implement network segmentation',
+                    'Consider hiring cybersecurity consultant',
+                    'Develop incident response plan'
                 ];
             }
 
@@ -350,12 +350,7 @@
                 <ul>
                     ${recommendations.map(rec => `<li>${rec}</li>`).join('')}
                 </ul>
-                <div class="radio-option">
-
-                    <strong> Next Steps:</strong> Start with items marked 🚨 (urgent) and 🔧 (important). 
-                    Consider going through the guides if you need implementation help or are unfamiliar with any terminology.
-                </div>
-            `;
+               `;
 
             document.getElementById('results').style.display = 'block';
         }
