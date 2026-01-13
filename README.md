@@ -13,13 +13,13 @@ Small business owners need actionable guidance, not 100 page technical documents
 
 ## What It Does
 
-**3-Minute Risk Assessment** → Identifies vulnerabilities, outputs prioritised action plans
+**3 Minute Risk Assessment** → Identifies vulnerabilities, outputs prioritised action plans
 
 **Progressive Learning Guides** → Six skill levels with specific tools, costs, and timelines
 
 **Interactive Phishing Simulator** → Hands on training for spotting real threats
 
-**Production-Ready Templates** → Security policies and incident response plans for small teams
+**Production Ready Templates** → Security policies and incident response plans for small teams
 
 ## Tech Stack & Decisions
 
