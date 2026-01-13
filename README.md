@@ -1,71 +1,66 @@
 # Lock Step
-*Cybersecurity Toolkit for Small Businesses*
 
-## Inspiration
-60% of small businesses close within 6 months of a cyber attack, yet they face the same sophisticated threats as major corporations without the resources to defend themselves. 
+Cybersecurity Toolkit for Small Businesses
 
-Existing cybersecurity frameworks like NIST and CIS Controls are powerful but written for enterprise IT teams. Small business owners don't have time for 100-page technical documents. Lock Step bridges this gap by democratizing cybersecurity - translating complex frameworks into practical guidance that real business owners can actually use.
+[Live Demo](https://lock-step.vercel.app) | [Assessment Tool](https://lock-step.vercel.app/docs/assessment/) | [Phishing Simulator](https://lock-step.vercel.app/interactive/)
 
-## What it does
-Lock Step transforms intimidating cybersecurity concepts into digestible, actionable resources:
+---
 
-- **Progressive Learning Guides**: 6 skill levels from beginner to security-aware business owner
-- **Interactive Risk Assessment**: 3-minute questionnaire with prioritized action plans
-- **Ready-to-Use Templates**: Security policies, incident response plans, and compliance checklists
-- **Interactive Phishing Simulator**: Hands-on training for spotting modern phishing attempts
-- **Practical Implementation**: Every recommendation includes specific tools, costs, and step-by-step instructions
+## The Problem
 
-##  How I built it
-Built with vanilla HTML, CSS, and JavaScript for strategic reasons:
+60% of small businesses close within 6 months of a cyber attack. Not because solutions don't exist, but because frameworks like NIST are written for enterprise IT teams.
 
-**Architecture Choices:**
-- **Static Site Design**: No backend required, loads fast, inherently secure
-- **No Dependencies**: Minimizes attack surface, no supply chain vulnerabilities
-- **Mobile-First CSS**: Built from 320px up for maximum accessibility
-- **Progressive Enhancement**: Works without JavaScript, enhanced with it
+Small business owners need actionable guidance, not 100 page technical documents. That's why I createed Lock Step: to help bridge that gap.
 
-##  Challenges I Faced
+## What It Does
 
-**Technical:**
-- CSS styling and layout implementation
-- Frontend framework decision (React vs vanilla HTML/CSS/JS)
-- Cross-device compatibility and responsive design
-- UI/UX design technical constraints
+**3-Minute Risk Assessment** → Identifies vulnerabilities, outputs prioritised action plans
 
-**Content & User Experience:**
-- Balancing technical accuracy with accessibility
-- Defining appropriate scope ("not enough" vs "overwhelming")
-- Language calibration for different technical literacy levels
-- Testing with time-constrained users
-- Designing resources for diverse industries
-- Time management and perfectionism
+**Progressive Learning Guides** → Six skill levels with specific tools, costs, and timelines
 
-## Key Accomplishments
-- Successfully translated enterprise frameworks without losing critical information
-- Created meaningful interactivity without complexity
-- Built practical implementation focus with exact tools and step-by-step instructions
-- Developed logical progression for complete beginners through clear learning paths
-- Used real Australian business case studies and current threats
+**Interactive Phishing Simulator** → Hands on training for spotting real threats
 
-## What I Learned
-- **Content Strategy**: Examples beat theory, progressive disclosure prevents overwhelm, every technical term needs practical context
-- **User Psychology**: Small business owners are time-constrained, trust comes through honesty, empowerment beats fear
-- **Development**: Perfectionism is the enemy, scope definition prevents feature creep, constant user perspective improves everything
+**Production-Ready Templates** → Security policies and incident response plans for small teams
 
-##  What's Next
+## Tech Stack & Decisions
 
-**Immediate (3 months):**
-- User testing with real small business owners
-- Content refinement based on feedback
-- Complete interactive suite (password tester, social engineering simulator)
-- Mobile optimization
+**Vanilla HTML/CSS/JS** → No dependencies, minimal attack surface, works offline
 
-**Medium-term (6 months):**
-- Industry-specific guidance
-- Community features
+**Static Site Architecture** → No backend vulnerabilities, fast load times, easy deployment
 
-**Long-term (12+ months):**
-- Measurement tools for tracking security improvement
-- Certification program
+**Mobile-First** → Built from 320px up (43% of small business owners work from mobile)
 
-**Ultimate Goal:** Transform cybersecurity from an intimidating technical challenge into an achievable business competency - because every small business deserves enterprise-level protection without enterprise-level complexity.
+**Progressive Enhancement** → Works without JavaScript, better with it
+
+## Development Status
+
+Started as a project for a course I completed at unsw: COMP6441 (Security Engineering). However I'm continuing development because the problem is real and the gap is massive.
+
+Currently refining UI/UX, implementing additional tools (password analyzer, vendor risk evaluator), and testing with actual small business owners.
+
+**Key Challenge:** Balancing technical accuracy with accessibility without losing critical information.
+
+## Key Learnings
+
+Examples beat theory. Progressive disclosure prevents overwhelm. Small business owners are time constrained and need quick wins. Shipped beats perfect.
+
+## What's Next
+
+**Short-term:** Complete interactive tools, user testing, mobile optimisation
+
+**Medium-term:** Industry specific guidance, progress tracking, threat intelligence feed
+
+**Long-term:** Community features, measurement tools, certification program
+
+## Why It Matters
+
+Every small business deserves enterprise level protection. Lock Step proves complex security concepts can be accessible without sacrificing accuracy.
+
+---
+
+Actively developing based on real world feedback. Living project, not finished product.
+
+**Stack:** HTML5, CSS3, Vanilla JavaScript  
+**Deployed:** Vercel  
+**Started:** July 2025
+**Last Updated:** January 2026
