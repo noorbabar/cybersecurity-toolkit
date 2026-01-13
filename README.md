@@ -2,8 +2,7 @@
 
 Cybersecurity Toolkit for Small Businesses
 
-[Live Demo](https://lock-step.vercel.app) | [Assessment Tool](https://lock-step.vercel.app/docs/assessment/) | [Phishing Simulator](https://lock-step.vercel.app/interactive/)
-
+[Live Demo](https://lock-step.vercel.app)
 ---
 
 ## The Problem
